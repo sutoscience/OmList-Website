@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmList App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="header-content">
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="Images and Animations/OmList Compact Logo.png" alt="OmList Logo" style="vertical-align: middle; width: 200px;" />
+                </div>                
+                <nav class="navbar">
+                    <ul>
+                        <button id="loginButton">Login</button>
+                        <li><a href="createaccount.html">Create Account</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Log-In Popup -->
+            <div class="login-popup" id="loginPopup">
+                <input type="text" id="username" placeholder="Username" autocomplete="off" />
+                <input type="password" id="password" placeholder="Password" autocomplete="off" />
+                <input type="checkbox" id="remember-me" /><label for="remember-me">Remember Me</label>
+                <button id="submitButton" onclick="submitFunction()">Submit</button>
+              </div>
+            <!-- Hero Section -->              
+            <div class="hero-content">
+                <img class="hero-image" src="Images and Animations/Swipe screen.png" alt="Swipe Screen OmList" width="300" style="display: block; margin: 0 auto;">
+                <h1>A new app to help make lists and find the movies we've always wanted, but never had the time to
+                    find.</h1>
+                <button class="cta">Get Started</button>
+            </div>
+            <div class="get-omlisted">
+                <img src="Images and Animations/OmListGif.gif" alt="OmList Animated O" width="200" style="display: block; margin: 0 auto;">
+                <h1>Get OmListed</h1>
+                <form>
+                    <label for="First Name">First Name:</label>
+                    <input type="text" id="First Name" name="First Name" placeholder="Enter your first name" autocomplete="off">
+                    <label for="Last Name">Last Name:</label>
+                    <input type="text" id="Last Name" name="Last Name" placeholder="Enter your last name" autocomplete="off">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="off">
+                    <button>Get On The Waitlist</button>
+                </form>
+            </div>            
+        </div>
+    </header>
+    <!-- Rest of your website content -->
+
+    
+    
+    
+    <script src="script.js"></script>
+
+    
+    
+</body>
+
+</html>
+
+
+            

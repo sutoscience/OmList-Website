@@ -1,0 +1,360 @@
+/* Styling the navbar */
+.navbar {
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling the logo */
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Styling the navbar list */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+    background-color: rgba(0, 0, 0, 0.6); /* Added a semi-transparent background */
+}
+
+/* Styling each item in the navbar list */
+.navbar ul li {
+    margin: 0 15px;
+    font-size: 18px;
+    background-color: transparent;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Styling the links in the navbar */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+    background-color: transparent;
+}
+
+/* Change color and add glow when hovering over links */
+.navbar ul li a:hover {
+    color: orange;
+    text-shadow: 0 0 5px orange, 0 0 10px orange;
+}
+
+/* Styling the login pop-up */
+.login-popup {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .login-popup input[type="text"], 
+  .login-popup input[type="password"] {
+    width: 20%;  /* Adjust width as needed */
+    margin-right: 10px;
+  }
+  
+  .login-popup input[type="checkbox"] + label {
+    margin-right: 10px;
+  }
+  
+  #submitButton {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+    background-color: #0056b3;
+}
+  
+
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 600px) {
+    body, p {
+        font-size: 16px;
+        background-color: black;
+    }
+    
+    .navbar {
+        font-size: 18px;
+        background-color: black;
+    }
+}
+
+/* Additional styles for your homepage layout */
+body {
+    font-family: Garamond, sans-serif;
+    background-color: #000000;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.main-content {
+    text-align: center;
+    margin: 50px 0;
+    background-color: black; 
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Additional layout styling */
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Styling the CTA button */
+.cta {
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta:hover {
+    background-color: #ff8800;
+    box-shadow: 0 0 10px #ff8800, 0 0 20px #ff8800;
+}
+
+/* Style for your hero section */
+.hero {
+    padding: 60px 0;
+    background-color: #000000; /* I'm assuming a black background similar to the reference. Adjust if necessary. */
+    color: white; /* Sets the default text color to white for better contrast */
+}
+
+.hero-image {
+    box-shadow: 0 0 10px #ff8800, 0 0 20px #ff8800;
+}
+
+
+/* Styling the Get OmListed section */
+.get-omlisted {
+    background-color: #1e1e1e;
+    padding: 60px 0;
+    text-align: center;
+    width: 100%; /* Ensures it spans the full width of its parent */
+    max-width: 600px; /* Keeps it from growing too wide */
+    margin: 0 auto; /* Centers it horizontally */
+}
+
+.get-omlisted h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.get-omlisted form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px; /* Provides even spacing between the elements */
+}
+
+.get-omlisted label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.get-omlisted input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2e2e2e;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.get-omlisted button {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Center the button horizontally */
+    width: fit-content; /* Fits the width to the content of the button */
+    width: 100%;
+    margin: 20px 0;
+}
+
+.get-omlisted button:hover {
+    background-color: #ff8f00;
+}
+
+
+/* CTA button styling */
+.cta {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #ff8f00; /* A slightly darker shade of orange for hover effect */
+}
+
+/* Box Sizing Property */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Input Field Width and Form Container */
+
+.get-omlisted input {
+    width: calc(100% - 30px);
+}
+
+.get-omlisted form {
+    padding: 0;
+    margin: 0;
+}
+
+/* Button Width */
+
+.get-omlisted button {
+    width: calc(100% - 40px);  /* Assuming the combined horizontal padding is 40px */
+}
+
+Copy code
+/* General styles for pages with black background and white text */
+.page-black-background {
+    background-color: black;
+    color: white; /* This ensures that the general text appears white */
+}
+
+/* Apply the styles to the headings, paragraphs, and links inside the pages with the black background */
+.page-black-background h1,
+.page-black-background h2,
+.page-black-background h3,
+.page-black-background h4,
+.page-black-background h5,
+.page-black-background h6,
+.page-black-background p,
+.page-black-background a {
+    color: white;
+}
+
+/* ... Existing styles ... */
+
+/* Applying black background to all pages */
+body {
+    background-color: black;
+    color: white; /* Setting default text color to white for the entire site */
+}
+
+/* Ensuring all headers and paragraphs on the about and blog pages have a white color */
+body h1, 
+body h2, 
+body h3, 
+body h4, 
+body h5, 
+body h6, 
+body p, 
+body a {
+    color: white;
+}
+
+/* Styling for the blog posts */
+.blog-posts {
+    padding: 20px 0;
+}
+
+.blog-post {
+    margin-bottom: 40px;
+}
+
+.blog-post .date {
+    color: rgba(255, 255, 255, 0.7); /* Subdued white color for date */
+    margin: 10px 0;
+}
+
+/* Styling the links in a darker color for contrast and adding an underline for clarity */
+body a {
+    color: #b8b8b8;
+    text-decoration: underline;
+}
+
+body a:hover {
+    color: white;
+    text-shadow: none;
+}
+
+
+
+
