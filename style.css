@@ -272,8 +272,9 @@ button {
     }
 }
 
-.hero img:hover {
-    animation: wiggle 0.2s ease infinite; /* Adjust the speed and easing as needed */
+.swipe-screen:hover {
+    animation: wiggle 0.2s ease forwards; /* 'forwards' makes the animation end in the last frame */
+    animation-iteration-count: 3; /* Adjust this number to control how many times the animation repeats */
 }
 
 /* Styling the Get OmListed section */
