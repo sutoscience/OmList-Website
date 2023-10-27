@@ -250,6 +250,12 @@ button {
     margin: 0 auto;
 }
 
+.hero h2 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
 /* Styling the Get OmListed section */
 .get-omlisted {
     background-color: #1e1e1e;
