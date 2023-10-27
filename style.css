@@ -106,12 +106,17 @@
 /* Additional styles for your homepage layout */
 
 body {
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#login-container,
+#login-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .header-content,
 .get-omlisted {
     width: 100%;
@@ -175,11 +180,6 @@ button {
     position: relative;
 }
 
-.hero-content {
-    text-align: center;
-    margin: 40px 0;
-}
-
 /* Styling the CTA button */
 .cta {
     background-color: orange;
@@ -206,6 +206,10 @@ button {
     box-shadow: 0 0 10px #ff8800, 0 0 20px #ff8800;
 }
 
+.hero-content {
+    text-align: center;
+    margin: 40px 0;
+}
 
 /* Styling the Get OmListed section */
 .get-omlisted {
