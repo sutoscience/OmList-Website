@@ -6,7 +6,7 @@ loginButton.addEventListener('click', function(event) {
     event.preventDefault(); // prevent the default action (page navigation)
     
     if (loginPopup.style.display === 'none' || loginPopup.style.display === '') {
-        loginPopup.style.display = 'flex';
+        loginPopup.style.display = 'block';
     } else {
         loginPopup.style.display = 'none';
     }

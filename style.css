@@ -5,11 +5,55 @@ body {
 }
 
 #login-container {
-    display: none;
+    display: none; /* Ensures the popup is hidden initially */
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensures it appears above other content */
 }
+
+/* Styling the login pop-up */
+.login-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    margin: auto; /* Centers the popup in the middle of the page */
+}
+  
+  .login-popup input[type="text"], 
+  .login-popup input[type="password"] {
+    width: 20%;  /* Adjust width as needed */
+    margin-right: 10px;
+  }
+  
+  .login-popup input[type="checkbox"] + label {
+    margin-right: 10px;
+  }
+  
+  #submitButton {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+    background-color: #0056b3;
+}
+  
 
 /* Styling the navbar */
 .navbar {
@@ -59,48 +103,6 @@ body {
     color: orange;
     text-shadow: 0 0 5px orange, 0 0 10px orange;
 }
-
-/* Styling the login pop-up */
-.login-popup {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-  
-  .login-popup input[type="text"], 
-  .login-popup input[type="password"] {
-    width: 20%;  /* Adjust width as needed */
-    margin-right: 10px;
-  }
-  
-  .login-popup input[type="checkbox"] + label {
-    margin-right: 10px;
-  }
-  
-  #submitButton {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#submitButton:hover {
-    background-color: #0056b3;
-}
-  
 
 
 /* Media query for mobile screens */
