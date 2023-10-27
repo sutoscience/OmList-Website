@@ -41,3 +41,13 @@ function toggleLoginPopup() {
         popup.style.display = 'none';
     }
 }
+
+document.getElementById('navbarId').addEventListener('click', function() {
+    loginContainer.style.display = 'none';
+    overlay.style.display = 'none';
+});
+
+document.getElementById('logoId').addEventListener('click', function() {
+    loginContainer.style.display = 'none';
+    overlay.style.display = 'none';
+});
