@@ -304,7 +304,6 @@ button {
 }
 
 .get-omlisted input {
-    width: 100%;
     padding: 10px 15px;
     font-size: 16px;
     border: none;
@@ -312,6 +311,23 @@ button {
     background-color: #2e2e2e;
     color: white;
     margin-bottom: 10px;
+    width: 200px;
+}
+
+.get-omlisted input[type="text"],
+.get-omlisted input[type="email"] {
+    width: 200px;
+    display: block;
+    margin-bottom: 10px;
+    margin: auto;
+    max-width: 300px; /* Prevents the fields from stretching too wide */
+    width: 100%; /* Makes each field take up the full width up to the max-width */
+}
+
+.get-omlisted input[type="text"],
+.get-omlisted input[type="email"],
+.get-omlisted button {
+    margin-bottom: 20px; /* Adjusts the space between each field */
 }
 
 .get-omlisted button {
@@ -325,8 +341,9 @@ button {
     align-self: center; /* Center the button horizontally */
     width: 100%;
     margin: 20px 0;
-    width: auto; /* Makes the button only as wide as its content */
-    padding: 10px 20px; /* Adjusts the padding to control the size of the button */
+    width: auto !important; /* Makes the button only as wide as its content */
+    padding: 10px 20px !important; /* Adjusts the padding to control the size of the button */
+    display: inline-block !important; /* Makes the button inline */
 }
 
 .get-omlisted button:hover {
