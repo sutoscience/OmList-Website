@@ -1,4 +1,5 @@
 #login-container {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -6,7 +7,6 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     z-index: 1000; /* Ensures it appears above other content */
-    display: none; /* Initially hidden */
 }
 
 .login-popup {

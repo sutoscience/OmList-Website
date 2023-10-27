@@ -10,13 +10,13 @@
 
 <body>
 
-         <!-- Log-In Popup -->
-    <div id="login-container">
+    <!-- Log-In Popup -->
+    <div id="loginPopup" style="display:none;">
         <div class="login-popup" id="loginPopup">
                 <input type="text" id="username" placeholder="Username" autocomplete="off" />
                 <input type="password" id="password" placeholder="Password" autocomplete="off" />
                 <input type="checkbox" id="remember-me" /><label for="remember-me">Remember Me</label>
-                <button id="submitButton" onclick="submitFunction()">Submit</button>
+                <button id="loginButton" onclick="toggleLoginPopup()">Login</button>
              </div>
         </div>
     <header class="hero">

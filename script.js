@@ -16,3 +16,12 @@ function submitFunction() {
     alert('Button has been clicked!');
     // Place any other function or logic you want to execute here
 }
+
+function toggleLoginPopup() {
+    var popup = document.getElementById('login-container');
+    if (popup.style.display === 'none' || popup.style.display === '') {
+        popup.style.display = 'block';
+    } else {
+        popup.style.display = 'none';
+    }
+}
