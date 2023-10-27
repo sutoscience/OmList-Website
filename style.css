@@ -50,8 +50,9 @@
 /* Styling the login pop-up */
 .login-popup {
     display: none;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     padding: 10px;
     background-color: #f9f9f9;
@@ -103,6 +104,19 @@
 }
 
 /* Additional styles for your homepage layout */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-container,
+.header-content,
+.get-omlisted {
+    width: 100%;
+}
+
 body {
     font-family: Garamond, sans-serif;
     background-color: #000000;
