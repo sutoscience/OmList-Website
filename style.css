@@ -1,11 +1,4 @@
-/* Applying black background to all pages */
-body {
-    background-color: black;
-    color: white; /* Setting default text color to white for the entire site */
-}
-
 #login-container {
-    display: none; /* Ensures the popup is hidden initially */
     position: fixed;
     top: 0;
     left: 0;
@@ -13,22 +6,27 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     z-index: 1000; /* Ensures it appears above other content */
+    display: none; /* Initially hidden */
 }
 
-/* Styling the login pop-up */
 .login-popup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px; /* Adjust width as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
     padding: 20px;
     background-color: white;
     color: black;
     border-radius: 5px;
-    margin: auto; /* Centers the popup in the middle of the page */
 }
-  
+
+/* Applying black background to all pages */
+body {
+    background-color: black;
+    color: white; /* Setting default text color to white for the entire site */
+}
+
   .login-popup input[type="text"], 
   .login-popup input[type="password"] {
     width: 20%;  /* Adjust width as needed */
