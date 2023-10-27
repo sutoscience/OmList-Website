@@ -1,3 +1,19 @@
+/* Overlay */
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+    z-index: 1; /* Ensure it is behind the popup */
+}
+
+
+
+
 /* Log-In Button and Pop-Up */
 
 #login-container {
@@ -450,6 +466,30 @@ body a:hover {
     text-shadow: none;
 }
 
+/* Footer Styling */
+footer {
+    background-color: black; 
+    padding: 20px; /* Space around the content */
+    text-align: center; /* Center align the text and content */
+}
+
+.footer .terms-of-service,
+.footer .copyright {
+    color: white; /* Making the text color white for visibility */
+    margin-bottom: 10px; /* Adding space between elements */
+}
+
+.footer .terms-of-service a,
+.footer .copyright a {
+    color: orange; /* Making the links orange for visibility and consistency */
+    text-decoration: none; /* Removing underlines from links */
+    margin: 0 10px; /* Adding space between links */
+}
+
+.footer .terms-of-service a:hover,
+.footer .copyright a:hover {
+    text-decoration: underline; /* Adding underline on hover for better user experience */
+}
 
 
 
