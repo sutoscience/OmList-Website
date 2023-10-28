@@ -5,9 +5,6 @@ window.onload = function() {
     const navbar = document.getElementById('navbarId');
 
     document.addEventListener('click', function(event) {
-        var isClickInsideLogin = loginContainer.contains(event.target) || event.target === loginButton;
-        var isClickInsideNavbar = navbar.contains(event.target) && event.target !== loginButton;
-
         if (event.target === loginButton) {
             if (loginContainer.style.display === 'none' || loginContainer.style.display === '') {
                 loginContainer.style.display = 'block';
@@ -16,7 +13,14 @@ window.onload = function() {
                 loginContainer.style.display = 'none';
                 overlay.style.display = 'none';
             }
-        } else if (!isClickInsideLogin && !isClickInsideNavbar) {
+        } else if (!loginContainer.contains(event.target)) {
+            loginContainer.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    });
+
+    navbar.addEventListener('click', function(event) {
+        if (event.target !== loginButton) {
             loginContainer.style.display = 'none';
             overlay.style.display = 'none';
         }
