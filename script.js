@@ -2,14 +2,11 @@ window.onload = function () {
     const loginButton = document.getElementById('loginButton');
     const loginContainer = document.getElementById('login-container');
     const overlay = document.getElementById('overlay');
-    const navbar = document.getElementById('navbarId');
 
     document.addEventListener('click', function (event) {
-        let target = event.target;
-
-        if (target === loginButton) {
+        if (event.target === loginButton) {
             toggleLoginPopup();
-        } else if (target !== navbar && !navbar.contains(target) && target !== loginContainer && !loginContainer.contains(target)) {
+        } else if (!loginContainer.contains(event.target) && event.target !== loginButton) {
             closeLoginPopup();
         }
     });
