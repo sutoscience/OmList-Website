@@ -13,14 +13,7 @@ window.onload = function() {
                 loginContainer.style.display = 'none';
                 overlay.style.display = 'none';
             }
-        } else if (!loginContainer.contains(event.target)) {
-            loginContainer.style.display = 'none';
-            overlay.style.display = 'none';
-        }
-    });
-
-    navbar.addEventListener('click', function(event) {
-        if (event.target !== loginButton) {
+        } else if (!loginContainer.contains(event.target) && !navbar.contains(event.target)) {
             loginContainer.style.display = 'none';
             overlay.style.display = 'none';
         }
