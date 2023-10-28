@@ -1,4 +1,3 @@
-/* Overlay */
 
 
 #overlay {
@@ -7,14 +6,9 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-    z-index: 1; /* Ensure it is behind the popup */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
-
-
-
-
-/* Log-In Button and Pop-Up */
 
 #login-container {
     display: none;
@@ -22,9 +16,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 150px;    
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 1000; /* Ensures it appears above other content */
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .login-popup {
@@ -32,9 +26,9 @@
     top: 50px;
     left: 70%;
     transform: translateX(-50%);
-    width: 80%; /* Adjust the width as needed */
-    max-width: 600px; /* Adjust the max-width as needed */
-    height: 100px; /* Adjust the height as needed */
+    width: 80%;
+    max-width: 600px;
+    height: 100px;
     padding: 20px;
     background-color: white;
     color: black;
@@ -42,13 +36,13 @@
 }
 
 #loginButton {
-    padding: 5px 15px; /* Adjust padding */
-    font-size: 18px; /* Adjust font size */
-    background-color: orange; /* Or any color you prefer */
+    padding: 5px 15px;
+    font-size: 18px;
+    background-color: orange;
     color: white;
     border: none;
     border-radius: 4px;
-    vertical-align: top; 
+    vertical-align: top;
     cursor: pointer;
     transition: background-color 0.3s;
     margin: 0;
@@ -58,7 +52,47 @@
 }
 
 #loginButton:hover {
-    background-color: #ff8f00; /* Darker shade for hover effect */
+    background-color: #ff8f00;
+}
+
+/* Navbar Styles */
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+#navbarId {
+    display: flex;
+    align-items: center;
+}
+
+#navbarId ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbarId ul li {
+    margin: 0 15px;
+}
+
+#navbarId ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#navbarId ul li a:hover {
+    color: orange;
 }
 
 
@@ -111,21 +145,6 @@ body {
     padding-bottom: 0; /* Removes the bottom padding from the navbar */
 }
 
-/* Styling the logo */
-.logo img {
-    width: 100px;
-    height: auto;
-}
-
-/* Styling the navbar list */
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    flex-grow: 2;
-    background-color: rgba(0, 0, 0, 0.6); /* Added a semi-transparent background */
-}
-
 /* Styling each item in the navbar list */
 .navbar ul li {
     margin: 0 15px;
@@ -149,6 +168,21 @@ body {
     text-shadow: 0 0 5px orange, 0 0 10px orange;
 }
 
+
+/* Styling the logo */
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Styling the navbar list */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+    background-color: rgba(0, 0, 0, 0.6); /* Added a semi-transparent background */
+}
 
 /* Media query for mobile screens */
 @media only screen and (max-width: 600px) {

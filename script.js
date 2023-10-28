@@ -1,19 +1,16 @@
-window.onload = function() {
+window.onload = function () {
     const loginButton = document.getElementById('loginButton');
     const loginContainer = document.getElementById('login-container');
     const overlay = document.getElementById('overlay');
-    const closeTriggers = document.querySelectorAll('.close-login');
+    const navbar = document.getElementById('navbarId');
+    const logo = document.getElementById('logoId');
 
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (event.target === loginButton) {
             toggleLoginPopup();
-        } else if (!loginContainer.contains(event.target)) {
+        } else if (!loginContainer.contains(event.target) && event.target !== navbar && event.target !== logo) {
             closeLoginPopup();
         }
-    });
-
-    closeTriggers.forEach(element => {
-        element.addEventListener('click', closeLoginPopup);
     });
 
     function toggleLoginPopup() {
