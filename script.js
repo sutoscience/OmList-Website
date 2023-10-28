@@ -3,12 +3,13 @@ window.onload = function () {
     const loginContainer = document.getElementById('login-container');
     const overlay = document.getElementById('overlay');
     const navbar = document.getElementById('navbarId');
-    const logo = document.getElementById('logoId');
 
     document.addEventListener('click', function (event) {
-        if (event.target === loginButton) {
+        let target = event.target;
+
+        if (target === loginButton) {
             toggleLoginPopup();
-        } else if (!loginContainer.contains(event.target) && event.target !== navbar && event.target !== logo) {
+        } else if (target !== navbar && !navbar.contains(target) && target !== loginContainer && !loginContainer.contains(target)) {
             closeLoginPopup();
         }
     });
