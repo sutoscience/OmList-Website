@@ -3,6 +3,7 @@ window.onload = function() {
     const loginButton = document.getElementById('loginButton');
     const loginContainer = document.getElementById('login-container');
     const overlay = document.getElementById('overlay');
+    const navbarList = document.querySelector('#navbarId ul'); // Select the <ul> inside the navbar
 
     document.addEventListener('click', function(event) {
         var isClickInside = loginContainer.contains(event.target) || event.target === loginButton;
@@ -27,6 +28,11 @@ window.onload = function() {
     overlay.addEventListener('click', function() {
         loginContainer.style.display = 'none';
         overlay.style.display = 'none'; // Hide overlay when it is clicked
+    });
+
+    navbarList.addEventListener('click', function() {
+        loginContainer.style.display = 'none';
+        overlay.style.display = 'none'; // Hide overlay when navbar list is clicked
     });
 }
 
