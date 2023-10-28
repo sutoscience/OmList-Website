@@ -33,7 +33,8 @@ window.onload = function() {
         if (!loginButton.contains(event.target) && event.target !== loginButton) { 
             loginContainer.style.display = 'none';
             overlay.style.display = 'none';
+            event.stopPropagation(); // Prevent the event from propagating up to the document
         }
-    });
+    });    
     
 }
