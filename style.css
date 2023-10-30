@@ -7,7 +7,7 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 9; /* Decreased from 10 so that login container is above it */
 }
 
 #login-container {
@@ -33,6 +33,7 @@
     background-color: white;
     color: black;
     border-radius: 5px;
+    z-index: 1000;
 }
 
 #loginButton {
@@ -138,7 +139,7 @@ body {
     padding: 10px 20px;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -167,7 +168,6 @@ body {
     color: orange;
     text-shadow: 0 0 5px orange, 0 0 10px orange;
 }
-
 
 /* Styling the logo */
 .logo img {
