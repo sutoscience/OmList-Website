@@ -573,6 +573,7 @@ section {
     transform: translate(-50%, -50%);
     padding: 40px;
     text-align: center;
+    display: block;
     border-radius: 8px;
 }
 
@@ -584,13 +585,20 @@ section {
     cursor: pointer;
 }
 
+.popup-content input[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+}
 .popup-content input[type="text"],
 .popup-content input[type="password"],
 .popup-content input[type="email"],
-.popup-content input[type="checkbox"],
 .popup-content label {
     display: block; /* Makes each input and label take the full width, placing them on new lines */
     margin-bottom: 10px; /* Adds some space between each field */
+}
+
+.popup-content input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 .popup-content input[type="text"],
