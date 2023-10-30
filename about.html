@@ -36,35 +36,39 @@
                     </header>
 
 
-            <!-- Log-In Popup -->
-                <div id="login-container" style="display:none;">
-                    <div class="login-popup">
-                        <input type="text" id="username" placeholder="Username" autocomplete="off" />
-                            <input type="password" id="password" placeholder="Password" autocomplete="off" />
-                            <input type="checkbox" id="remember-me" /><label for="remember-me">Remember Me</label>
-                            <button> Submit </button>
-                        </div>
-                    </div>
-
-            <!-- Create Account Popup -->
-                <div id="create-account-popup" class="popup-container">
-                    <div class="popup-content">
-                        <span class="close-popup" onclick="closeCreateAccountPopup()">&times;</span>
-                        <h1>Create Account</h1>
-                        <form>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                            
-                            <label for="username">Username:</label>
-                            <input type="text" id="username" name="username" required>
-                            
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required>
-                            
-                            <input type="submit" value="Create Account">
-                        </form>
-                    </div>
+          <!-- Log-In Popup -->
+          <div id="login-container" style="display:none;">
+            <div class="login-popup">
+                <input type="text" id="username" placeholder="Username" autocomplete="off" />
+                    <input type="password" id="password" placeholder="Password" autocomplete="off" />
+                    <input type="checkbox" id="remember-me" /><label for="remember-me">Remember Me</label>
+                    <button class="submit-btn">Submit</button>
                 </div>
+            </div>
+
+        <!-- Create Account Popup -->
+            <div id="create-account-popup" class="popup-container">
+                <div class="popup-content">
+                    <span class="close-popup" onclick="closeCreateAccountPopup()">&times;</span>
+                    <h1>Create Account</h1>
+                    <form>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <input type="checkbox" id="age-verification" required>
+                        <label for="age-verification">I'm over 18 years of age and agree to the <a href="terms_of_service.html">terms of service</a> and <a href="privacy_policy.html">privacy policy</a></label>
+
+                        
+                        <button class="submit-btn" type="submit">Create Account</button>
+                    </form>
+                </div>
+            </div>
 
              <!-- Sidebar and Progress Bar -->
                     <div id="sidebar">
