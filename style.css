@@ -624,13 +624,25 @@ section {
     color: orange;
 }
 
-/* Style for the title */
+/* Style for the Create Account title */
 .popup-content h1 {
     text-align: center;
     color: black; /* Ensuring the header text is black */
 }
 
-/* Style for the button */
+/* Styles for the Create Accountcheckbox container */
+.checkbox-container {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the checkbox and label */
+}
+
+/* Styles for the Create Account checkbox */
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px; /* Add some space between the checkbox and the label */
+}
+
+
+/* Style for the popup button */
 .popup-content button {
     display: block;
     margin: 0 auto;
