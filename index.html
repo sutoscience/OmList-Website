@@ -26,7 +26,7 @@
                             <nav id="navbar" class="NavBar">
                                 <ul>
                                     <button id="loginButton">Login</button>
-                                    <li><a href="createaccount.html">Create Account</a></li>
+                                    <li><button onclick="openCreateAccountPopup()">Create Account</button></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="blog.html">Blog</a></li>
                                 </ul>
@@ -43,6 +43,26 @@
                     </div>
                 </div>
     
+            <!-- Create Account Popup -->
+                <div id="create-account-popup" class="popup-container">
+                    <div class="popup-content">
+                        <span class="close-popup" onclick="closeCreateAccountPopup()">&times;</span>
+                        <h1>Create Account</h1>
+                        <form>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                            
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            
+                            <input type="submit" value="Create Account">
+                        </form>
+                    </div>
+                </div>
+                
             <!-- Hero Section -->              
             <header class="hero">
                 <div class="header-content">

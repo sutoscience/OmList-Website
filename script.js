@@ -104,3 +104,14 @@ window.addEventListener('scroll', function () {
         }
     });
 });
+
+
+// Create Account - Pop-Up
+
+function openCreateAccountPopup() {
+    document.getElementById('create-account-popup').style.display = 'block';
+}
+
+function closeCreateAccountPopup() {
+    document.getElementById('create-account-popup').style.display = 'none';
+}
