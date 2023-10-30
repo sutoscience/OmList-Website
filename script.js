@@ -15,7 +15,7 @@ window.onload = function () {
     });
 
     loginContainer.addEventListener('click', function (event) {
-        event.stopPropagation(); // Prevent the click inside the pop-up from closing it
+        event.stopPropagation();
     });
 
     function toggleLoginPopup() {
