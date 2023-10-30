@@ -71,3 +71,14 @@ window.addEventListener('scroll', function () {
         }
     });
 });
+
+// About Page - Progress Bar
+
+window.addEventListener('scroll', function () {
+    const sidebarHeight = document.getElementById('sidebar').offsetHeight;
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const windowScroll = window.scrollY;
+    const progressHeight = (windowScroll / windowHeight) * sidebarHeight;
+
+    document.getElementById('progress-bar').style.height = progressHeight + 'px';
+});
