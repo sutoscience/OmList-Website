@@ -1,4 +1,11 @@
+/* Universal Styles */
 
+body, h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+ 
+ 
  /* Overlay - for Script Code and Event Listeners */
 
 #overlay {
@@ -209,7 +216,6 @@ body {
 }
 
 body {
-    font-family: Garamond, sans-serif;
     background-color: #000000;
 }
 
@@ -497,29 +503,25 @@ body {
 
 #sidebar {
     position: fixed;
-    top: 0;
+    top: 100px; /* Lower the position of the sidebar */
     left: 0;
-    width: 300px;
-    height: 100vh;
-    background-color: #1a1a1a; /* Dark grey background for the sidebar */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
+    width: auto;
+    background-color: transparent; /* Remove the background */
+    padding: 0;
+    z-index: 1000; /* Ensure it’s above other content */
 }
 
 #sidebar a {
     display: block;
-    margin-bottom: 20px;
-    color: white; /* White text for the links */
+    margin: 10px 0;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 #sidebar a:hover {
-    background-color: #333; /* Slightly lighter grey for hover effect */
+    color: #3498db; /* Change color on hover */
 }
 
 #content {
