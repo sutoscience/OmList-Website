@@ -608,15 +608,41 @@ section {
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
-/* Add or modify these styles in your CSS file */
+/* Style for the labels */
+.popup-content label {
+    text-align: left;
+    display: block;
+}
 
+/* Style for the checkbox */
+.popup-content input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+/* Style for the checkbox label */
+.popup-content input[type="checkbox"] + label {
+    display: inline;
+    vertical-align: middle;
+}
+
+/* Style for the links */
+.popup-content a {
+    color: orange;
+    display: inline; /* Ensure the links are displayed inline */
+}
+
+/* Style for the title */
 .popup-content h1 {
+    text-align: center;
     color: black; /* Ensuring the header text is black */
 }
 
-.popup-content a {
-    color: orange; /* Making hyperlinks orange */
+/* Style for the button */
+.popup-content button {
+    display: block;
+    margin: 0 auto;
 }
+
 
 /* Styling the checkbox and its label to be inline */
 .popup-content input[type="checkbox"] + label {
