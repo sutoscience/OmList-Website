@@ -112,23 +112,6 @@ body a:hover {
     margin-right: 900px; /* Adjust the value as needed */
 }
 
-#submitButton {
-  padding: 5px 20px;
-  font-size: 14px;
-  vertical-align: middle;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#submitButton:hover {
-  background-color: #0056b3;
-}
-
 .navbar {
   padding: 10px 20px;
   position: sticky;
@@ -154,7 +137,21 @@ body a:hover {
     color: black;
 }
 
+/* Existing navbar link styles */
+#navbar ul li a,
+#navbar ul li button { /* Include buttons in the selector */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
 
+/* Existing navbar link hover styles */
+#navbar ul li a:hover,
+#navbar ul li button:hover { /* Include buttons in the hover selector */
+    color: orange;
+    text-shadow: 0 0 5px orange, 0 0 10px orange;
+}
 
 /* Styling each item in the navbar list */
 .navbar ul li {
