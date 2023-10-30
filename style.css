@@ -630,17 +630,23 @@ section {
     color: black; /* Ensuring the header text is black */
 }
 
-/* Styles for the Create Accountcheckbox container */
+/* Styles for the checkbox container */
 .checkbox-container {
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Vertically center the checkbox and label */
+    width: 100%; /* Ensure the container takes the full width available */
 }
 
-/* Styles for the Create Account checkbox */
+/* Styles for the checkbox */
 .checkbox-container input[type="checkbox"] {
     margin-right: 5px; /* Add some space between the checkbox and the label */
 }
 
+/* Styles for the label */
+.checkbox-container label {
+    flex-grow: 1; /* Allow the label to take up the remaining space in the container */
+    word-wrap: break-word; /* Allow words to break and wrap onto the next line */
+}
 
 /* Style for the popup button */
 .popup-content button {
