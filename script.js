@@ -2,21 +2,20 @@ window.onload = function () {
     const loginButton = document.getElementById('loginButton');
     const loginContainer = document.getElementById('login-container');
     const overlay = document.getElementById('overlay');
-    const navbar = document.getElementById('navbarId');
 
     loginButton.addEventListener('click', function (event) {
         event.stopPropagation();
         toggleLoginPopup();
     });
 
-    document.addEventListener('click', function () {
-        closeLoginPopup();
-    });
-
-    navbar.addEventListener('click', function (event) {
+    document.addEventListener('click', function (event) {
         if (!loginContainer.contains(event.target) && event.target !== loginButton) {
             closeLoginPopup();
         }
+    });
+
+    loginContainer.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent the click inside the pop-up from closing it
     });
 
     function toggleLoginPopup() {
