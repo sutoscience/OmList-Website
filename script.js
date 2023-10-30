@@ -1,3 +1,5 @@
+// Log-In Pop-Up Code
+
 window.onload = function () {
     const loginButton = document.getElementById('loginButton');
     const loginContainer = document.getElementById('login-container');
@@ -29,3 +31,14 @@ window.onload = function () {
         overlay.style.display = 'none';
     }
 }
+
+// About Page Scroll Bar
+
+window.addEventListener('scroll', function () {
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const progressBar = document.getElementById('progress-bar');
+
+    const progressHeight = (scrollPosition / scrollHeight) * 100;
+    progressBar.style.height = progressHeight + 'vh';
+});
