@@ -572,7 +572,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 40px;
-    text-align: center;
+    text-align: left;
     display: block;
     border-radius: 8px;
 }
@@ -589,46 +589,39 @@ section {
     display: flex;
     align-items: center;
 }
-.popup-content input[type="text"],
-.popup-content input[type="password"],
-.popup-content input[type="email"],
-.popup-content label {
-    display: block; /* Makes each input and label take the full width, placing them on new lines */
-    margin-bottom: 10px; /* Adds some space between each field */
-}
 
 .popup-content input[type="checkbox"] {
     margin-right: 5px;
 }
 
+
+/* New or modified styles for form elements */
+.popup-content label {
+    display: block;
+    margin-bottom: 10px;
+}
+
 .popup-content input[type="text"],
 .popup-content input[type="password"],
 .popup-content input[type="email"] {
-    width: calc(100% - 22px); /* Makes the input fields take the full width of the popup, considering padding */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    width: 100%; /* Full width of the popup */
+    margin-bottom: 15px; /* Space between inputs */
 }
 
-/* Style for the labels */
-.popup-content label {
-    text-align: left;
-    display: block;
-}
-
-/* Style for the checkbox */
+/* Styles for the checkbox and its label */
 .popup-content input[type="checkbox"] {
+    display: inline-block;
     vertical-align: middle;
 }
 
-/* Style for the checkbox label */
 .popup-content input[type="checkbox"] + label {
-    display: inline;
+    display: inline-block;
     vertical-align: middle;
 }
 
-/* Style for the links */
+/* Styles for the links */
 .popup-content a {
     color: orange;
-    display: inline; /* Ensure the links are displayed inline */
 }
 
 /* Style for the title */
@@ -641,17 +634,6 @@ section {
 .popup-content button {
     display: block;
     margin: 0 auto;
-}
-
-
-/* Styling the checkbox and its label to be inline */
-.popup-content input[type="checkbox"] + label {
-    display: flex;
-    align-items: center;
-}
-
-.popup-content input[type="checkbox"] {
-    margin-right: 5px;
 }
 
 /* Styling the submit button on all popups */
