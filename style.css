@@ -153,6 +153,21 @@ body a:hover {
     text-shadow: 0 0 5px orange, 0 0 10px orange;
 }
 
+/* Styling for navbar buttons */
+#navbar ul li button.nav-link {
+    background: none;
+    border: none;
+    color: white; /* Or any color you prefer */
+    font-weight: bold; /* Makes the text bold */
+    cursor: pointer;
+}
+
+/* Hover effect for navbar buttons */
+#navbar ul li button.nav-link:hover {
+    color: orange; /* Or any color you prefer for hover effect */
+    text-shadow: 0 0 5px orange, 0 0 10px orange;
+}
+
 /* Styling each item in the navbar list */
 .navbar ul li {
   margin: 0 15px;
