@@ -520,8 +520,9 @@ body {
     transition: color 0.3s;
 }
 
+/* Sidebar link hover styles */
 #sidebar a:hover {
-    color: #3498db; /* Change color on hover */
+    color: orange;
 }
 
 #content {
