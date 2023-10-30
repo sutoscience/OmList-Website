@@ -75,10 +75,16 @@ window.addEventListener('scroll', function () {
 // About Page - Progress Bar
 
 window.addEventListener('scroll', function () {
-    const sidebarHeight = document.getElementById('sidebar').offsetHeight;
-    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const sidebarLinksHeight = document.getElementById('sidebar').offsetHeight;
+    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const windowScroll = window.scrollY;
-    const progressHeight = (windowScroll / windowHeight) * sidebarHeight;
-
-    document.getElementById('progress-bar').style.height = progressHeight + 'px';
+    
+    // Calculate the percentage of the total scroll height where the sidebar links are covered
+    const progressPercentage = (windowScroll / totalHeight) * 100;
+    
+    // Calculate the progress bar height based on the percentage and sidebar links height
+    // You might want to manually adjust the multiplier to ensure it reaches the bottom
+    const progressBarHeight = (progressPercentage / 100) * (sidebarLinksHeight * 1.5); // Adjust the multiplier as needed
+    
+    document.getElementById('progress-bar').style.height = progressBarHeight + 'px';
 });

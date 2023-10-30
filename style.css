@@ -539,14 +539,9 @@ section {
     left: 250px; /* Adjust based on your sidebar width */
     width: 4px;
     height: 0;
-    background-color: gold; /* Change the color to gold */
+    background-color: #FFA500; /* Change the color to gold */
     z-index: 1001; /* Ensure it’s above other content */
 }
-
-
-
-
-
 
 /* Styling the links in a darker color for contrast and adding an underline for clarity */
 body a {
