@@ -116,6 +116,12 @@ function closeCreateAccountPopup() {
     document.getElementById('create-account-popup').style.display = 'none';
 }
 
-document.getElementById("create-account-btn").addEventListener("click", function() {
+// Create Account - Pop-Up
+
+document.getElementById("createAccountButton").addEventListener("click", function() {
     document.getElementById("createAccountModal").style.display = "block";
+});
+
+document.getElementById("closeCreateAccountModal").addEventListener("click", function() {
+    document.getElementById("createAccountModal").style.display = "none";
 });
