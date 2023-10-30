@@ -123,7 +123,7 @@ body a:hover {
 }
 
 /* Styling for navbar buttons */
-#navbar ul li button.nav-link {
+#navbar ul li button {
     background: none;
     border: none;
     color: white; /* Or any color you prefer */
@@ -133,7 +133,7 @@ body a:hover {
 }
 
 /* Hover effect for navbar buttons */
-#navbar ul li button.nav-link:hover {
+#navbar ul li button:hover {
     color: orange; /* Or any color you prefer for hover effect */
     text-shadow: 0 0 5px orange, 0 0 10px orange;
 }

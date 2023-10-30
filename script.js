@@ -105,23 +105,12 @@ window.addEventListener('scroll', function () {
     });
 });
 
-
-// Create Account - Pop-Up
-
-function openCreateAccountPopup() {
-    document.getElementById('create-account-popup').style.display = 'block';
-}
-
-function closeCreateAccountPopup() {
-    document.getElementById('create-account-popup').style.display = 'none';
-}
-
 // Create Account - Pop-Up
 
 document.getElementById("createAccountButton").addEventListener("click", function() {
-    document.getElementById("createAccountModal").style.display = "block";
+    document.getElementById("create-account-popup").style.display = "block";
 });
 
-document.getElementById("closeCreateAccountModal").addEventListener("click", function() {
-    document.getElementById("createAccountModal").style.display = "none";
+document.getElementsByClassName("close-popup")[0].addEventListener("click", function() {
+    document.getElementById("create-account-popup").style.display = "none";
 });
