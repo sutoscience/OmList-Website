@@ -15,6 +15,16 @@ body a:hover {
     text-shadow: none;
 }
 
+a {
+    color: orange;
+    text-decoration: none; /* Removes the underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+
  /* Overlay - for Script Code and Event Listeners */
 
 #overlay {
@@ -573,6 +583,23 @@ section {
     font-size: 20px;
     cursor: pointer;
 }
+
+.popup-content input[type="text"],
+.popup-content input[type="password"],
+.popup-content input[type="email"],
+.popup-content input[type="checkbox"],
+.popup-content label {
+    display: block; /* Makes each input and label take the full width, placing them on new lines */
+    margin-bottom: 10px; /* Adds some space between each field */
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="password"],
+.popup-content input[type="email"] {
+    width: calc(100% - 22px); /* Makes the input fields take the full width of the popup, considering padding */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
 
 .submit-btn {
     background-color: orange;

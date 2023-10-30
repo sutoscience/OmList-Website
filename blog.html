@@ -48,29 +48,37 @@
             </div>
         </div>
 
-    <!-- Create Account Popup -->
-        <div id="create-account-popup" class="popup-container">
-            <div class="popup-content">
-                <span class="close-popup" onclick="closeCreateAccountPopup()">&times;</span>
-                <h1>Create Account</h1>
-                <form>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                    
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+     <!-- Create Account Popup -->
+     <div id="create-account-popup" class="popup-container">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closeCreateAccountPopup()">&times;</span>
+            <h1>Create Account</h1>
+            <form>
 
-                    <input type="checkbox" id="age-verification" required>
-                    <label for="age-verification">I'm over 18 years of age and agree to the <a href="terms_of_service.html">terms of service</a> and <a href="privacy_policy.html">privacy policy</a></label>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
 
-                    
-                    <button class="submit-btn" type="submit">Create Account</button>
-                </form>
-            </div>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="checkbox" id="age-verification" required>
+                <label for="age-verification">I'm over 18 years of age and agree to the <a href="terms_of_service.html">terms of service</a> and <a href="privacy_policy.html">privacy policy</a></label>
+
+                
+                <button class="submit-btn" type="submit">Create Account</button>
+            </form>
         </div>
+    </div>
+    
 
         <h1>My Blog</h1>
         <div class="blog-posts">
