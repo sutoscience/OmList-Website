@@ -2,16 +2,15 @@ window.onload = function () {
     const loginButton = document.getElementById('loginButton');
     const loginContainer = document.getElementById('login-container');
     const overlay = document.getElementById('overlay');
+    const navbar = document.getElementById('navbar');
 
     loginButton.addEventListener('click', function (event) {
         event.stopPropagation();
         toggleLoginPopup();
     });
 
-    overlay.addEventListener('click', function () {
-        closeLoginPopup();
-    });
-    
+    document.addEventListener('click', closeLoginPopup);
+    navbar.addEventListener('click', closeLoginPopup);
     loginContainer.addEventListener('click', function (event) {
         event.stopPropagation();
     });
@@ -30,10 +29,3 @@ window.onload = function () {
         overlay.style.display = 'none';
     }
 }
-
-document.addEventListener('click', function(event) {
-    const popup = document.querySelector('.login-popup');
-    if (!popup.contains(event.target)) {
-        // close the popup
-    }
-});

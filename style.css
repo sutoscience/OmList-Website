@@ -36,6 +36,16 @@
     z-index: 1000;
 }
 
+.login-popup input[type="text"], 
+.login-popup input[type="password"] {
+  width: 20%;  /* Adjust width as needed */
+  margin-right: 10px;
+}
+
+.login-popup input[type="checkbox"] + label {
+  margin-right: 10px;
+}
+
 #loginButton {
     padding: 5px 15px;
     font-size: 18px;
@@ -57,6 +67,7 @@
 }
 
 /* Navbar Styles */
+
 .logo-nav {
     display: flex;
     justify-content: space-between;
@@ -96,92 +107,77 @@
     color: orange;
 }
 
+#submitButton {
+  padding: 5px 20px;
+  font-size: 14px;
+  vertical-align: middle;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+  background-color: #0056b3;
+}
+
+.navbar {
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0; /* Removes the bottom padding from the navbar */
+}
+
+/* Styling each item in the navbar list */
+.navbar ul li {
+  margin: 0 15px;
+  font-size: 18px;
+  background-color: transparent;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Styling the links in the navbar */
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+  background-color: transparent;
+}
+
+/* Change color and add glow when hovering over links */
+.navbar ul li a:hover {
+  color: orange;
+  text-shadow: 0 0 5px orange, 0 0 10px orange;
+}
+
+/* Styling the logo */
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Styling the navbar list */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-grow: 2;
+  background-color: rgba(0, 0, 0, 0.6); /* Added a semi-transparent background */
+}
 
 /* Applying black background to all pages */
 
 body {
     background-color: black;
     color: white; /* Setting default text color to white for the entire site */
-}
-
-/* more login popup stuff I'm scrrd to move */
-
-  .login-popup input[type="text"], 
-  .login-popup input[type="password"] {
-    width: 20%;  /* Adjust width as needed */
-    margin-right: 10px;
-  }
-  
-  .login-popup input[type="checkbox"] + label {
-    margin-right: 10px;
-  }
-  
-  #submitButton {
-    padding: 5px 20px;
-    font-size: 14px;
-    vertical-align: middle;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#submitButton:hover {
-    background-color: #0056b3;
-}
-  
-
-/* Styling the navbar */
-.navbar {
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 0; /* Removes the bottom padding from the navbar */
-}
-
-/* Styling each item in the navbar list */
-.navbar ul li {
-    margin: 0 15px;
-    font-size: 18px;
-    background-color: transparent;
-    text-shadow: 1px 1px 2px black;
-}
-
-/* Styling the links in the navbar */
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s, text-shadow 0.3s;
-    background-color: transparent;
-}
-
-/* Change color and add glow when hovering over links */
-.navbar ul li a:hover {
-    color: orange;
-    text-shadow: 0 0 5px orange, 0 0 10px orange;
-}
-
-/* Styling the logo */
-.logo img {
-    width: 100px;
-    height: auto;
-}
-
-/* Styling the navbar list */
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    flex-grow: 2;
-    background-color: rgba(0, 0, 0, 0.6); /* Added a semi-transparent background */
 }
 
 /* Media query for mobile screens */
