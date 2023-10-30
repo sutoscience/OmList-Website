@@ -559,9 +559,10 @@ section {
 }
 
 .glow {
-    color: gold; /* You can choose any color */
-    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FF4500, 0 0 20px #FF4500;
+    color: gold;
+    text-shadow: 0 0 3px #FFD700, 0 0 6px #FFD700; /* Adjusted values for a more subtle glow */
 }
+
 
 
 /* Styling the links in a darker color for contrast and adding an underline for clarity */
