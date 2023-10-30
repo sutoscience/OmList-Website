@@ -2,7 +2,7 @@ window.onload = function () {
     const loginButton = document.getElementById('loginButton');
     const loginContainer = document.getElementById('login-container');
     const overlay = document.getElementById('overlay');
-    const navbar = document.getElementById('navbarId');
+    const navbar = document.getElementById('navbar');
 
     loginButton.addEventListener('click', function (event) {
         event.stopPropagation();
@@ -10,13 +10,7 @@ window.onload = function () {
     });
 
     document.addEventListener('click', closeLoginPopup);
-
-    navbar.addEventListener('click', function (event) {
-        if (event.target !== loginButton && !loginContainer.contains(event.target)) {
-            closeLoginPopup();
-        }
-    });
-
+    navbar.addEventListener('click', closeLoginPopup);
     loginContainer.addEventListener('click', function (event) {
         event.stopPropagation();
     });

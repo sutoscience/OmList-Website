@@ -68,30 +68,30 @@
     flex-grow: 1;
 }
 
-#navbarId {
+#navbar {
     display: flex;
     align-items: center;
 }
 
-#navbarId ul {
+#navbar ul {
     display: flex;
     align-items: center;
     list-style-type: none;
     padding: 0;
 }
 
-#navbarId ul li {
+#navbar ul li {
     margin: 0 15px;
 }
 
-#navbarId ul li a {
+#navbar ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-#navbarId ul li a:hover {
+#navbar ul li a:hover {
     color: orange;
 }
 
