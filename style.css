@@ -643,6 +643,25 @@ section {
     margin: 0 auto;
 }
 
+/* Left align the labels and checkbox */
+.popup-content label,
+.popup-content input[type="checkbox"] {
+    text-align: left;
+    display: block;
+}
+
+/* Style to horizontally align the checkbox and its label */
+.popup-content input[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+}
+
+/* Style to ensure the checkbox and text are on the same line */
+.popup-content input[type="checkbox"],
+.popup-content input[type="checkbox"] + label span {
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /* Styling the checkbox and its label to be inline */
 .popup-content input[type="checkbox"] + label {
@@ -693,8 +712,5 @@ footer {
 .footer .copyright a:hover {
     text-decoration: underline; /* Adding underline on hover for better user experience */
 }
-
-
-
 
 
