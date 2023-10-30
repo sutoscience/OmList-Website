@@ -490,41 +490,47 @@ body a {
 
 /* About Page Styling */
 
+body {
+    background-color: black;
+    color: white;
+}
+
 #sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 300px;
     height: 100vh;
-    background-color: #f8f8f8;
+    background-color: #1a1a1a; /* Dark grey background for the sidebar */
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
 }
 
 #sidebar a {
     display: block;
     margin-bottom: 20px;
-    color: #333;
+    color: white; /* White text for the links */
     text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-#progress-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 5px;
-    height: 0;
-    background-color: #3498db;
+#sidebar a:hover {
+    background-color: #333; /* Slightly lighter grey for hover effect */
 }
 
 #content {
-    margin-left: 220px;
+    margin-left: 320px;
     padding: 40px;
 }
 
 section {
     margin-bottom: 100px;
 }
+
 
 
 

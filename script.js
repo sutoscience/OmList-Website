@@ -42,3 +42,32 @@ window.addEventListener('scroll', function () {
     const progressHeight = (scrollPosition / scrollHeight) * 100;
     progressBar.style.height = progressHeight + 'vh';
 });
+
+// About Page Smooth Scrolling
+
+document.querySelectorAll('#sidebar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        window.scrollTo({
+            top: targetElement.offsetTop - 20,
+            behavior: 'smooth'
+        });
+    });
+});
+
+window.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('section');
+    const links = document.querySelectorAll('#sidebar a');
+
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+            links.forEach(link => link.classList.remove('active'));
+            links[index].classList.add('active');
+        }
+    });
+});
