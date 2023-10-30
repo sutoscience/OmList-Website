@@ -108,6 +108,10 @@ body a:hover {
     color: orange;
 }
 
+.navbar a, .navbar button {
+    margin-right: 900px; /* Adjust the value as needed */
+}
+
 #submitButton {
   padding: 5px 20px;
   font-size: 14px;
