@@ -633,18 +633,18 @@ section {
 /* Styles for the checkbox container */
 .checkbox-container {
     display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically center the checkbox and label */
+    align-items: flex-start; /* Align items to the start */
     width: 100%; /* Ensure the container takes the full width available */
 }
 
 /* Styles for the checkbox */
 .checkbox-container input[type="checkbox"] {
-    margin-right: 5px; /* Add some space between the checkbox and the label */
+    margin-right: 10px; /* Add some space between the checkbox and the label */
 }
 
 /* Styles for the label */
 .checkbox-container label {
-    flex-grow: 1; /* Allow the label to take up the remaining space in the container */
+    width: 90%; /* Set a specific width for the label */
     word-wrap: break-word; /* Allow words to break and wrap onto the next line */
 }
 
