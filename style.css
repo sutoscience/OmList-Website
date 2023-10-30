@@ -81,8 +81,10 @@ body a:hover {
     margin-top: -3px;
 }
 
-#loginButton:hover {
-    background-color: #ff8f00;
+/* Hover effect for both buttons */
+#login-btn:hover, #create-account-btn:hover {
+    background-color: black;
+    color: orange;
 }
 
 /* Navbar Styles */
@@ -609,6 +611,23 @@ section {
     cursor: pointer;
 }
 
+/* New styles for the create account button */
+
+#create-account-btn {
+    padding: 5px 15px;
+    font-size: 18px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    vertical-align: top;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: -3px;
+}
 
 /* Footer Styling */
 footer {
