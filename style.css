@@ -504,7 +504,7 @@ body {
 #sidebar {
     position: fixed;
     top: 200px; /* Lower the position of the sidebar */
-    left: 50px;
+    left: 100px;
     width: auto;
     background-color: transparent; /* Remove the background */
     padding: 0;
@@ -536,12 +536,32 @@ section {
 #progress-bar {
     position: fixed;
     top: 150px; /* Adjust based on your sidebar position */
-    left: 250px; /* Adjust based on your sidebar width */
+    left: 290px; /* Adjust based on your sidebar width */
     width: 4px;
     height: 0;
     background-color: #FFA500; /* Change the color to gold */
     z-index: 1001; /* Ensure it’s above other content */
 }
+
+/* Style for h2 elements on the About page */
+#about-page h2 {
+    border-bottom: 1px solid #FFA500; /* Adding a thin gold line underneath */
+    padding-bottom: 10px; /* Adding some space between the text and the line */
+    margin-bottom: 20px; /* Adding some space below the line */
+}
+
+/* Style to constrain text width on the About page */
+#about-page #content {
+    max-width: 800px; /* You can adjust this value to your preference */
+    margin: 0 auto; /* Center the content */
+    padding-right: 50px; /* Adding padding to the right of the text */
+}
+
+.glow {
+    color: gold; /* You can choose any color */
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FF4500, 0 0 20px #FF4500;
+}
+
 
 /* Styling the links in a darker color for contrast and adding an underline for clarity */
 body a {

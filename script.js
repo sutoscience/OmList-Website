@@ -88,3 +88,19 @@ window.addEventListener('scroll', function () {
     
     document.getElementById('progress-bar').style.height = progressBarHeight + 'px';
 });
+
+// About Page - Glow on Sidebar Links
+
+window.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('#content section');
+    const links = document.querySelectorAll('#sidebar a');
+
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - 200; // Adjust this value as needed
+
+        if (window.scrollY >= sectionTop) {
+            links.forEach(link => link.classList.remove('glow'));
+            links[index].classList.add('glow');
+        }
+    });
+});
