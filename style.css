@@ -1,4 +1,5 @@
 
+ /* Overlay - for Script Code and Event Listeners */
 
 #overlay {
     position: fixed;
@@ -9,6 +10,8 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000; /* Overlay is below the navbar and login container */
 }
+
+ /* Log-In Container and Pop-Up Code for NavBar */
 
 #login-container {
     position: absolute;
@@ -485,6 +488,12 @@ body a {
     margin: 10px 0;
 }
 
+/* About Page Styling */
+
+
+
+
+
 /* Styling the links in a darker color for contrast and adding an underline for clarity */
 body a {
     color: #b8b8b8;
@@ -520,6 +529,8 @@ footer {
 .footer .copyright a:hover {
     text-decoration: underline; /* Adding underline on hover for better user experience */
 }
+
+
 
 
 

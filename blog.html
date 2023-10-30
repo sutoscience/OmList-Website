@@ -1,12 +1,49 @@
 <!-- FILEPATH: /Users/amysuto/Sutoscience LLC Dropbox/Amy Suto/~2023 Documents and Photos/Coding Projects/OmList Website/blog.html -->
 
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>My Blog</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmList App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="overlay" style="display:none;"></div>
+
+         <!-- Header and NavBar Section -->
+                <header class="hero">
+                    <div class="header-content">
+                        <div class="logo-nav">
+                            <div class="logo" id="logoId">
+                                <a href="index.html"><img src="Images and Animations/OmList Compact Logo.png" alt="OmList Logo" style="vertical-align: middle; width: 200px;" /></a>
+                                    </div>     
+                            <nav id="navbar" class="NavBar">
+                                <ul>
+                                    <button id="loginButton">Login</button>
+                                    <li><a href="createaccount.html">Create Account</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                </ul>
+                            </nav>
+                        </header>
+
+            <!-- Log-In Popup -->
+                <div id="login-container" style="display:none;">
+                    <div class="login-popup">
+                        <input type="text" id="username" placeholder="Username" autocomplete="off" />
+                            <input type="password" id="password" placeholder="Password" autocomplete="off" />
+                            <input type="checkbox" id="remember-me" /><label for="remember-me">Remember Me</label>
+                            <button> Submit </button>
+                        </div>
+                    </div>
+
         <h1>My Blog</h1>
         <div class="blog-posts">
             <div class="blog-post">
@@ -26,5 +63,24 @@
             </div>
             <!-- Add more blog posts here -->
         </div>
-    </body>
-</html>
+
+        
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="terms-of-service">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 OmList. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+      <!-- JavaScript Connector -->
+      <script src="script.js"></script>
+
+    
+  
+</body>
