@@ -65,28 +65,6 @@ body a:hover {
   margin-right: 10px;
 }
 
-#loginButton {
-    padding: 5px 15px;
-    font-size: 18px;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    vertical-align: top;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 0;
-    font-weight: bold;
-    line-height: 1;
-    margin-top: -3px;
-}
-
-/* Hover effect for both buttons */
-#login-btn:hover, #create-account-btn:hover {
-    background-color: black;
-    color: orange;
-}
-
 /* Navbar Styles */
 
 .logo-nav {
@@ -157,6 +135,30 @@ body a:hover {
   align-items: center;
   padding-bottom: 0; /* Removes the bottom padding from the navbar */
 }
+
+/* Common NavBar button styles */
+.nav-btn {
+    padding: 5px 15px;
+    font-size: 18px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    vertical-align: top;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: -3px;
+}
+
+/* Hover effect */
+.nav-btn:hover {
+    background-color: black;
+    color: orange;
+}
+
 
 /* Styling each item in the navbar list */
 .navbar ul li {
@@ -609,24 +611,6 @@ section {
     right: 10px;
     font-size: 20px;
     cursor: pointer;
-}
-
-/* New styles for the create account button */
-
-#create-account-btn {
-    padding: 5px 15px;
-    font-size: 18px;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    vertical-align: top;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 0;
-    font-weight: bold;
-    line-height: 1;
-    margin-top: -3px;
 }
 
 /* Footer Styling */
