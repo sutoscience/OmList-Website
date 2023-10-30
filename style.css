@@ -610,14 +610,14 @@ section {
 
 /* Styles for the checkbox and its label */
 .popup-content input[type="checkbox"] {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block; /* Display inline */
+    margin-right: 5px; /* Add a little space between the checkbox and the label */
 }
 
-.popup-content input[type="checkbox"] + label {
-    display: inline-block;
-    vertical-align: middle;
+.popup-content .checkbox-label {
+    display: inline-block; /* Display inline */
 }
+
 
 /* Styles for the links */
 .popup-content a {
