@@ -7,23 +7,21 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9; /* Decreased from 10 so that login container is above it */
+    z-index: 1000; /* Overlay is below the navbar and login container */
 }
 
 #login-container {
     position: absolute;
-    top: 0; /* Adjust based on the height of your navbar */
+    top: 0;
     left: 0;
-    width: 100%; /* Take the full width of the navbar */
-    z-index: 10; /* Ensure it's above other elements */
+    width: 100%;
+    z-index: 1002; /* Login container is above both navbar and overlay */
     display: none;
-    height: 150px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .login-popup {
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: 70%;
     transform: translateX(-50%);
     width: 80%;
@@ -83,6 +81,8 @@
 #navbar {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1001;
 }
 
 #navbar ul {
