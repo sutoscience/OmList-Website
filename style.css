@@ -637,15 +637,15 @@ section {
     display: flex;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap; /* Add this line */
-  }  
-
+    flex-wrap: wrap; /* This ensures that the contents can wrap */
+  }
+  
   .checkbox-inline label {
     flex-grow: 1;
     margin-left: 10px;
-    white-space: nowrap; /* Prevents the label from wrapping */
+    white-space: normal; /* Change from nowrap to normal to allow wrapping */
   }
-
+  
 
 .checkbox-container {
     display: flex;
