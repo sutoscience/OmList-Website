@@ -633,30 +633,43 @@ section {
 }
 
 /* Styles for the checkbox container */
+
 .checkbox-container {
-    display: block; /* or inline-block */
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .checkbox-container label {
-    display: block;
-    max-width: calc(100% - 30px); /* Adjust the 30px based on actual checkbox width */
+    display: inline-block;
     margin-left: 10px;
-    vertical-align: top;
     font-size: 16px;
-    white-space: normal;
+    line-height: 1.5; /* Adjust line height for better readability */
 }
 
 .checkbox-container input[type="checkbox"] {
     margin-right: 10px;
-    vertical-align: top; /* aligns checkbox with the first line of text */
 }
 
 .checkbox-container label a {
-    display: inline; /* This ensures the link is inline */
-    white-space: nowrap; /* This prevents the link from wrapping */
+    display: inline; /* This ensures links are in the same line */
 }
 
+/* Add a class for the checkbox and label container */
+.checkbox-inline {
+    display: flex;
+    align-items: center; /* Aligns the checkbox and label vertically */
+    width: 100%; /* Adjust the width as needed */
+  }
+  
+  /* Style for the label to allow text wrapping */
+  .checkbox-inline label {
+    flex-grow: 1; /* Allows the label to fill the container */
+    margin-left: 10px; /* Space between checkbox and label */
+    white-space: normal; /* Allows text to wrap */
+  }
+
+  
 /* Style for the popup button */
 .popup-content button {
     display: block;
