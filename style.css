@@ -608,6 +608,12 @@ section {
     margin-bottom: 15px; /* Space between inputs */
 }
 
+.popup-content input[type="number"] {
+    /* Adjust the padding and margin to match other input fields */
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
 /* Styles for the checkbox and its label */
 .popup-content input[type="checkbox"] {
     display: inline-block; /* Display inline */
@@ -644,9 +650,12 @@ section {
 
 /* Styles for the label */
 .checkbox-container label {
-    width: 90%; /* Set a specific width for the label */
-    word-wrap: break-word; /* Allow words to break and wrap onto the next line */
+    display: inline-block; /* or block, if you prefer */
+    white-space: normal;
+    max-width: 90%; /* Adjust this as needed */
+    margin-left: 10px; /* This ensures some space between the checkbox and the text */
 }
+
 
 /* Style for the popup button */
 .popup-content button {
