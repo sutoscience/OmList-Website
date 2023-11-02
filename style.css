@@ -639,14 +639,13 @@ section {
 }
 
 .checkbox-container label {
-    display: inline-block;
-    max-width: 90%; /* Adjust as needed */
+    display: block;
+    max-width: calc(100% - 30px); /* Adjust the 30px based on actual checkbox width */
     margin-left: 10px;
     vertical-align: top;
     font-size: 16px;
     white-space: normal;
 }
-
 
 .checkbox-container input[type="checkbox"] {
     margin-right: 10px;
