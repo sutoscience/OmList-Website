@@ -640,11 +640,11 @@ section {
 
 .checkbox-container label {
     display: inline-block;
-    max-width: 280px; /* adjust as needed */
+    max-width: 280px; /* Adjust as needed */
     margin-left: 10px;
     vertical-align: top;
-    font-size: 16px;
-    white-space: normal; /* allows text to wrap */
+    font-size: 16px; /* Adjust font size if necessary */
+    white-space: normal; /* Ensure text wraps */
 }
 
 .checkbox-container input[type="checkbox"] {
