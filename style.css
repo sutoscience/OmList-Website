@@ -603,15 +603,11 @@ section {
 
 .popup-content input[type="text"],
 .popup-content input[type="password"],
-.popup-content input[type="email"] {
-    width: 100%; /* Full width of the popup */
-    margin-bottom: 15px; /* Space between inputs */
-}
-
-.popup-content input[type="number"] {
-    /* Adjust the padding and margin to match other input fields */
-    padding: 10px;
-    margin-bottom: 15px;
+.popup-content input[type="email"],
+.popup-content input[type="tel"] { /* Added input[type="tel"] for phone number */
+    width: 100%;
+    margin-bottom: 15px; /* This sets a uniform space below each input */
+    /* Add any additional styling here to match the design */
 }
 
 /* Styles for the checkbox and its label */
@@ -650,10 +646,10 @@ section {
 
 /* Styles for the label */
 .checkbox-container label {
-    display: inline-block; /* or block, if you prefer */
-    white-space: normal;
-    max-width: 90%; /* Adjust this as needed */
-    margin-left: 10px; /* This ensures some space between the checkbox and the text */
+    display: inline-block;
+    white-space: normal; /* This allows the text to wrap */
+    max-width: 90%; /* Adjust this value as needed to prevent awkward stacking */
+    margin-left: 10px;
 }
 
 
