@@ -634,9 +634,9 @@ section {
 
 /* Styles for the checkbox container */
 .checkbox-container {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; 
-    width: 100%; /* Ensure the container takes the full width available */
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 /* Styles for the checkbox */
@@ -647,9 +647,9 @@ section {
 /* Styles for the checkbox-container label */
 
 .checkbox-container label {
-    display: inline-block;
-    white-space: normal; /* Changed from nowrap to normal */
-    max-width: 90%; 
+    display: inline;
+    white-space: nowrap;
+    max-width: 90%;
     margin-left: 10px;
 }
 
