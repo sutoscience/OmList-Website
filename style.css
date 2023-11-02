@@ -658,16 +658,16 @@ section {
 /* Add a class for the checkbox and label container */
 .checkbox-inline {
     display: flex;
-    align-items: center; /* Aligns the checkbox and label vertically */
-    width: 100%; /* Adjust the width as needed */
+    align-items: center;
+    width: 100%;
   }
   
-  /* Style for the label to allow text wrapping */
   .checkbox-inline label {
-    flex-grow: 1; /* Allows the label to fill the container */
-    margin-left: 10px; /* Space between checkbox and label */
-    white-space: normal; /* Allows text to wrap */
+    flex-grow: 1;
+    margin-left: 10px;
+    white-space: normal;
   }
+  
 
   
 /* Style for the popup button */
