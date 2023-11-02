@@ -303,19 +303,13 @@ button {
     margin: 0 auto;
 }
 
-@keyframes wiggle {
-    0%, 100% {
-        transform: rotate(-5deg);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
+.swipe-screen {
+    display: block;
+    max-width: 100%; /* Ensures the video is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    border: none; /* Removes any border */
 }
 
-.swipe-screen:hover {
-    animation: wiggle 0.2s ease forwards; /* 'forwards' makes the animation end in the last frame */
-    animation-iteration-count: 3; /* Adjust this number to control how many times the animation repeats */
-}
 
 /* Styling the Get OmListed section */
 .get-omlisted {
