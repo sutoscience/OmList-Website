@@ -593,6 +593,29 @@ section {
     margin-right: 5px;
 }
 
+.popup-content .checkbox-inline {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.popup-content .checkbox-inline input[type="checkbox"] {
+    margin-right: 10px; /* Adjust the margin as needed */
+    flex-shrink: 0; /* Prevent the checkbox from shrinking */
+}
+
+.popup-content .checkbox-inline label {
+    flex-grow: 1;
+    white-space: normal; /* Override any white-space property to allow wrapping */
+}
+
+/* Ensure links within the label are displayed inline */
+.popup-content .checkbox-inline label a {
+    display: inline;
+    margin: 0 5px; /* Adjust the margin as needed */
+    white-space: nowrap; /* Prevent the links from breaking */
+}
+
 
 /* New or modified styles for form elements */
 .popup-content label {
