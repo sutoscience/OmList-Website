@@ -647,18 +647,16 @@ section {
 /* Styles for the checkbox-container label */
 
 .checkbox-container label {
-    display: inline;
-    white-space: nowrap;
-    max-width: 90%;
+    display: inline-block; /* Change this to inline-block if it's not already */
+    max-width: 90%; /* This ensures that the label can only take up to 90% of its container's width */
     margin-left: 10px;
+    vertical-align: top; /* Aligns the text to the top if it wraps */
 }
 
 .checkbox-container label a {
-    display: inline; /* This ensures that the links are in line with the text */
-    white-space: normal; /* Allows the link text to wrap if needed */
+    display: inline; /* This should be inline to keep links in the flow of the text */
+    white-space: normal; /* This allows the text to wrap and not be forced onto one line */
 }
-
-
 
 /* Style for the popup button */
 .popup-content button {
