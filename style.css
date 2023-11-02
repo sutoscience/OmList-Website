@@ -644,19 +644,12 @@ section {
     margin-right: 10px; /* Add some space between the checkbox and the label */
 }
 
-/* Styles for the label */
-.checkbox-container label {
-    display: inline-block;
-    white-space: normal; /* This allows the text to wrap */
-    max-width: 90%; /* Adjust this value as needed to prevent awkward stacking */
-    margin-left: 10px;
-}
-
+/* Styles for the checkbox-container label */
 
 .checkbox-container label {
     display: inline-block;
-    white-space: nowrap; /* Prevent wrapping to the next line */
-    max-width: 90%; /* Adjust if necessary */
+    white-space: normal; /* Changed from nowrap to normal */
+    max-width: 90%; 
     margin-left: 10px;
 }
 
