@@ -633,6 +633,33 @@ section {
 
 /* Styles for the checkbox container */
 
+.checkbox-inline,
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkbox-inline input[type="checkbox"],
+.checkbox-container input[type="checkbox"] {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.checkbox-inline label,
+.checkbox-container label {
+  flex-grow: 1;
+  white-space: normal;
+  margin-bottom: 0;
+}
+
+.checkbox-inline label a,
+.checkbox-container label a {
+  display: inline;
+  margin: 0 5px;
+}
+
+
 .checkbox-inline {
     display: flex;
     align-items: center;
