@@ -653,6 +653,20 @@ section {
 }
 
 
+.checkbox-container label {
+    display: inline-block;
+    white-space: nowrap; /* Prevent wrapping to the next line */
+    max-width: 90%; /* Adjust if necessary */
+    margin-left: 10px;
+}
+
+.checkbox-container label a {
+    display: inline; /* This ensures that the links are in line with the text */
+    white-space: normal; /* Allows the link text to wrap if needed */
+}
+
+
+
 /* Style for the popup button */
 .popup-content button {
     display: block;
