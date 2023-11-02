@@ -634,25 +634,29 @@ section {
 
 /* Styles for the checkbox container */
 .checkbox-container {
-    display: block; /* Changed from flex to block */
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-checkbox-container label {
-    display: inline-block; /* Added display property */
-    max-width: 280px; /* Adjusted max-width for proper wrapping */
+.checkbox-container label {
+    display: inline-block;
+    max-width: 280px; /* Adjust this value if needed to fit the text */
     margin-left: 10px;
     vertical-align: top;
-    font-size: 16px; /* Optional: Adjust font size as needed */
+    font-size: 16px;
+    line-height: 1.5; /* This will ensure that if the text goes to two lines, the spacing is consistent */
 }
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    align-self: start; /* Aligns the checkbox to the top of the text if it wraps */
+}
+
 
 .checkbox-container label a {
     display: inline; /* This ensures the link is inline */
     white-space: nowrap; /* This prevents the link from wrapping */
-}
-
-.checkbox-container input[type="checkbox"] {
-    margin-right: 10px; 
 }
 
 /* Style for the popup button */
