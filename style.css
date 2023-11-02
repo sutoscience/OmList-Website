@@ -615,6 +615,7 @@ section {
   flex-grow: 1;
   white-space: normal;
   margin-bottom: 0; /* Ensure there is no margin pushing the label down */
+  padding-bottom: 15px; /* Adjust the value as needed for your design */
 }
 
 .popup-content .checkbox-inline label a {
@@ -665,11 +666,11 @@ section {
 }
 
 
-
 /* Style for the popup button */
 .popup-content button {
     display: block;
     margin: 0 auto;
+    padding-top: 25px; /* Adjust the value as needed for your design */
 }
 
 /* Styling the submit button on all popups */
