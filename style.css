@@ -639,29 +639,30 @@ section {
 .checkbox-inline,
 .checkbox-container {
   display: flex;
-  align-items: center; /* This will vertically align the checkbox and text */
-  flex-wrap: wrap; /* This will allow the label to wrap to the next line if needed */
+  align-items: center; /* Align items vertically */
+  flex-wrap: wrap; /* Allow them to wrap onto new lines if needed */
 }
 
 .checkbox-inline input[type="checkbox"],
 .checkbox-container input[type="checkbox"] {
-  margin-right: 10px; /* Adjust the space between the checkbox and the text */
-  flex-shrink: 0; /* Prevent the checkbox from shrinking */
+  margin-right: 10px; /* Space after checkbox */
+  flex-shrink: 0; /* Don't allow the checkbox to shrink */
 }
 
 .checkbox-inline label,
 .checkbox-container label {
-  flex-grow: 1; /* Allow the label to grow and fill the space */
-  white-space: normal; /* Allow the text to wrap */
-  margin-bottom: 0; /* Remove any margin below the label if not needed */
+  flex-grow: 1; /* Allow the label to grow and fill the available space */
+  white-space: normal; /* Allow text to wrap */
+  margin-bottom: 0; /* Remove bottom margin if any */
 }
 
 .checkbox-inline label a,
 .checkbox-container label a {
-  display: inline; /* Keep the links inline */
-  margin: 0 5px; /* Adjust spacing around the links */
-  white-space: nowrap; /* Prevent the links from wrapping */
+  display: inline; /* Keep links inline */
+  margin: 0 5px; /* Space around links */
+  white-space: nowrap; /* Prevent links from wrapping */
 }
+
 
 /* Style for the popup button */
 .popup-content button {
