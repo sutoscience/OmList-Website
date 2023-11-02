@@ -656,78 +656,35 @@ section {
 
 /* Styles for the checkbox container */
 
+/* Ensure the flex container wraps the items */
 .checkbox-inline,
 .checkbox-container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* This will allow the items to wrap */
 }
 
+/* Prevent the checkbox from shrinking and ensure margin is set */
 .checkbox-inline input[type="checkbox"],
 .checkbox-container input[type="checkbox"] {
   margin-right: 10px;
   flex-shrink: 0;
 }
 
+/* Allow the label to grow and wrap text */
 .checkbox-inline label,
 .checkbox-container label {
   flex-grow: 1;
-  white-space: normal;
-  margin-bottom: 0;
+  white-space: normal; /* This will allow the text to wrap */
+  margin-bottom: 0; /* Adjust as needed */
 }
 
+/* Style hyperlinks to be inline and allow them to wrap if needed */
 .checkbox-inline label a,
 .checkbox-container label a {
-  display: inline;
-  margin: 0 5px;
-}
-
-
-.checkbox-inline {
-    display: flex;
-    align-items: center;
-    flex-direction: row; /* Ensure children are laid out in a row */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
-  }
-  
-  .checkbox-inline label {
-    flex-grow: 1;
-    margin-left: 10px;
-    white-space: normal; /* Allow text to wrap */
-  }
-  
-  /* Ensure anchor tags within the label are displayed inline */
-  .checkbox-inline label a {
-    display: inline; /* This will prevent them from stacking */
-    margin-right: 5px; /* Add some space between the links */
-  }
-  
-
-  .checkbox-container {
-    display: flex;
-    align-items: center; /* Aligns items vertically in the middle */
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-  }
-  
-  .checkbox-container input[type="checkbox"] {
-    margin-right: 10px; /* Space between the checkbox and the text */
-    flex-shrink: 0; /* Prevents the checkbox from shrinking */
-  }
-  
-  .checkbox-container label {
-    flex-grow: 1; /* Allows the label to grow and fill the space */
-    white-space: normal; /* Allows text to wrap */
-    margin-bottom: 0; /* Removes any margin below the label if it's not needed */
-  }
-  
-  .checkbox-container label a {
-    display: inline; /* Keeps links inline with the text */
-    margin: 0 5px; /* Adds space around links for readability */
-  }
-  
-
-.checkbox-container input[type="checkbox"] {
-    margin-right: 10px;
+  display: inline; /* Keep hyperlinks inline */
+  margin: 0 5px; /* Adjust spacing around links */
+  white-space: nowrap; /* Prevent links from wrapping */
 }
 
 /* Style for the popup button */
