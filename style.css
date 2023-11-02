@@ -636,14 +636,20 @@ section {
 .checkbox-inline {
     display: flex;
     align-items: center;
-    width: 100%;
-    flex-wrap: wrap; /* This ensures that the contents can wrap */
+    flex-direction: row; /* Ensure children are laid out in a row */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
   }
   
   .checkbox-inline label {
     flex-grow: 1;
     margin-left: 10px;
-    white-space: normal; /* Change from nowrap to normal to allow wrapping */
+    white-space: normal; /* Allow text to wrap */
+  }
+  
+  /* Ensure anchor tags within the label are displayed inline */
+  .checkbox-inline label a {
+    display: inline; /* This will prevent them from stacking */
+    margin-right: 5px; /* Add some space between the links */
   }
   
 
@@ -663,11 +669,6 @@ section {
 .checkbox-container input[type="checkbox"] {
     margin-right: 10px;
 }
-
-.checkbox-container label a {
-    display: inline; /* This ensures links are in the same line */
-}
-
 
 /* Style for the popup button */
 .popup-content button {
