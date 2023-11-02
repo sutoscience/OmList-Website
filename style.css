@@ -637,21 +637,22 @@ section {
 .checkbox-inline,
 .checkbox-container {
   display: flex;
-  align-items: flex-start; /* Align items to the start of the cross axis */
-  flex-wrap: wrap;
+  align-items: flex-start; /* Align items to the start of the container */
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
 }
 
 .checkbox-inline input[type="checkbox"],
 .checkbox-container input[type="checkbox"] {
-  margin-right: 10px; /* Adjust as needed */
-  flex-shrink: 0;
+  margin-top: 0; /* Align the checkbox with the first line of text */
+  margin-right: 5px; /* Space between the checkbox and the text */
+  flex-shrink: 0; /* Prevent the checkbox from shrinking */
 }
 
 .checkbox-inline label,
 .checkbox-container label {
-  flex-grow: 1;
-  white-space: normal;
-  margin-bottom: 0; /* Remove bottom margin if any */
+  flex-grow: 1; /* Allow the label to grow and fill the available space */
+  white-space: normal; /* Allow the text to wrap */
+  margin-bottom: 0; /* Remove any margin below the label if not needed */
 }
 
 .checkbox-inline label a,
