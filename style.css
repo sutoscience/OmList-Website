@@ -634,33 +634,31 @@ section {
 }
 
 /* Styles for the checkbox container */
-
-/* Ensure the flex container wraps the items */
 .checkbox-inline,
 .checkbox-container {
   display: flex;
-  align-items: center; /* Align items vertically */
-  flex-wrap: wrap; /* Allow them to wrap onto new lines if needed */
+  align-items: flex-start; /* Align items to the start of the cross axis */
+  flex-wrap: wrap;
 }
 
 .checkbox-inline input[type="checkbox"],
 .checkbox-container input[type="checkbox"] {
-  margin-right: 10px; /* Space after checkbox */
-  flex-shrink: 0; /* Don't allow the checkbox to shrink */
+  margin-right: 10px; /* Adjust as needed */
+  flex-shrink: 0;
 }
 
 .checkbox-inline label,
 .checkbox-container label {
-  flex-grow: 1; /* Allow the label to grow and fill the available space */
-  white-space: normal; /* Allow text to wrap */
+  flex-grow: 1;
+  white-space: normal;
   margin-bottom: 0; /* Remove bottom margin if any */
 }
 
 .checkbox-inline label a,
 .checkbox-container label a {
-  display: inline; /* Keep links inline */
-  margin: 0 5px; /* Space around links */
-  white-space: nowrap; /* Prevent links from wrapping */
+  display: inline;
+  margin: 0 5px;
+  white-space: nowrap;
 }
 
 
