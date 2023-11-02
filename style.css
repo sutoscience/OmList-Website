@@ -24,7 +24,6 @@ a:hover {
     text-decoration: underline; /* Adds underline on hover */
 }
 
-
  /* Overlay - for Script Code and Event Listeners */
 
 #overlay {
@@ -634,6 +633,20 @@ section {
 
 /* Styles for the checkbox container */
 
+.checkbox-inline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* Add this line */
+  }  
+
+  .checkbox-inline label {
+    flex-grow: 1;
+    margin-left: 10px;
+    white-space: nowrap; /* Prevents the label from wrapping */
+  }
+
+
 .checkbox-container {
     display: flex;
     flex-direction: column;
@@ -655,19 +668,7 @@ section {
     display: inline; /* This ensures links are in the same line */
 }
 
-/* Add a class for the checkbox and label container */
-.checkbox-inline {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .checkbox-inline label {
-    flex-grow: 1;
-    margin-left: 10px;
-    white-space: normal;
-  }
-  
+
 /* Style for the popup button */
 .popup-content button {
     display: block;
