@@ -633,7 +633,7 @@ section {
 /* Styles for the checkbox container */
 .checkbox-container {
     display: flex; /* Use flexbox for alignment */
-    align-items: flex-start; /* Align items to the start */
+    align-items: center; 
     width: 100%; /* Ensure the container takes the full width available */
 }
 
