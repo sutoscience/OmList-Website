@@ -601,18 +601,20 @@ section {
 
 .popup-content .checkbox-inline {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
+    align-items: flex-start; /* This ensures the checkbox aligns with the first line of text */
+    flex-wrap: nowrap;
+  }
 
-.popup-content .checkbox-inline input[type="checkbox"] {
+  .popup-content .checkbox-inline input[type="checkbox"] {
     margin-right: 10px;
     flex-shrink: 0;
-}
+    align-self: flex-start; /* Add this line to align the checkbox with the first line of text */
+  }
 
 .popup-content .checkbox-inline label {
-    flex-grow: 1;
-    white-space: normal;
+  flex-grow: 1;
+  white-space: normal;
+  margin-bottom: 0; /* Ensure there is no margin pushing the label down */
 }
 
 .popup-content .checkbox-inline label a {
