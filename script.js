@@ -107,7 +107,8 @@ window.addEventListener('scroll', function () {
 
 // Create Account - Pop-Up
 
-document.getElementById("createAccountButton").addEventListener("click", function() {
+document.getElementById("createAccountButton").addEventListener("click", function(event) {
+    event.stopPropagation(); // Prevents the click from immediately closing the popup
     document.getElementById("create-account-popup").style.display = "block";
 });
 
@@ -122,4 +123,5 @@ window.addEventListener('click', function(event) {
 document.getElementById('create-account-popup').addEventListener('click', function(event) {
     event.stopPropagation();
 });
+
 
