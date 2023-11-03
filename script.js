@@ -111,6 +111,15 @@ document.getElementById("createAccountButton").addEventListener("click", functio
     document.getElementById("create-account-popup").style.display = "block";
 });
 
-document.getElementsByClassName("close-popup")[0].addEventListener("click", function() {
-    document.getElementById("create-account-popup").style.display = "none";
+window.addEventListener('click', function(event) {
+    const createAccountPopup = document.getElementById('create-account-popup');
+    // If the target of the click isn't the container nor a descendant of the container, then hide the popup.
+    if (!createAccountPopup.contains(event.target)) {
+        createAccountPopup.style.display = 'none';
+    }
 });
+
+document.getElementById('create-account-popup').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
