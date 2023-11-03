@@ -107,21 +107,20 @@ window.addEventListener('scroll', function () {
 
 // Create Account - Pop-Up
 
-document.getElementById("createAccountButton").addEventListener("click", function(event) {
-    event.stopPropagation(); // Prevents the click from immediately closing the popup
+// This listener is for opening the popup
+document.getElementById("createAccountButton").addEventListener("click", function() {
     document.getElementById("create-account-popup").style.display = "block";
 });
 
+// This listener is for closing the popup if the user clicks outside of it
 window.addEventListener('click', function(event) {
     const createAccountPopup = document.getElementById('create-account-popup');
-    // If the target of the click isn't the container nor a descendant of the container, then hide the popup.
-    if (!createAccountPopup.contains(event.target)) {
+    if (createAccountPopup.style.display === 'block' && !createAccountPopup.contains(event.target)) {
         createAccountPopup.style.display = 'none';
     }
 });
 
+// Stop the click inside the popup from propagating to the window
 document.getElementById('create-account-popup').addEventListener('click', function(event) {
     event.stopPropagation();
 });
-
-
