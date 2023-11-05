@@ -305,7 +305,7 @@ button {
 
 .swipe-screen {
     display: block;
-    max-width: 100%; /* Ensures the video is responsive */
+    max-width: 50%; /* Ensures the video is responsive */
     height: auto; /* Maintains the aspect ratio */
     border: none; /* Removes any border */
 }
