@@ -719,18 +719,83 @@ section {
 
 /* Styling the Swipe Screen */
 
-#movie-swipe-container {
-    position: relative;
-    /* Other styles for the container */
+/* Color Scheme */
+.primary-color {
+  color: #E65100; /* Deep Orange */
 }
 
-.movie-card {
-    position: absolute;
-    /* Styles for the card, including transitions for swiping */
+.secondary-color {
+  color: #795548; /* Earth Brown */
 }
 
-.like-button, .dislike-button {
-    /* Button styles */
+.accent-color {
+  color: #F9B384; /* Light Orange */
+}
+
+.neutral-dark {
+  color: #212121; /* Charcoal */
+}
+
+.neutral-light {
+  color: #F5F5F5; /* Cream */
+}
+
+
+
+/* Button Styles */
+button {
+  background-color: #E65100;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #F9B384;
+}
+
+/* Icon and Interactive Elements */
+.icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-button:focus {
+  outline: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 

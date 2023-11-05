@@ -125,11 +125,33 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Swipe Screen */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize swipe.js on the movie swipe container
+    var swipeContainer = document.getElementById('movie-swipe-container');
+    var swiper = new Swipe(swipeContainer, {
+        // Configure options here
+        startSlide: 0,
+        speed: 400,
+        auto: 3000,
+        draggable: true,
+        continuous: true,
+        disableScroll: false,
+        stopPropagation: false,
+        callback: function(index, elem, dir) {
+            // Handle swipe callback
+        },
+        transitionEnd: function(index, elem) {
+            // Handle transitionEnd callback
+        }
+    });
+
+    // Event listeners for like and dislike buttons
     const likeButtons = document.querySelectorAll('.like-button');
     const dislikeButtons = document.querySelectorAll('.dislike-button');
 
     likeButtons.forEach(button => {
         button.addEventListener('click', function() {
+            // Trigger swipe to the right
+            swiper.next();
             // Handle like
             swipeMovie(this.parentElement, 'like');
         });
@@ -137,24 +159,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     dislikeButtons.forEach(button => {
         button.addEventListener('click', function() {
+            // Trigger swipe to the left
+            swiper.prev();
             // Handle dislike
             swipeMovie(this.parentElement, 'dislike');
         });
     });
 
+    // Keyboard events for like and dislike
     document.addEventListener('keydown', function(event) {
         if (event.key === 'ArrowRight') {
-            // Handle like with right arrow key
+            swiper.next();
             swipeMovie(document.querySelector('.movie-card'), 'like');
         } else if (event.key === 'ArrowLeft') {
-            // Handle dislike with left arrow key
+            swiper.prev();
             swipeMovie(document.querySelector('.movie-card'), 'dislike');
         }
     });
 
     function swipeMovie(movieCard, action) {
         // Logic to animate and remove the card, and to track likes/dislikes
+        // This will depend on how you've set up your swipe.js and what you want to do after a swipe
     }
 });
-
 
