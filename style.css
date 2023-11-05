@@ -673,10 +673,14 @@ section {
     background-color: orange;
     color: black;
     border: none;
-    padding: 10px 10px; /* Adjust the top padding as needed */
+    padding: 10px 20px; /* Adjust padding if necessary */
     cursor: pointer;
     transition: background-color 0.3s;
+    line-height: normal; /* Add this line if not present */
+    vertical-align: middle; /* Add this line if not present */
+    /* Remove any fixed height if it's set */
 }
+
 
 .submit-btn:hover {
     background-color: #ff8800;
