@@ -636,16 +636,21 @@ section {
     background-color: orange;
     color: black;
     border: none;
-    padding: 0px 20px; /* Remove padding from top */
+    padding: 10px 20px; /* Adjust top and bottom padding as needed */
     cursor: pointer;
     transition: background-color 0.3s;
-    line-height: 1.2; /* Set a specific line-height */
+    line-height: normal; /* This should be 1 or close to the font size if 'normal' still gives issues */
     vertical-align: middle;
-    display: inline-block; /* Ensure it's treated as inline-block */
-    margin: 0; /* Reset any default margins */
-    overflow: hidden; /* Prevent extra space inside the button */
-    white-space: nowrap; /* Prevent text wrapping */
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    /* Add this if not already present */
+    font-size: 16px; /* Adjust to your font size */
+    height: auto; /* Or set a specific height if you want to control it */
+    box-shadow: none; /* In case there's an inherited box-shadow */
 }
+
 
 
 /* Styles for the checkbox container */
