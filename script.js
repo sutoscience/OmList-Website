@@ -121,3 +121,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+/* Swipe Screen */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const likeButtons = document.querySelectorAll('.like-button');
+    const dislikeButtons = document.querySelectorAll('.dislike-button');
+
+    likeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Handle like
+            swipeMovie(this.parentElement, 'like');
+        });
+    });
+
+    dislikeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Handle dislike
+            swipeMovie(this.parentElement, 'dislike');
+        });
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowRight') {
+            // Handle like with right arrow key
+            swipeMovie(document.querySelector('.movie-card'), 'like');
+        } else if (event.key === 'ArrowLeft') {
+            // Handle dislike with left arrow key
+            swipeMovie(document.querySelector('.movie-card'), 'dislike');
+        }
+    });
+
+    function swipeMovie(movieCard, action) {
+        // Logic to animate and remove the card, and to track likes/dislikes
+    }
+});
+
+

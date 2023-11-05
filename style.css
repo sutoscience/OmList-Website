@@ -715,6 +715,25 @@ section {
     background-color: #ff8800;
 }
 
+
+
+/* Styling the Swipe Screen */
+
+#movie-swipe-container {
+    position: relative;
+    /* Other styles for the container */
+}
+
+.movie-card {
+    position: absolute;
+    /* Styles for the card, including transitions for swiping */
+}
+
+.like-button, .dislike-button {
+    /* Button styles */
+}
+
+
 /* Footer Styling */
 footer {
     background-color: black; 
