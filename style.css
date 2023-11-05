@@ -719,6 +719,23 @@ section {
 
 /* Styling the Swipe Screen */
 
+/* Adjust the size of the like and dislike buttons */
+.tinder--buttons button img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+}
+
+/* Change text color to black */
+.tinder--card h3,
+.tinder--card p {
+    color: #000; /* Change to black or any color you prefer */
+}
+
+/* Ensure the swipe screen can scroll if content is larger than the viewport */
+.swipe-screen-page {
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
 .swipe-screen-page {
     background-color: black; /* This will ensure the background is black only on the swipe screen page */
     color: white; /* This will ensure the text is white only on the swipe screen page */
@@ -745,11 +762,6 @@ section {
   .tinder--buttons .dislike {
       background: url('Images and Animations/Swipe Screen Icons/Buttons/dislike button.png') no-repeat center center;
       background-size: contain;
-  }
-
-  .swipe-screen-page .tinder--card h3,
-  .swipe-screen-page .tinder--card p {
-    color: black; /* This will ensure the text inside the cards is black */
   }
   
 *, *:before, *:after {
