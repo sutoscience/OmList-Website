@@ -719,6 +719,26 @@ section {
 
 /* Styling the Swipe Screen */
 
+.swipe-screen-page {
+    background-color: black; /* This will ensure the background is black only on the swipe screen page */
+    color: white; /* This will ensure the text is white only on the swipe screen page */
+    overflow-y: auto; /* This will enable scrolling on the swipe screen page */
+  }
+  
+  .swipe-screen-page .tinder--card h3,
+  .swipe-screen-page .tinder--card p {
+    color: black; /* This will ensure the text inside the cards is black */
+  }
+  
+  .swipe-screen-page .tinder--buttons i.fa-heart {
+    color: #FFACE4; /* This will ensure the like icon is visible */
+  }
+  
+  .swipe-screen-page .tinder--buttons i.fa-remove {
+    color: #CDD6DD; /* This will ensure the dislike icon is visible */
+  }
+  
+
 *, *:before, *:after {
     box-sizing: border-box;
     padding: 0;
