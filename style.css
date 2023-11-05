@@ -305,9 +305,7 @@ button {
 
 .swipe-screen {
     display: block;
-    max-width: 50%; /* Ensures the video is responsive */
-    height: auto; /* Maintains the aspect ratio */
-    border: none; /* Removes any border */
+    max-width: 50%; 
 }
 
 
@@ -635,8 +633,7 @@ section {
 .create-account-btn {
     background-color: orange;
     color: black;
-    border: none;
-    padding: 10px 20px; /* Adjust top and bottom padding as needed */
+    border: none;    
     cursor: pointer;
     transition: background-color 0.3s;
     line-height: normal; /* This should be 1 or close to the font size if 'normal' still gives issues */
@@ -649,6 +646,11 @@ section {
     font-size: 16px; /* Adjust to your font size */
     height: auto; /* Or set a specific height if you want to control it */
     box-shadow: none; /* In case there's an inherited box-shadow */
+    margin-top: 0;
+    padding-top: 10px; /* Adjust as needed */
+    padding-bottom: 10px; /* Adjust as needed */
+    line-height: 1.2; /* Adjust as needed */
+    vertical-align: middle;
 }
 
 
