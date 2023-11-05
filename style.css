@@ -673,7 +673,7 @@ section {
     background-color: orange;
     color: black;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 10px; /* Adjust the top padding as needed */
     cursor: pointer;
     transition: background-color 0.3s;
 }
