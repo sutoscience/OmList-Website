@@ -1,3 +1,5 @@
+<!-- FILEPATH: /Users/amysuto/Sutoscience LLC Dropbox/Amy Suto/~2023 Documents and Photos/Coding Projects/OmList Website/swipescreen.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,38 +11,44 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-
 </head>
 
 <body>
 
-<div id="overlay" style="display:none;"></div>
+    <div id="overlay" style="display:none;"></div>
 
-<!-- Header and NavBar Section -->
-  <header class="hero">
-      <div class="header-content">
-          <div class="logo-nav">
-              <div class="logo" id="logoId">
-                  <a href="index.html"><img src="Images and Animations/OmList Compact Logo.png" alt="OmList Logo" style="vertical-align: middle; width: 200px;" /></a>
-                      </div>     
-              <nav id="navbar" class="NavBar">
-                  <ul>
-                      <li><button id="loginButton" class="nav-link">Log In</button></li>
-                      <li><button id="createAccountButton" class="nav-link">Create Account</button></li>                                </li>                                    </li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="blog.html">Blog</a></li>
-                  </ul>
-              </nav>
-          </header>
+    <!-- Header and NavBar Section -->
+    <header class="hero">
+        <div class="header-content">
+            <div class="logo-nav">
+                <div class="logo" id="logoId">
+                    <a href="index.html"><img src="Images and Animations/OmList Compact Logo.png" alt="OmList Logo" style="vertical-align: middle; width: 200px;" /></a>
+                </div>
+                <nav id="navbar" class="NavBar">
+                    <ul>
+                        <li><a href="list.html">My Lists</a></li>
+                        <li>
+                            <div class="search-container">
+                                <form action="#" method="get">
+                                    <input type="text" placeholder="Search movies...">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="user-icon-container">
+                            <li><a href="profile.html"><img src="Images and Animations/user icon.png" alt="User" style="max-height: 50px;"></a></li>
+                        </div>
+                    </ul>
+                </nav>
+        </div>
+    </header>
 
-
-
-          
+    <!-- Swipe screen section -->
+   
 
 
 
     <!-- Footer Section -->
-
     <footer>
         <div class="terms-of-service">
             <a href="#">Terms of Service</a>
@@ -51,10 +59,9 @@
         </div>
     </footer>
 
+    <!-- JavaScript Connector -->
+    <script src="script.js"></script>
 
-      <!-- JavaScript Connector -->
-      <script src="script.js"></script>
-
-    
-  
 </body>
+
+</html>
