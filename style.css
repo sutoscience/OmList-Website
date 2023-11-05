@@ -721,6 +721,48 @@ section {
 
 /* Styling the Swipe Screen */
 
+.swipe-screen-page {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    background-color: black; /* This will ensure the background is black only on the swipe screen page */
+    color: white; /* This will ensure the text is white only on the swipe screen page */
+    overflow-y: auto; /* This will enable scrolling on the swipe screen page */
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+}
+
+/* Ensure the hero section on the swipe screen page takes up all available space */
+.swipe-screen-page .hero {
+    flex-grow: 1;
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+/* Adjust the navbar to remove any unwanted space */
+.swipe-screen-page #navbar {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* If there are any other elements causing space, set their margins and padding to 0 */
+.swipe-screen-page .other-element {
+    margin: 0;
+    padding: 0;
+}
+
+.tinder {
+    margin-top: 0; /* Set top margin to 0 */
+  }
+  
+
 /* Adjust the size of the like and dislike buttons */
 .tinder--buttons button img {
     width: 50px; /* Adjust the width as needed */
@@ -733,20 +775,6 @@ section {
     color: #000; /* Change to black or any color you prefer */
 }
 
-/* Ensure the swipe screen can scroll if content is larger than the viewport */
-.swipe-screen-page {
-    overflow-y: auto; /* Allows vertical scrolling */
-}
-
-.swipe-screen-page {
-    background-color: black; /* This will ensure the background is black only on the swipe screen page */
-    color: white; /* This will ensure the text is white only on the swipe screen page */
-    overflow-y: auto; /* This will enable scrolling on the swipe screen page */
-    margin: 0;
-    padding: 0;
-    margin-top: 0;
-  }
-  
   .swipe-screen-page .tinder--buttons .like,
   .swipe-screen-page .tinder--buttons .dislike {
       background-size: cover;
