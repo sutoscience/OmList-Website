@@ -752,6 +752,21 @@ section {
       background-color: transparent; /* Ensure background is transparent */
       border: none; /* Remove any borders */
   }
+
+  .tinder--buttons button {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed for spacing from the bottom */
+  }
+
+  #nope {
+    left: 20px; /* Adjust as needed for spacing from the left */
+  }
+  
+  #love {
+    right: 20px; /* Adjust as needed for spacing from the right */
+  }
+  
+  
   
   /* If you have specific classes for the like and dislike buttons, you can set the max-width and max-height there as well */
   .tinder--buttons .like {
