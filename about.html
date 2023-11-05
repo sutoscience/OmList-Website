@@ -18,65 +18,67 @@
 
     <div id="overlay" style="display:none;"></div>
 
-              <!-- Header and NavBar Section -->
-              <header class="hero">
-                <div class="header-content">
-                    <div class="logo-nav">
-                        <div class="logo" id="logoId">
-                            <a href="index.html"><img src="Images and Animations/OmList Compact Logo.png" alt="OmList Logo" style="vertical-align: middle; width: 200px;" /></a>
-                                </div>     
-                        <nav id="navbar" class="NavBar">
-                            <ul>
-                                <li><button id="loginButton" class="nav-link">Log In</button></li>
-                                <li><button id="createAccountButton" class="nav-link">Create Account</button></li>                                </li>                                    </li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                            </ul>
-                        </nav>
-                    </header>
+    <!-- Header and NavBar Section -->
+      <header class="hero">
+          <div class="header-content">
+              <div class="logo-nav">
+                  <div class="logo" id="logoId">
+                      <a href="index.html"><img src="Images and Animations/OmList Compact Logo.png" alt="OmList Logo" style="vertical-align: middle; width: 200px;" /></a>
+                          </div>     
+                  <nav id="navbar" class="NavBar">
+                      <ul>
+                          <li><button id="loginButton" class="nav-link">Log In</button></li>
+                          <li><button id="createAccountButton" class="nav-link">Create Account</button></li>                                </li>                                    </li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="blog.html">Blog</a></li>
+                      </ul>
+                  </nav>
+              </header>
 
+  <!-- Log-In Popup -->
+  <div id="login-container" style="display:none;">
+      <div class="login-popup">
+          <input type="text" id="username" placeholder="Username" autocomplete="off" />
+              <input type="password" id="password" placeholder="Password" autocomplete="off" />
+              <input type="checkbox" id="remember-me" /><label for="remember-me">Remember Me</label>
+              <button class="submit-btn">Submit</button>
+          </div>
+      </div>
 
-          <!-- Log-In Popup -->
-          <div id="login-container" style="display:none;">
-            <div class="login-popup">
-                <input type="text" id="username" placeholder="Username" autocomplete="off" />
-                    <input type="password" id="password" placeholder="Password" autocomplete="off" />
-                    <input type="checkbox" id="remember-me" /><label for="remember-me">Remember Me</label>
-                    <button class="submit-btn">Submit</button>
-                </div>
-            </div>
+  <!-- Create Account Popup -->
+      <div id="create-account-popup" class="popup-container">
+          <div class="popup-content">
+              <h1>Create Account</h1>
+              <form>
 
-        <!-- Create Account Popup -->
-        <div id="create-account-popup" class="popup-container">
-            <div class="popup-content">
-                <span class="close-popup" onclick="closeCreateAccountPopup()">&times;</span>
-                <h1>Create Account</h1>
-                <form>
+                  <label for="first-name">First Name:</label>
+                  <input type="text" id="first-name" name="first-name" required>
 
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required>
+                  <label for="last-name">Last Name:</label>
+                  <input type="text" id="last-name" name="last-name" required>
 
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name" required>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                  
+                  <label for="phone-number">Phone Number:</label>
+                  <input type="tel" id="phone-number" name="phone-number" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                    
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required>
 
-                    <input type="checkbox" id="age-verification" required>
-                    <label for="age-verification">I'm over 18 years of age and agree to the <a href="terms_of_service.html">terms of service</a> and <a href="privacy_policy.html">privacy policy</a></label>
-
-                    
-                    <button class="submit-btn" type="submit">Create Account</button>
-                </form>
-            </div>
-        </div>
-        
+                  <div class="checkbox-inline">
+                      <input type="checkbox" id="termsCheckbox">
+                      <label for="termsCheckbox">
+                          I'm over 18 years of age and agree to the 
+                          <a href="link-to-terms">terms of service</a> and 
+                          <a href="link-to-privacy">privacy policy</a>
+                        </label>                                  
+                    </div>                              
+                                              
+                    <button class="create-account-btn" id="create-account-btn" type="submit">Create Account</button>
+                  </form>
+          </div>
+      </div>
 
              <!-- Sidebar and Progress Bar -->
                     <div id="sidebar">
