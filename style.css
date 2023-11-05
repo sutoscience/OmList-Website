@@ -649,8 +649,12 @@ section {
     margin-top: 0;
     padding-top: 10px; /* Adjust as needed */
     padding-bottom: 10px; /* Adjust as needed */
-    line-height: 1.2; /* Adjust as needed */
+    line-height: 1; /* Adjust as needed */
     vertical-align: middle;
+    margin-top: 0;
+    padding-top: 0;
+    height: 40px; /* Adjust this value to fit your design */
+
 }
 
 
