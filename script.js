@@ -106,16 +106,16 @@ window.addEventListener('scroll', function () {
 });
 
 // Create Account - Pop-Up
-
 // This listener is for opening the popup
 document.getElementById("createAccountButton").addEventListener("click", function() {
-    document.getElementById("create-account-popup").style.display = "block";
+    var createAccountPopup = document.getElementById("create-account-popup");
+    createAccountPopup.style.display = "block";
 });
 
 // This listener is for closing the popup if the user clicks outside of it
 window.addEventListener('click', function(event) {
-    const createAccountPopup = document.getElementById('create-account-popup');
-    if (createAccountPopup.style.display === 'block' && !createAccountPopup.contains(event.target)) {
+    var createAccountPopup = document.getElementById('create-account-popup');
+    if (event.target === createAccountPopup) {
         createAccountPopup.style.display = 'none';
     }
 });
@@ -124,3 +124,4 @@ window.addEventListener('click', function(event) {
 document.getElementById('create-account-popup').addEventListener('click', function(event) {
     event.stopPropagation();
 });
+
