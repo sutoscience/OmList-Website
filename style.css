@@ -737,6 +737,35 @@ section {
   .swipe-screen-page .tinder--buttons i.fa-remove {
     color: #CDD6DD; /* This will ensure the dislike icon is visible */
   }
+
+.swipe-screen-page .tinder--buttons .like {
+    background: url('Images and Animations/Swipe Screen Icons/Buttons/like button.png') no-repeat center center;
+    background-size: contain;
+  }
+  
+  .swipe-screen-page .tinder--buttons .dislike {
+    background: url('Images and Animations/Swipe Screen Icons/Buttons/dislike button.png') no-repeat center center;
+    background-size: contain;
+  }
+  
+  /* Update the button styles */
+  .tinder--buttons button {
+    border-radius: 50%;
+    line-height: 60px;
+    width: 60px;
+    height: 60px; /* Add height to ensure the button has a circle shape */
+    border: 0;
+    background: #FFFFFF;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 0; /* Remove padding to prevent affecting the background image */
+  }
+  
+  /* Remove the font-awesome icon styles as they are no longer needed */
+  .tinder--buttons i {
+    display: none;
+  }
+  
   
 
 *, *:before, *:after {
@@ -849,40 +878,6 @@ section {
     pointer-events: none;
   }
   
-  .tinder--buttons {
-    flex: 0 0 100px;
-    text-align: center;
-    padding-top: 20px;
-  }
-  
-  .tinder--buttons button {
-    border-radius: 50%;
-    line-height: 60px;
-    width: 60px;
-    border: 0;
-    background: #FFFFFF;
-    display: inline-block;
-    margin: 0 8px;
-  }
-  
-  .tinder--buttons button:focus {
-    outline: 0;
-  }
-  
-  .tinder--buttons i {
-    font-size: 32px;
-    vertical-align: middle;
-  }
-  
-  .fa-heart {
-    color: #FFACE4;
-  }
-  
-  .fa-remove {
-    color: #CDD6DD;
-  }
-  
-
 
 /* Footer Styling */
 footer {
