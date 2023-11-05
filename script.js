@@ -106,22 +106,30 @@ window.addEventListener('scroll', function () {
 });
 
 // Create Account - Pop-Up
-// This listener is for opening the popup
-document.getElementById("createAccountButton").addEventListener("click", function() {
-    var createAccountPopup = document.getElementById("create-account-popup");
-    createAccountPopup.style.display = "block";
-});
-
-// This listener is for closing the popup if the user clicks outside of it
-window.addEventListener('click', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
+    var createAccountButton = document.getElementById('createAccountButton');
     var createAccountPopup = document.getElementById('create-account-popup');
-    if (event.target === createAccountPopup) {
-        createAccountPopup.style.display = 'none';
-    }
+    var overlay = document.getElementById('overlay'); // Assuming you have an overlay div
+
+    // Listener for opening the popup
+    createAccountButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        createAccountPopup.style.display = 'block';
+        overlay.style.display = 'block'; // Show overlay
+    });
+
+    // Listener for closing the popup if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === overlay) { // Assuming the click on overlay should close the popup
+            createAccountPopup.style.display = 'none';
+            overlay.style.display = 'none'; // Hide overlay
+        }
+    });
+
+    // Stop the click inside the popup from propagating to the window
+    createAccountPopup.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
 });
 
-// Stop the click inside the popup from propagating to the window
-document.getElementById('create-account-popup').addEventListener('click', function(event) {
-    event.stopPropagation();
-});
 
