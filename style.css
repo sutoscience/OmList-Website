@@ -630,6 +630,22 @@ section {
     color: black; /* Ensuring the header text is black */
 }
 
+
+/* 'Create Account' button */
+.create-account-btn {
+    padding-top: 0px; /* Reduce this value if it's too large */
+    line-height: 1; /* Adjust line-height if it's creating extra space */
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 10px 20px; /* Adjust padding if necessary */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    line-height: normal; /* Add this line if not present */
+    vertical-align: middle; /* Add this line if not present */
+    /* Remove any fixed height if it's set */
+  }
+
 /* Styles for the checkbox container */
 .checkbox-inline,
 .checkbox-container {
