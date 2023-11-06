@@ -859,6 +859,11 @@ section {
     bottom: 20px; /* Align vertically */
   }
 
+  #nope, #love {
+    background: transparent;
+    border: none; /* Removes the border if any */
+  }  
+
     .tinder--buttons .like {
       background: url('Images and Animations/Swipe Screen Icons/Buttons/like button.png') no-repeat center center;
       background-size: contain;
