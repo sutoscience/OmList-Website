@@ -1081,11 +1081,15 @@ section {
 
 .reclist-page .movie-number {
     position: absolute;
-    bottom: -20px;
+    bottom: 10px; /* Adjusted to bring the number above the bottom edge of the poster */
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px; /* Adjust as needed */
-    color: #000; /* Change this to match your site's color scheme */
+    color: #fff; /* Changed to white for better visibility, adjust as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better visibility */
+    padding: 5px 10px; /* Add some padding around the number */
+    border-radius: 5px; /* Optional: adds rounded corners to the background */
+    z-index: 10; /* Ensure the number is above other elements */
 }
 
 
