@@ -721,6 +721,63 @@ section {
 
 /* Styling the Swipe Screen */
 
+/* Reset any margin or padding that might be affecting the layout */
+.swipe-screen-page body, .swipe-screen-page html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure the header is full width */
+.swipe-screen-page header.hero {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure the navbar container is full width */
+.swipe-screen-page .header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Ensure the navbar itself is full width */
+.swipe-screen-page nav#navbar {
+    width: auto;
+    flex-grow: 1;
+}
+
+/* Ensure list items fill the nav and are spaced correctly */
+.swipe-screen-page nav#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Ensure individual list items do not collapse */
+.swipe-screen-page nav#navbar ul li {
+    padding: 0 10px;
+}
+
+/* Ensure the logo has no unintended margins */
+.swipe-screen-page .logo-nav .logo {
+    margin-right: 20px; /* Adjust as needed */
+}
+
+/* Remove any additional margins or padding that may be causing issues */
+.swipe-screen-page .logo-nav,
+.swipe-screen-page .user-icon-container,
+.swipe-screen-page .search-container {
+    margin: 0;
+    padding: 
+}
+
 .swipe-screen-page {
     margin: 0;
     padding: 0;
@@ -761,7 +818,6 @@ section {
 .tinder {
     margin-top: 0; /* Set top margin to 0 */
   }
-  
 
 /* Adjust the size of the like and dislike buttons */
 .tinder--buttons button img {
@@ -925,47 +981,7 @@ section {
     padding: 0 16px;
     pointer-events: none;
   }
-  
 
-  /* Styling the Swipe Screen Page's NavBar */
-
-  /* Ensure the navbar fills the top of the swipescreen page */
-.swipe-screen-page #navbar {
-    width: 100%; /* Full width */
-    justify-content: space-between; /* Space between logo and nav items */
-}
-
-/* Ensure the logo and navigation items are aligned properly */
-.swipe-screen-page .logo-nav {
-    justify-content: space-between; /* Space between logo and nav items */
-    padding: 0 20px; /* Padding on the sides */
-}
-
-/* Make sure the list items in the navbar take up equal space and are aligned */
-.swipe-screen-page #navbar ul {
-    justify-content: space-around; /* Distribute items evenly */
-    width: 100%; /* Full width of the navbar */
-    padding: 0; /* Remove padding */
-}
-
-/* Ensure the navbar is not collapsing due to flex item shrinking */
-.swipe-screen-page #navbar ul li {
-    flex-shrink: 0; /* Prevent flex items from shrinking */
-}
-
-/* Additional styles to ensure visual consistency */
-.swipe-screen-page .navbar {
-    padding: 10px 0; /* Consistent padding for the navbar */
-    position: sticky; /* Sticky position to stay on top */
-    top: 0; /* Stick to the top */
-    z-index: 999; /* High z-index to stay above other content */
-}
-
-/* Remove any margin that may be causing the navbar to not appear full width */
-.swipe-screen-page .navbar a,
-.swipe-screen-page .navbar button {
-    margin-right: 0; /* Remove right margin */
-}
 
 
 /* Footer Styling */
