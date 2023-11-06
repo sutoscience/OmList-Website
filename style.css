@@ -824,7 +824,7 @@ section {
     max-height: 70vh; /* Adjust the value as needed */
     overflow-y: auto; /* Allows scrolling if content is larger than the container */
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 120px); /* Adjust 120px to the height of your buttons container */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -851,6 +851,13 @@ section {
     left: 0;
     right: 0;
     z-index: 10; /* Ensure it's above the tinder cards */
+  }
+  
+  .tinder-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; /* This will take the full height of the viewport */
   }
   
   #dislike, #like {
