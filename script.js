@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-/* Swipe Screen */
+/* Swipe Screen Page */
 
 'use strict';
 

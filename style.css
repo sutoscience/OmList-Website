@@ -827,7 +827,9 @@ section {
   /* Container for the buttons */
 .buttons-container {
     display: flex;
-    justify-content: space-between; /* This will place one button at each end */
+    justify-content: center;
+    align-items: center; /* if needed */
+    margin-top: 20px; /* Adjust the value to position under the cards */
     position: absolute; /* Positioning relative to the swipe screen */
     width: 100%; /* Make the container the same width as the swipe screen */
     bottom: -50px; /* Adjust this value to position the buttons right below the swipe screen */
