@@ -855,11 +855,12 @@ section {
   
   .tinder-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack children vertically */
+    position: relative;
     justify-content: space-between;
     height: 100vh; /* This will take the full height of the viewport */
   }
-  
+
   #dislike, #like {
     background: transparent;
     border: none; /* Removes the border if any */
@@ -872,7 +873,6 @@ section {
   left: initial;
   transform: initial;
 }
-
   .like {
     margin-right: 10px; /* Adjust as needed */
     background: url('Images and Animations/Swipe Screen Icons/Buttons/like button.png') no-repeat center center;
