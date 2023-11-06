@@ -803,9 +803,7 @@ section {
     bottom: 20px; /* Align vertically */
   }
 
-  
-  /* If you have specific classes for the like and dislike buttons, you can set the max-width and max-height there as well */
-  .tinder--buttons .like {
+    .tinder--buttons .like {
       background: url('Images and Animations/Swipe Screen Icons/Buttons/like button.png') no-repeat center center;
       background-size: contain;
       background-color: transparent; 
@@ -928,6 +926,47 @@ section {
     pointer-events: none;
   }
   
+
+  /* Styling the Swipe Screen Page's NavBar */
+
+  /* Ensure the navbar fills the top of the swipescreen page */
+.swipe-screen-page #navbar {
+    width: 100%; /* Full width */
+    justify-content: space-between; /* Space between logo and nav items */
+}
+
+/* Ensure the logo and navigation items are aligned properly */
+.swipe-screen-page .logo-nav {
+    justify-content: space-between; /* Space between logo and nav items */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+/* Make sure the list items in the navbar take up equal space and are aligned */
+.swipe-screen-page #navbar ul {
+    justify-content: space-around; /* Distribute items evenly */
+    width: 100%; /* Full width of the navbar */
+    padding: 0; /* Remove padding */
+}
+
+/* Ensure the navbar is not collapsing due to flex item shrinking */
+.swipe-screen-page #navbar ul li {
+    flex-shrink: 0; /* Prevent flex items from shrinking */
+}
+
+/* Additional styles to ensure visual consistency */
+.swipe-screen-page .navbar {
+    padding: 10px 0; /* Consistent padding for the navbar */
+    position: sticky; /* Sticky position to stay on top */
+    top: 0; /* Stick to the top */
+    z-index: 999; /* High z-index to stay above other content */
+}
+
+/* Remove any margin that may be causing the navbar to not appear full width */
+.swipe-screen-page .navbar a,
+.swipe-screen-page .navbar button {
+    margin-right: 0; /* Remove right margin */
+}
+
 
 /* Footer Styling */
 footer {
