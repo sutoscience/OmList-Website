@@ -1051,17 +1051,22 @@ section {
 /* Grid container styles specific to Rec List page */
 .reclist-page .grid-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center; /* Center the posters in the container */
+    gap: 20px; /* Adjust the gap between the posters as needed */
 }
 
 .reclist-page .movie-poster {
+    flex: 0 0 22%; /* Each poster will take up 22% of the container width */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
     position: relative;
     margin-bottom: 30px;
+    cursor: pointer; /* Changes the cursor to indicate the posters are interactive */
 }
 
 .reclist-page .movie-poster img {
-    width: 200px; /* Adjust as needed */
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Keep the aspect ratio of the image */
     transition: transform 0.5s, box-shadow 0.5s;
 }
 
@@ -1078,6 +1083,9 @@ section {
     font-size: 24px; /* Adjust as needed */
     color: #000; /* Change this to match your site's color scheme */
 }
+
+/* ... your existing styles ... */
+
 
 
 /* Footer Styling */
