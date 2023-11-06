@@ -1056,6 +1056,15 @@ section {
     gap: 20px; /* Adjust the gap between the posters as needed */
     padding: 20px; /* Add padding to ensure there's space around the grid */
     box-sizing: border-box; /* Include padding in the container's total width and height */
+    margin-bottom: 50px; /* Adjust as needed */
+
+}
+
+/* Clearing floats (if you're using float layout) */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .reclist-page .movie-poster {
@@ -1104,11 +1113,8 @@ footer {
     padding-top: 300px;
     padding: 20px; /* Space around the content */
     text-align: center; /* Center align the text and content */
+    color: #fff; /* Example text color */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
 }
-
-.footer .terms-of-service,
-.footer .copyright {
-    color: white; /* Making the text color white for visibility */
-    margin-bottom: 10px; /* Adding space between elements */
-}
-
