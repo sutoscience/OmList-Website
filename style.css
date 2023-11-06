@@ -1014,6 +1014,71 @@ section {
   }
 
 
+/* Reclist Page Styling */
+
+.reclist-page .toggle-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.reclist-page .toggle-btn {
+    text-decoration: none;
+    color: #000; /* Change this to match your site's color scheme */
+    margin: 0 10px;
+    padding: 5px 20px;
+    border: 1px solid #000; /* Change this to match your site's color scheme */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.reclist-page .toggle-btn.active {
+    background-color: #000; /* Change this to match your site's color scheme */
+    color: #fff;
+}
+
+/* Rec List Header styles */
+.reclist-page h1 {
+    text-align: center;
+    /* Add styles specific to the Rec List header if needed */
+}
+
+.reclist-page .subheader {
+    text-align: center;
+    color: #666; /* Change this to match your site's color scheme */
+    margin-bottom: 50px;
+}
+
+/* Grid container styles specific to Rec List page */
+.reclist-page .grid-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.reclist-page .movie-poster {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.reclist-page .movie-poster img {
+    width: 200px; /* Adjust as needed */
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.reclist-page .movie-poster:hover img {
+    transform: scale(1.05) rotate(-5deg);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* This creates the glow effect */
+}
+
+.reclist-page .movie-number {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px; /* Adjust as needed */
+    color: #000; /* Change this to match your site's color scheme */
+}
+
 
 /* Footer Styling */
 footer {
