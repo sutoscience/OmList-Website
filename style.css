@@ -835,12 +835,20 @@ section {
     border: none; /* Removes the border if any */
   }  
 
-  .like,
+  .like {
+    position: absolute;
+    top: 50%; /* Adjust this value as needed */
+    right: 50px; /* Adjust this value to move closer to the center */
+    transform: translate(50%, -50%); /* Adjusts the positioning to be centered and to the right */
+}
+  
   .dislike {
-    position: absolute; /* this will take the buttons out of the normal flow and position them relative to the swipe-card-stack */
-    top: 50%; /* this will position the buttons halfway down the swipe card stack */
-    transform: translateY(-50%); /* this will center the buttons vertically */
-  }
+    position: absolute;
+    top: 50%; /* Adjust this value as needed */
+    left: 50px; /* Adjust this value to move closer to the center */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to be centered and to the left */
+}
+  
 
   .tinder--buttons {
     display: flex;
