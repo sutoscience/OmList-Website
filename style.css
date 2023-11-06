@@ -842,11 +842,6 @@ section {
       border: none; /* Remove any borders */
   }
 
-  .tinder--buttons button {
-    position: absolute;
-    bottom: 20px; /* Adjust as needed for spacing from the bottom */
-  }
-
   #nope {
     position: absolute;
     left: 0; /* Adjust if you want more space from the left edge */
@@ -863,6 +858,16 @@ section {
     background: transparent;
     border: none; /* Removes the border if any */
   }  
+
+  .tinder--buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%; /* Adjust this value as needed to center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Adjust this value as needed */
+  }
 
     .tinder--buttons .like {
       background: url('Images and Animations/Swipe Screen Icons/Buttons/like button.png') no-repeat center center;
