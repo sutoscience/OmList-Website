@@ -829,16 +829,30 @@ section {
     display: flex;
     justify-content: center;
     align-items: center; /* if needed */
+    gap: 10px; /* Adjust the gap between buttons as needed */
     margin-top: 20px; /* Adjust the value to position under the cards */
     position: absolute; /* Positioning relative to the swipe screen */
     width: 100%; /* Make the container the same width as the swipe screen */
     bottom: -50px; /* Adjust this value to position the buttons right below the swipe screen */
   }
-
+  
   #dislike, #like {
     background: transparent;
     border: none; /* Removes the border if any */
   }  
+
+  .swipe {
+    min-height: calc(100vh - 120px); /* Adjust the 120px to account for the height of the buttons and any desired spacing */
+    padding-bottom: 60px; /* This should be at least half the height of your buttons to ensure they are visible */
+  }
+
+  .like-button,
+.dislike-button {
+  position: relative; /* Remove absolute positioning */
+  bottom: initial; /* Reset any previously set values */
+  left: initial;
+  transform: initial;
+}
 
   .like {
     margin-right: 10px; /* Adjust as needed */
@@ -850,7 +864,7 @@ section {
   .dislike {
     margin-left: 10px; /* Adjust as needed */
     background: url('Images and Animations/Swipe Screen Icons/Buttons/dislike button.png') no-repeat center center;
-      background-size: contain;
+     background-size: contain;
       background-color: transparent; 
 }
 
