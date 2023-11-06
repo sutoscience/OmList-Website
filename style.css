@@ -846,8 +846,11 @@ section {
     margin-top: 20px; /* Adjust the value to position under the cards */
     position: absolute; /* Positioning relative to the swipe screen */
     width: 100%; /* Make the container the same width as the swipe screen */
-    bottom: -50px; /* Adjust this value to position the buttons right below the swipe screen */
+    bottom: 10px; /* Adjust this value to position the buttons right below the swipe screen */
     margin-bottom: 100px; /* Adjust the value so it doesn't overlap with the footer */
+    left: 0;
+    right: 0;
+    z-index: 10; /* Ensure it's above the tinder cards */
   }
   
   #dislike, #like {
@@ -886,6 +889,17 @@ section {
     width: 50px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
 }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .tinder {
+      max-height: 60vh; /* Smaller screens might need a smaller max-height */
+    }
+    
+    .buttons-container {
+      bottom: 5px; /* Adjust for smaller screens */
+    }
+  }
 
 
 /* Change text color to black */
