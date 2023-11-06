@@ -841,11 +841,6 @@ section {
     border: none; /* Removes the border if any */
   }  
 
-  .swipe {
-    min-height: calc(100vh - 120px); /* Adjust the 120px to account for the height of the buttons and any desired spacing */
-    padding-bottom: 60px; /* This should be at least half the height of your buttons to ensure they are visible */
-  }
-
   .like-button,
 .dislike-button {
   position: relative; /* Remove absolute positioning */
@@ -906,6 +901,8 @@ section {
     position: relative;
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
+    min-height: calc(100vh - 120px); /* Adjust the 120px to account for the height of the buttons and any desired spacing */
+    padding-bottom: 60px; /* This should be at least half the height of your buttons to ensure they are visible */
   }
   
   .loaded.tinder {
