@@ -819,9 +819,22 @@ section {
     padding: 0;
 }
 
-.tinder {
+  .tinder {
     margin-top: 0; /* Set top margin to 0 */
+    max-height: 70vh; /* Adjust the value as needed */
+    overflow-y: auto; /* Allows scrolling if content is larger than the container */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    min-height: calc(100vh - 120px); /* Adjust the 120px to account for the height of the buttons and any desired spacing */
+    padding-bottom: 60px; /* This should be at least half the height of your buttons to ensure they are visible */
   }
+  
 
 
   /* Container for the buttons */
@@ -834,6 +847,7 @@ section {
     position: absolute; /* Positioning relative to the swipe screen */
     width: 100%; /* Make the container the same width as the swipe screen */
     bottom: -50px; /* Adjust this value to position the buttons right below the swipe screen */
+    margin-bottom: 100px; /* Adjust the value so it doesn't overlap with the footer */
   }
   
   #dislike, #like {
@@ -892,19 +906,7 @@ section {
     font-family: sans-serif;
   }
   
-  .tinder {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    opacity: 0;
-    transition: opacity 0.1s ease-in-out;
-    min-height: calc(100vh - 120px); /* Adjust the 120px to account for the height of the buttons and any desired spacing */
-    padding-bottom: 60px; /* This should be at least half the height of your buttons to ensure they are visible */
-  }
-  
+
   .loaded.tinder {
     opacity: 1;
   }
@@ -997,10 +999,14 @@ section {
 
 /* Footer Styling */
 footer {
+    position: absolute; /* or 'relative' if not sticking to the viewport bottom */
+    bottom: 0;
+    width: 100%;
     background-color: black; 
     padding: 20px; /* Space around the content */
     text-align: center; /* Center align the text and content */
 }
+
 
 .footer .terms-of-service,
 .footer .copyright {
