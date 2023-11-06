@@ -775,7 +775,6 @@ section {
 .swipe-screen-page .user-icon-container,
 .swipe-screen-page .search-container {
     margin: 0;
-    padding: 
 }
 
 .swipe-screen-page {
@@ -831,33 +830,17 @@ section {
     color: #000; /* Change to black or any color you prefer */
 }
 
-  .swipe-screen-page .tinder--buttons .like,
-  .swipe-screen-page .tinder--buttons .dislike {
-      background-size: cover;
-      max-width: 50px; /* Set a max-width for the buttons */
-      max-height: 50px; /* Set a max-height for the buttons */
-      width: auto; /* Adjust width to maintain aspect ratio */
-      height: auto; /* Adjust height to maintain aspect ratio */
-      background-color: transparent; /* Ensure background is transparent */
-      border: none; /* Remove any borders */
-  }
-
-  #nope {
-    position: absolute;
-    left: 0; /* Adjust if you want more space from the left edge */
-    bottom: 20px; /* Align vertically */
-  }
-  
-  #love {
-    position: absolute;
-    right: 0; /* Adjust if you want more space from the right edge */
-    bottom: 20px; /* Align vertically */
-  }
-
-  #nope, #love {
+  #dislike, #like {
     background: transparent;
     border: none; /* Removes the border if any */
   }  
+
+  .like,
+  .dislike {
+    position: absolute; /* this will take the buttons out of the normal flow and position them relative to the swipe-card-stack */
+    top: 50%; /* this will position the buttons halfway down the swipe card stack */
+    transform: translateY(-50%); /* this will center the buttons vertically */
+  }
 
   .tinder--buttons {
     display: flex;
@@ -947,6 +930,7 @@ section {
     justify-content: center;
     align-items: flex-end;
     z-index: 1;
+    position: relative; /* this will be the anchor point for the absolute positioning of the buttons */
   }
   
   .tinder--card {

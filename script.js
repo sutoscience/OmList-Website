@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
-var nope = document.getElementById('nope');
-var love = document.getElementById('love');
+var nope = document.getElementById('dislike');
+var love = document.getElementById('like');
 
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
@@ -204,7 +204,7 @@ function createButtonListener(love) {
 
     card.classList.add('removed');
 
-    if (love) {
+    if (like) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
     } else {
       card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
