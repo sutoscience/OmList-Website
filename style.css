@@ -1208,6 +1208,14 @@ section {
     display: block; /* Change from flex to block to stack elements */
 }
 
+.profile-page .user-details {
+    padding: 20px;
+    background-color: gray; 
+    margin: 0 auto; /* Center the section */
+    max-width: 600px; /* Adjust this value as needed to control the width */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
 .profile-page .profile-header {
     text-align: center;
     padding: 20px;
@@ -1255,12 +1263,6 @@ section {
     display: block;
     font-size: 1.5em;
     color: #333;
-}
-
-.profile-page .user-details {
-    padding: 20px;
-    background-color: gray; /* This sets the background to a light gray. Adjust the color as needed. */
-    text-align: center; /* Center align the text for all children */
 }
 
 .profile-page .detail-item {
