@@ -1344,48 +1344,79 @@ section {
 
 /* Movie Profile Page Styling */
 
-.movie-profile-page .card {
+.movie-profile-page {
+    position: relative;
+  }
+
+  .movie-profile-page .card {
     max-width: 800px;
     margin: 20px auto;
     background-color: #121212;
     border-radius: 8px;
     overflow: hidden;
+    position: relative; /* Ensure this is positioned relative for z-index to work */
   }
-  
-  .movie-profile-page .banner {
-    position: relative;
-    height: 20vh; /* Set the height of the banner to 20% of the viewport height */
-    overflow: hidden;
-  }
-  
-  .movie-profile-page .banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This will ensure the image covers the area without stretching */
+
+  .movie-profile-page .card::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Align with the top of the card */
+    left: 0;
+    right: 0;
+    height: 20vh; /* Height of the banner */
+    background: url('path-to-your-banner-image.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Behind the card content */
     opacity: 0.5;
   }
+
+  .movie-profile-page .content {
+  position: relative;
+  z-index: 2;
+}
+
+  .movie-profile-page .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50vh; /* Set the height of the banner */
+    overflow: hidden;
+    z-index: 1; /* Lower z-index so it's behind the card */
+  }
+  
+ .movie-profile-page .banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will ensure the image covers the area without stretching */
+  opacity: 0.5;
+}
+
   
   .movie-profile-page .content {
     position: relative;
     z-index: 2;
   }
   
-  .movie-profile-page .poster {
+.movie-profile-page .poster {
     position: absolute;
-    top: -50px;
-    left: 20px;
+    top: 20px; /* Adjust if necessary to ensure it's not cut off */
+    right: 20px; /* Align to the right side */
     border: 5px solid #121212;
     border-radius: 8px;
+    z-index: 3; /* Ensure the poster is above both the pseudo-element and the card */
   }
+
+.movie-profile-page .poster-image {
+  width: 150px; /* Adjust width as necessary */
+  height: auto; /* Maintain aspect ratio */
+}
   
-  .movie-profile-page .poster-image {
-    width: 150px;
-  }
-  
-  .movie-profile-page .info {
-    margin-left: 200px;
+.movie-profile-page .info {
     padding: 20px;
+    text-align: left; /* Align text to the left */
   }
+  
   
   .movie-profile-page .movie-title {
     font-size: 2em;
