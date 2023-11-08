@@ -40,10 +40,14 @@
 
     <div class="profile-container">
 
-        <!-- Profile Header -->
-        <header class="profile-header">
-        <!-- Profile Picture -->
-        <input type="file" id="profile-picture" class="profile-picture" accept="image/*">
+       
+<!-- Profile Header -->
+<header class="profile-header">
+    <!-- Profile Picture -->
+    <label for="profile-picture-upload" class="profile-picture-label">
+        <img src="Images and Animations/user icon.png" alt="Profile Picture" class="profile-picture" id="profile-picture">
+        <input type="file" id="profile-picture-upload" class="profile-picture-upload" accept="image/*" style="display: none;">
+    </label>
         <!-- Username -->
         <input type="text" id="user-name" class="user-name" value="User Name">
         <!-- User Bio -->

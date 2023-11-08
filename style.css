@@ -1278,25 +1278,31 @@ section {
     font-style: italic;
 }
 
-/* Profile Picture Input */
-.profile-page .profile-picture {
-    /* ... existing styles ... */
+/* Profile Picture Label */
+.profile-page .profile-picture-label {
     cursor: pointer; /* Indicates that it's clickable */
+    display: block; /* Ensure the label is a block to center it */
+    margin: 0 auto; /* Center the label */
+}
+
+/* Profile Picture Upload Input */
+.profile-page .profile-picture-upload {
+    /* Hide the actual input, but it will be clicked when the label is clicked */
 }
 
 /* Username Input */
 .profile-page .user-name {
-    /* ... existing styles ... */
     border: none;
     background: transparent;
+    color: white; /* Set the text color to white */
     text-align: center;
 }
 
 /* User Bio Textarea */
 .profile-page .user-bio {
-    /* ... existing styles ... */
     border: none;
     background: transparent;
+    color: white; /* Set the text color to white */
     text-align: center;
     width: 100%; /* Adjust as needed */
     resize: none; /* Prevent resizing */

@@ -221,3 +221,16 @@ var loveListener = createButtonListener(true);
 
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
+
+
+
+/* Profile Page */
+
+// JavaScript to change the profile picture when a new file is selected
+document.getElementById('profile-picture-upload').addEventListener('change', function(event) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        document.getElementById('profile-picture').src = e.target.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+});
