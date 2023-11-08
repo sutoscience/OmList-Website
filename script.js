@@ -234,3 +234,13 @@ document.getElementById('profile-picture-upload').addEventListener('change', fun
     };
     reader.readAsDataURL(event.target.files[0]);
 });
+
+
+/* Navbar - Profile Page Logout */
+
+function logoutFunction() {
+    // Your logout code here
+    // Redirect to index.html after logout
+    window.location.href = 'index.html';
+  }
+  
