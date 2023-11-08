@@ -1205,10 +1205,7 @@ section {
     max-width: 1200px;
     margin: 0 auto; /* Keeps the container centered */
     padding: 20px;
-    display: flex; /* This will apply flexbox layout */
-    justify-content: center; /* This will center the flex children horizontally */
-    align-items: center; /* This will center the flex children vertically */
-    height: 100vh; /* Optional: This will make the container take up the full viewport height */
+    display: block; /* Change from flex to block to stack elements */
 }
 
 .profile-page .profile-header {
@@ -1222,6 +1219,8 @@ section {
     border-radius: 50%;
     border: 3px solid #333;
     object-fit: cover;
+    display: block; /* Ensure the image is a block to center it */
+    margin: 0 auto; /* Center the image */
 }
 
 .profile-page .user-name {
@@ -1259,17 +1258,14 @@ section {
 }
 
 .profile-page .user-details {
-    display: flex;
-    flex-direction: column;
     padding: 20px;
-    background-color: #f5f5f5; /* This sets the background to a light gray. Adjust the color as needed. */
-    align-items: center; /* This centers the items on the cross axis (perpendicular to the main axis). */
-    justify-content: center; /* This centers the items on the main axis. */
-    width: 100%; /* This ensures the user details section spans the full width of its container. */
+    background-color: gray; /* This sets the background to a light gray. Adjust the color as needed. */
+    text-align: center; /* Center align the text for all children */
 }
 
 .profile-page .detail-item {
     margin-bottom: 10px;
+    color: black; /* Set the font color to black */
 }
 
 .profile-page .detail-item label {
@@ -1277,10 +1273,8 @@ section {
 }
 
 .profile-page .detail-value {
-    margin-left: 10px;
     font-style: italic;
 }
-
 
 
 /* Footer Styling */
