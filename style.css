@@ -1016,9 +1016,17 @@ section {
 
 /* Reclist Page Styling */
 
+.reclist-page .toggle-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically (if needed) */
+    gap: 10px; /* Optional: adds space between buttons */
+    padding-bottom: 40px;
+}
+
 .reclist-page .toggle-container .toggle-btn {
     display: inline-block;
-    width: 60px;
+    min-width: 60px; /* Use min-width to accommodate longer text */
     height: 30px;
     background-color: #ccc;
     border-radius: 15px;
@@ -1028,11 +1036,12 @@ section {
     color: #000; /* Text color */
     transition: background-color 0.3s;
     cursor: pointer;
+    padding: 0 15px; /* Add some padding on the sides */
 }
 
 /* Style for the "pressed" state */
 .reclist-page .toggle-container .current-page {
-    background-color: #4cd964; /* Active color */
+    background-color: orange; /* Active color */
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for "pressed" effect */
 }
 
