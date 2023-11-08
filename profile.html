@@ -39,12 +39,18 @@
     </header>
 
     <div class="profile-container">
+
+        <!-- Profile Header -->
         <header class="profile-header">
-            <img src="Images and Animations/user icon.png" alt="Profile Picture" class="profile-picture">
-            <h1 class="user-name">User Name</h1>
-            <p class="user-bio">User bio goes here...</p>
+        <!-- Profile Picture -->
+        <input type="file" id="profile-picture" class="profile-picture" accept="image/*">
+        <!-- Username -->
+        <input type="text" id="user-name" class="user-name" value="User Name">
+        <!-- User Bio -->
+        <textarea id="user-bio" class="user-bio">User bio goes here...</textarea>
         </header>
-        
+
+
         <section class="user-details">
             <div class="detail-item">
                 <label for="name">Name:</label>

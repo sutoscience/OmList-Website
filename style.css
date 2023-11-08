@@ -1278,6 +1278,31 @@ section {
     font-style: italic;
 }
 
+/* Profile Picture Input */
+.profile-page .profile-picture {
+    /* ... existing styles ... */
+    cursor: pointer; /* Indicates that it's clickable */
+}
+
+/* Username Input */
+.profile-page .user-name {
+    /* ... existing styles ... */
+    border: none;
+    background: transparent;
+    text-align: center;
+}
+
+/* User Bio Textarea */
+.profile-page .user-bio {
+    /* ... existing styles ... */
+    border: none;
+    background: transparent;
+    text-align: center;
+    width: 100%; /* Adjust as needed */
+    resize: none; /* Prevent resizing */
+}
+
+
 
 /* Footer Styling */
 footer {
