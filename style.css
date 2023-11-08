@@ -1386,13 +1386,24 @@ section {
     left: 0;
     right: 0;
     height: 50vh; /* Adjust the height as needed */
-    background: linear-gradient(
-      to bottom,
-      rgba(18, 18, 18, 0) 0%,
-      #121212 100%
-    ), url('path-to-your-movie-poster.jpg') no-repeat top center;
+    background: url('path-to-your-movie-poster.jpg') no-repeat top center;
     background-size: cover;
     z-index: 1; /* Lower z-index so it's behind the card */
+  }
+
+  .movie-profile-page .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      #121212 100%
+    );
+    z-index: 2; /* Ensure the gradient is above the banner image */
   }
   
  .movie-profile-page .banner-image {
@@ -1413,7 +1424,7 @@ section {
     right: 20px;
     border: none; /* Remove the border */
     border-radius: 8px;
-    z-index: 3;
+    z-index: 3; /* Ensure the poster is above the banner and gradient */
   }
 
   .movie-profile-page .poster-image {
