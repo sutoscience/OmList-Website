@@ -1354,10 +1354,14 @@ section {
   
   .movie-profile-page .banner {
     position: relative;
+    height: 20vh; /* Set the height of the banner to 20% of the viewport height */
+    overflow: hidden;
   }
   
   .movie-profile-page .banner-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will ensure the image covers the area without stretching */
     opacity: 0.5;
   }
   
@@ -1417,13 +1421,14 @@ section {
   }
   
   .movie-profile-page .like-button,
-  .dislike-button {
+  .movie-profile-page .dislike-button {
     background-color: transparent;
-    border: 1px solid #ffa500;
-    color: #ffa500;
-    padding: 5px 10px;
-    margin-right: 10px;
-    border-radius: 5px;
+    border: none;
+    padding: 0;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
   }
   
@@ -1433,6 +1438,13 @@ section {
     color: #000;
   }
 
+  .movie-profile-page .like-button {
+    background-image: url('Images and Animations/Swipe Screen Icons/Buttons/like button.png');
+  }
+  
+  .movie-profile-page .dislike-button {
+    background-image: url('Images and Animations/Swipe Screen Icons/Buttons/dislike button.png');
+  }
 
 
 /* Footer Styling */
