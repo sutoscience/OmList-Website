@@ -1254,6 +1254,26 @@ section {
     color: #333;
 }
 
+.profile-page .user-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.profile-page .detail-item {
+    margin-bottom: 10px;
+}
+
+.profile-page .detail-item label {
+    font-weight: bold;
+}
+
+.profile-page .detail-value {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+
 
 /* Footer Styling */
 footer {
