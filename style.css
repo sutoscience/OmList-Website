@@ -1351,29 +1351,34 @@ section {
   .movie-profile-page .card {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #121212;
+    background-color: #121212; /* This is the color the gradient will fade into */
     border-radius: 8px;
     overflow: hidden;
-    position: relative; /* Ensure this is positioned relative for z-index to work */
+    position: relative;
   }
 
   .movie-profile-page .card::before {
     content: '';
     position: absolute;
-    top: 0; /* Align with the top of the card */
+    top: 0;
     left: 0;
     right: 0;
-    height: 20vh; /* Height of the banner */
-    background: url('path-to-your-banner-image.jpg') no-repeat center center;
+    height: 100%; /* Make the gradient span the entire height of the card */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ), url('path-to-your-banner-image.jpg') no-repeat center center;
     background-size: cover;
-    z-index: -1; /* Behind the card content */
+    z-index: -1;
     opacity: 0.5;
   }
 
-  .movie-profile-page .content {
+.movie-profile-page .content {
   position: relative;
   z-index: 2;
 }
+
 
   .movie-profile-page .banner {
     position: absolute;
@@ -1398,19 +1403,19 @@ section {
     z-index: 2;
   }
   
-.movie-profile-page .poster {
+  .movie-profile-page .poster {
     position: absolute;
-    top: 20px; /* Adjust if necessary to ensure it's not cut off */
-    right: 20px; /* Align to the right side */
-    border: 5px solid #121212;
+    top: 20px; /* Adjust if necessary */
+    right: 20px;
+    border: none; /* Remove the border */
     border-radius: 8px;
-    z-index: 3; /* Ensure the poster is above both the pseudo-element and the card */
+    z-index: 3;
   }
 
-.movie-profile-page .poster-image {
-  width: 150px; /* Adjust width as necessary */
-  height: auto; /* Maintain aspect ratio */
-}
+  .movie-profile-page .poster-image {
+    width: 150px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+  }
   
 .movie-profile-page .info {
     padding: 20px;
