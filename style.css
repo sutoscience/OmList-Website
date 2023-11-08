@@ -1351,7 +1351,7 @@ section {
   .movie-profile-page .card {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #121212; /* This is the color the gradient will fade into */
+    background-color: transparent; /* Make the card background transparent */
     border-radius: 8px;
     overflow: hidden;
     position: relative;
@@ -1385,25 +1385,25 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    height: 50vh; /* Adjust the height as needed */
+    height: 30vh; /* Adjust the height as needed */
     background: url('path-to-your-movie-poster.jpg') no-repeat top center / cover;
     z-index: 1; /* Lower z-index so it's behind the card content */
   }
-  
-  .movie-profile-page .banner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(18, 18, 18, 0) 0%,
-      #121212 75% /* Adjust the percentage to control the gradient transition */
-    );
-    z-index: 2; /* Ensure the gradient is above the banner image */
-  }
+
+.movie-profile-page .banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 18, 18, 0) 0%,
+    #121212 100% /* Adjust the percentage to control the gradient transition */
+  );
+  z-index: 2; /* Ensure the gradient is above the banner image */
+}
 
  .movie-profile-page .banner-image {
   width: 100%;
@@ -1413,9 +1413,12 @@ section {
 }
 
   
-  .movie-profile-page .content {
+.movie-profile-page .content {
     position: relative;
+    z-index: 3; /* Ensure the content is above the banner and gradient */
+    padding-top: 20vh; /* Adjust padding to position the content correctly */
   }
+  
   
 .movie-profile-page .poster {
   position: absolute;
