@@ -725,7 +725,6 @@ section {
 .swipe-screen-page {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
     height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
@@ -918,12 +917,6 @@ section {
     margin: 0;
   }
   
-  body {
-    background: black;
-    overflow: hidden;
-    font-family: sans-serif;
-  }
-  
 
   .loaded.tinder {
     opacity: 1;
@@ -1112,15 +1105,10 @@ section {
 
 /* Footer Styling */
 footer {
-    position: relative;
-    bottom: 0;
     width: 100%;
-    background-color: black; 
-    padding-top: 300px;
-    padding: 20px; /* Space around the content */
-    text-align: center; /* Center align the text and content */
+    background-color: black;
     color: #fff; /* Example text color */
     text-align: center;
-    padding: 20px 0;
-    width: 100%;
+    padding: 20px 0; /* Space around the content */
+    margin-top: 50px; /* Ensure there's space between the content and the footer */
 }
