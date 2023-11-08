@@ -1199,6 +1199,62 @@ section {
 }
 
 
+/* Profile Page Styling */
+
+.profile-page .profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-page .profile-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-page .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    object-fit: cover;
+}
+
+.profile-page .user-name {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.profile-page .user-bio {
+    font-size: 1em;
+    color: #555;
+}
+
+.profile-page .profile-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-page .info-item {
+    text-align: center;
+}
+
+.profile-page .info-title {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.profile-page .info-value {
+    display: block;
+    font-size: 1.5em;
+    color: #333;
+}
+
+
 /* Footer Styling */
 footer {
     width: 100%;

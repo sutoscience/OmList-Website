@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body class="profile-page">
+
+    <!-- Header and NavBar Section -->
+    <header class="hero">
+        <div class="header-content">
+            <div class="logo-nav">
+                <div class="logo" id="logoId">
+                    <a href="index.html"><img src="Images and Animations/OmList Compact Logo.png" alt="OmList Logo" style="vertical-align: middle; width: 200px;" /></a>
+                </div>
+                <nav id="navbar" class="NavBar">
+                    <ul>
+                       <li><a href="swipescreen.html">Swipe</a></li>
+                        <li><a href="reclist.html">My Lists</a></li>
+                        <li>
+                            <div class="search-container">
+                                <form action="#" method="get">
+                                    <input type="text" placeholder="Search movies...">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="user-icon-container">
+                            <li><a href="profile.html"><img src="Images and Animations/user icon.png" alt="User" style="max-height: 50px;"></a></li>
+                        </div>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <header class="profile-header">
+            <img src="Images and Animations/user icon.png" alt="Profile Picture" class="profile-picture">
+            <h1 class="user-name">User Name</h1>
+            <p class="user-bio">User bio goes here...</p>
+        </header>
+        <section class="profile-info">
+            <div class="info-item">
+                <span class="info-title">Followers</span>
+                <span class="info-value">123k</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">Following</span>
+                <span class="info-value">456</span>
+            </div>
+            <div class="info-item">
+                <span class="info-title">Posts</span>
+                <span class="info-value">78</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
