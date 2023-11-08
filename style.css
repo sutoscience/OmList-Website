@@ -1341,6 +1341,100 @@ section {
 
 
 
+
+/* Movie Profile Page Styling */
+
+.movie-profile-page .card {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #121212;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .movie-profile-page .banner {
+    position: relative;
+  }
+  
+  .movie-profile-page .banner-image {
+    width: 100%;
+    opacity: 0.5;
+  }
+  
+  .movie-profile-page .content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .movie-profile-page .poster {
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    border: 5px solid #121212;
+    border-radius: 8px;
+  }
+  
+  .movie-profile-page .poster-image {
+    width: 150px;
+  }
+  
+  .movie-profile-page .info {
+    margin-left: 200px;
+    padding: 20px;
+  }
+  
+  .movie-profile-page .movie-title {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  .movie-profile-page .movie-year {
+    font-size: 1em;
+    opacity: 0.7;
+  }
+  
+  .movie-profile-page .icon-placeholder {
+    /* Placeholder for icon */
+  }
+  
+  .movie-profile-page .trailer-button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .movie-profile-page .movie-quote {
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  .movie-profile-page .like-dislike {
+    margin-top: 20px;
+  }
+  
+  .movie-profile-page .like-button,
+  .dislike-button {
+    background-color: transparent;
+    border: 1px solid #ffa500;
+    color: #ffa500;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .movie-profile-page .like-button:hover,
+  .dislike-button:hover {
+    background-color: #ffa500;
+    color: #000;
+  }
+
+
+
 /* Footer Styling */
 footer {
     width: 100%;
