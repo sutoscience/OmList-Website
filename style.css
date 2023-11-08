@@ -1355,6 +1355,7 @@ section {
     border-radius: 8px;
     overflow: hidden;
     position: relative;
+    z-index: 2; /* Ensure the card is above the banner */
   }
 
   .movie-profile-page .card::before {
@@ -1380,15 +1381,20 @@ section {
 }
 
 
-  .movie-profile-page .banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50vh; /* Set the height of the banner */
-    overflow: hidden;
-    z-index: 1; /* Lower z-index so it's behind the card */
-  }
+.movie-profile-page .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50vh; /* Adjust the height as needed */
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 18, 18, 0.6) 0%,
+    #121212 100%
+  ), url('path-to-your-movie-poster.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 1; /* Lower z-index so it's behind the card */
+}
   
  .movie-profile-page .banner-image {
   width: 100%;
@@ -1400,18 +1406,16 @@ section {
   
   .movie-profile-page .content {
     position: relative;
-    z-index: 2;
   }
   
   .movie-profile-page .poster {
     position: absolute;
     top: 20px; /* Adjust if necessary */
     right: 20px;
-    border: none; /* Remove the border */
+    border: none;
     border-radius: 8px;
-    z-index: 3;
   }
-
+  
   .movie-profile-page .poster-image {
     width: 150px; /* Adjust width as necessary */
     height: auto; /* Maintain aspect ratio */
