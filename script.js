@@ -1,3 +1,5 @@
+let access_token = "";
+
 // Log-In Pop-Up Code
 window.onload = function () {
     const loginButton = document.getElementById('loginButton');
@@ -32,6 +34,73 @@ window.onload = function () {
         }
     }
 }
+
+// Sign-up submit code
+document.getElementById('create-account-popup').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    // Gather data from the form
+    var formData = {
+        name: document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password-user').value
+    };
+
+    // Create the fetch request
+    fetch("http://18.218.139.176:3030/auth/signup", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            // If the response is not ok, parse and log it before throwing an error
+            return response.json().then(errorData => {
+                console.error("Error Response Body:", errorData);
+                throw new Error('Network response was not ok: ' + response.statusText);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("Account created successfully", data);
+        access_token = data.access_token;
+        document.getElementById('create-account-popup').style.display = 'none';
+    })
+    .catch(error => {
+        console.error("Error in account creation", error);
+    });
+});
+
+document.getElementById('get-user-button').addEventListener('click', function(event){
+    event.preventDefault();
+
+    fetch("http://18.218.139.176:3030/user", {
+        method: "GET",
+        headers: {
+            "Authorization": "Bearer " + access_token,
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(errorData => {
+                console.error("Error Response Body:", errorData);
+                throw new Error('Network response was not ok: ' + response.statusText);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("User fetched successfully", data);
+    })
+    .catch(error => {
+        console.error("Error in user fetching", error);
+    });
+});
+
+
 
 // About Page Scroll Bar
 window.addEventListener('scroll', function () {
