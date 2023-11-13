@@ -47,7 +47,7 @@ document.getElementById('create-account-popup').addEventListener('submit', funct
     };
 
     // Create the fetch request
-    fetch("http://18.218.139.176:3030/auth/signup", {
+    fetch("http://3.12.228.217:3030/auth/signup", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -77,7 +77,7 @@ document.getElementById('create-account-popup').addEventListener('submit', funct
 document.getElementById('get-user-button').addEventListener('click', function(event){
     event.preventDefault();
 
-    fetch("http://18.218.139.176:3030/user", {
+    fetch("http://3.12.228.217:3030/user", {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + access_token,
