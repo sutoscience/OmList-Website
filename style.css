@@ -1509,6 +1509,39 @@ section {
     background-image: url('Images and Animations/Swipe Screen Icons/Buttons/dislike button.png');
   }
 
+/* Tournament Mode Page Styling */
+
+.tournament-mode-page #tournament {
+    text-align: center;
+}
+
+.tournament-mode-page .movie-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tournament-mode-page .movie-card {
+    margin: 0 10px;
+    position: relative; /* For flame animation positioning */
+}
+
+.tournament-mode-page .movie-card img {
+    width: 150px; /* Adjust as necessary */
+    height: auto;
+}
+
+.tournament-mode-page .or {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tournament-mode-page .controls button {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
 
 /* Footer Styling */
 footer {

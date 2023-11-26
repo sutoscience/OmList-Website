@@ -6,14 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmList App</title>
+    <title>OmList App - Tournament Mode</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 
-    <body class="swipe-screen-page">
+    <body class="tournament-mode-page">
 
     <div id="overlay" style="display:none;"></div>
 
@@ -49,7 +49,23 @@
       </div>
   </header>
 
-
+  <div id="tournament">
+    <div class="movie-selection">
+        <div class="movie-card left" id="movieLeft">
+            <img src="Images and Animations/pirates 1.png" alt="Movie Poster Left">
+            <p class="movie-title">Pirates</p>
+        </div>
+        <div class="or">OR</div>
+        <div class="movie-card right" id="movieRight">
+            <img src="Images and Animations/matrix.png" alt="Movie Poster Right">
+            <p class="movie-title">The Matrix</p>
+        </div>
+    </div>
+    <div class="controls">
+        <button id="hateLeft">Hate Left</button>
+        <button id="hateRight">Hate Right</button>
+    </div>
+</div>
 
       <!-- Footer Section -->
       <footer class="footer">
