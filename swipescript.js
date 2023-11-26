@@ -35,19 +35,29 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Like and Dislike button handlers
+    // Like and Dislike button handlers with card animation
     const likeButton = document.getElementById('like');
     const dislikeButton = document.getElementById('dislike');
 
     likeButton.addEventListener('click', function() {
-        console.log('Liked');
-        // Add any additional logic for the like action here
+        if(allCards.length > 0) {
+            animateCard(allCards[0], true);
+        }
     });
 
     dislikeButton.addEventListener('click', function() {
-        console.log('Disliked');
-        // Add any additional logic for the dislike action here
+        if(allCards.length > 0) {
+            animateCard(allCards[0], false);
+        }
     });
+
+    // Function to animate card on like or dislike
+    function animateCard(card, isLiked) {
+        const outOfScreenX = isLiked ? window.innerWidth : -window.innerWidth;
+        card.style.transition = 'transform 0.5s ease-in-out';
+        card.style.transform = 'translate(' + outOfScreenX + 'px, 0px)';
+        setTimeout(() => card.remove(), 500);
+    }
 
     // Existing logout function
     function logoutFunction() {
