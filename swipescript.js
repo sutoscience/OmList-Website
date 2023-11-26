@@ -1,14 +1,10 @@
-// Swipescreen Page Code
+// Consolidating all code under one DOMContentLoaded event handler
 document.addEventListener('DOMContentLoaded', function () {
     const allCards = document.querySelectorAll('.tinder--card');
     const nopeIndicator = document.querySelector('.fa-remove');
     const loveIndicator = document.querySelector('.fa-heart');
 
-    if (allCards.length === 0) {
-        console.error('No tinder cards found.');
-        return;
-    }
-
+    // Handling swipe cards
     allCards.forEach(function (card) {
         const hammertime = new Hammer(card);
         hammertime.on('pan', function (event) {
@@ -22,40 +18,39 @@ document.addEventListener('DOMContentLoaded', function () {
             card.classList.remove('moving');
             loveIndicator.style.opacity = 0;
             nopeIndicator.style.opacity = 0;
-            if (Math.abs(event.deltaX) > 80) {
-                const outOfScreenX = (event.deltaX > 0) ? window.innerWidth : -window.innerWidth;
-                card.style.transition = 'transform 0.5s ease-in-out';
-                card.style.transform = 'translate(' + outOfScreenX + 'px, ' + event.deltaY + 'px)';
-                setTimeout(() => card.remove(), 500);
-            } else {
-                card.style.transition = 'transform 0.5s ease-in-out';
-                card.style.transform = 'translate(0px, 0px)';
-            }
+            handleSwipeEnd(event, card);
         });
     });
-});
 
-// Swipescreen - event listener for like or dislike buttons
+    // Swipe end handler
+    function handleSwipeEnd(event, card) {
+        if (Math.abs(event.deltaX) > 80) {
+            const outOfScreenX = (event.deltaX > 0) ? window.innerWidth : -window.innerWidth;
+            card.style.transition = 'transform 0.5s ease-in-out';
+            card.style.transform = 'translate(' + outOfScreenX + 'px, ' + event.deltaY + 'px)';
+            setTimeout(() => card.remove(), 500);
+        } else {
+            card.style.transition = 'transform 0.5s ease-in-out';
+            card.style.transform = 'translate(0px, 0px)';
+        }
+    }
 
-document.addEventListener('DOMContentLoaded', function () {
+    // Like and Dislike button handlers
     const likeButton = document.getElementById('like');
     const dislikeButton = document.getElementById('dislike');
 
     likeButton.addEventListener('click', function() {
-        // Handle like action here
         console.log('Liked');
+        // Add any additional logic for the like action here
     });
 
     dislikeButton.addEventListener('click', function() {
-        // Handle dislike action here
         console.log('Disliked');
+        // Add any additional logic for the dislike action here
     });
+
+    // Existing logout function
+    function logoutFunction() {
+        window.location.href = 'index.html'; // Redirect to index.html after logout
+    };
 });
-
-/* Navbar - Profile Page Logout */
-
-function logoutFunction() {
-    // Your logout code here
-    // Redirect to index.html after logout
-    window.location.href = 'index.html';
-};
