@@ -197,73 +197,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
-var nope = document.getElementById('dislike');
-var love = document.getElementById('like');
 
-// Initialize cards and add Hammer.js to each card
-function initCards() {
-  allCards.forEach(function (card, index) {
-    card.style.zIndex = allCards.length - index;
-    card.style.transform = 'scale(' + (1 - index * 0.1) + ') translateY(-' + 20 * index + 'px)';
-    card.style.opacity = 1;
-
-    // Add Hammer.js to the card
-    var hammertime = new Hammer(card);
-    hammertime.on('pan', function (event) {
-      card.classList.add('moving');
-      tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
-      tinderContainer.classList.toggle('tinder_nope', event.deltaX < 0);
-
-      var xMulti = event.deltaX * 0.03;
-      var yMulti = event.deltaY / 80;
-      var rotate = xMulti * yMulti;
-
-      card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
-    });
-
-    hammertime.on('panend', function (event) {
-      card.classList.remove('moving');
-      tinderContainer.classList.remove('tinder_love');
-      tinderContainer.classList.remove('tinder_nope');
-
-      if (Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5) {
-        card.style.transform = '';
-      } else {
-        card.style.transform = 'translate(' + event.deltaX * 2 + 'px, ' + event.deltaY * 2 + 'px) rotate(' + rotate + 'deg)';
-        setTimeout(function() {
-          card.remove(); // Remove the card from DOM after swipe
-        }, 300); // Adjust timeout to match CSS transition duration
-      }
-    });
+// Function to initialize Hammer.js on a card
+function initCardSwipe(card) {
+  var hammertime = new Hammer(card);
+  
+  hammertime.on('pan', function (event) {
+    card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px)';
   });
-}
 
-initCards();
-
-function createButtonListener(action) {
-  return function (event) {
-    var topCard = document.querySelector('.tinder--card:not(.removed)');
-    if (!topCard) return;
-
-    topCard.classList.add('removed');
-    if (action === 'like') {
-      topCard.style.transform = 'translate(100px, -100px) rotate(20deg)';
+  hammertime.on('panend', function (event) {
+    if (Math.abs(event.deltaX) > 100) {  // Swipe threshold
+      let outBoundX = Math.sign(event.deltaX) * window.innerWidth;
+      card.style.transition = 'transform 0.5s ease-in-out';
+      card.style.transform = `translate(${outBoundX}px)`;
+      setTimeout(() => card.remove(), 500); // Remove card after transition
     } else {
-      topCard.style.transform = 'translate(-100px, -100px) rotate(-20deg)';
+      card.style.transform = ''; // Reset card position
     }
+ });
+s 
 
-    setTimeout(function() {
-      topCard.remove(); // Remove the card from DOM after swipe
-    }, 300); // Adjust timeout to match CSS transition duration
-  };
-}
-
-var nopeListener = createButtonListener('nope');
-var loveListener = createButtonListener('like');
-
-nope.addEventListener('click', nopeListener);
-love.addEventListener('click', loveListener);
-
+// Initialize all cards
+allCards.forEach(initCardSwipe);
 
 
 /* Profile Page */
