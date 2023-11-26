@@ -858,7 +858,6 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
-    opacity: 0;
     transition: opacity 0.1s ease-in-out;
     min-height: calc(100vh - 200px); /* Adjust the 120px to account for the height of the buttons and any desired spacing */
     padding-bottom: 100px; /* This should be at least half the height of your buttons to ensure they are visible */
@@ -1414,8 +1413,6 @@ section {
   opacity: 0.5;
 }
 
-
-  
 .movie-profile-page .poster {
   position: absolute;
   top: 20px; /* Adjust if necessary */
