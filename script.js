@@ -193,13 +193,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Swipe Screen Page */
 
-'use strict';
-
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
 
+if (tinderContainer && allCards.length > 0) {
+    initCards();
+}
+
 function initCards() {
-    allCards.forEach(function(card, index) {
+    allCards.forEach(function(card) {
         var hammertime = new Hammer(card);
         hammertime.on('pan', function(event) {
             card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px)';
@@ -215,8 +217,6 @@ function initCards() {
         });
     });
 }
-
-initCards();
 
 // Initialize all cards
 allCards.forEach(initCardSwipe);

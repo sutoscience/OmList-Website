@@ -1315,11 +1315,6 @@ section {
     margin: 0 auto; /* Center the label */
 }
 
-/* Profile Picture Upload Input */
-.profile-page .profile-picture-upload {
-    /* Hide the actual input, but it will be clicked when the label is clicked */
-}
-
 /* Username Input */
 .profile-page .user-name {
     border: none;
@@ -1443,9 +1438,6 @@ section {
     opacity: 0.7;
   }
   
-  .movie-profile-page .icon-placeholder {
-    /* Placeholder for icon */
-  }
   
   .movie-profile-page .trailer-button {
     background-color: #ffa500;
