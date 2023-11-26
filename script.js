@@ -193,30 +193,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Swipe Screen Page */
 
-var tinderContainer = document.querySelector('.tinder');
-var allCards = document.querySelectorAll('.tinder--card');
-
-if (tinderContainer && allCards.length > 0) {
-    initCards();
-}
-
-function initCards() {
-    allCards.forEach(function(card) {
-        var hammertime = new Hammer(card);
-        hammertime.on('pan', function(event) {
-            card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px)';
-        });
-
-        hammertime.on('panend', function(event) {
-            if (Math.abs(event.deltaX) > 100 || Math.abs(event.velocityX) > 0.5) {
-                card.style.transform = 'translate(' + event.deltaX * 3 + 'px, ' + event.deltaY * 3 + 'px)';
-                setTimeout(() => card.remove(), 200);
-            } else {
+document.addEventListener('DOMContentLoaded', function() {
+    var allCards = document.querySelectorAll('.tinder--card');
+    if (allCards) {
+        allCards.forEach(function(card) {
+            var hammertime = new Hammer(card);
+            hammertime.on('pan', function(event) {
+                card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px)';
+            });
+            hammertime.on('panend', function(event) {
                 card.style.transform = ''; // Reset card position
-            }
+            });
         });
-    });
-}
+    }
+});
+
 
 // Initialize all cards
 allCards.forEach(initCardSwipe);
