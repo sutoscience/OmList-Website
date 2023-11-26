@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             card.style.transform = 'translate(0px, 0px)';
         }
     }
-    
+
     // Function to find the topmost card
     function getTopCard() {
         const allCards = document.querySelectorAll('.tinder--card');
@@ -58,6 +58,36 @@ document.addEventListener('DOMContentLoaded', function () {
             animateCard(topCard, false); // False for dislike
         }
     });
+
+        // Function to handle like action
+        function likeAction() {
+            const topCard = getTopCard();
+            if (topCard) {
+                animateCard(topCard, true); // True for like
+            }
+        }
+    
+        // Function to handle dislike action
+        function dislikeAction() {
+            const topCard = getTopCard();
+            if (topCard) {
+                animateCard(topCard, false); // False for dislike
+            }
+        }
+
+        // Attaching click events to buttons
+        likeButton.addEventListener('click', likeAction);
+        dislikeButton.addEventListener('click', dislikeAction);
+    
+        // Keydown event for arrow keys
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                likeAction(); // Bind right arrow key to like action
+            }
+            if (event.key === 'ArrowLeft') {
+                dislikeAction(); // Bind left arrow key to dislike action
+            }
+        });
 
     // Updated animateCard function
     function animateCard(card, isLiked) {
