@@ -198,25 +198,25 @@ document.addEventListener('DOMContentLoaded', function() {
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
 
-// Function to initialize Hammer.js on a card
-function initCardSwipe(card) {
-  var hammertime = new Hammer(card);
-  
-  hammertime.on('pan', function (event) {
-    card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px)';
-  });
+function initCards() {
+    allCards.forEach(function(card, index) {
+        var hammertime = new Hammer(card);
+        hammertime.on('pan', function(event) {
+            card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px)';
+        });
 
-  hammertime.on('panend', function (event) {
-    if (Math.abs(event.deltaX) > 100) {  // Swipe threshold
-      let outBoundX = Math.sign(event.deltaX) * window.innerWidth;
-      card.style.transition = 'transform 0.5s ease-in-out';
-      card.style.transform = `translate(${outBoundX}px)`;
-      setTimeout(() => card.remove(), 500); // Remove card after transition
-    } else {
-      card.style.transform = ''; // Reset card position
-    }
- });
-s 
+        hammertime.on('panend', function(event) {
+            if (Math.abs(event.deltaX) > 100 || Math.abs(event.velocityX) > 0.5) {
+                card.style.transform = 'translate(' + event.deltaX * 3 + 'px, ' + event.deltaY * 3 + 'px)';
+                setTimeout(() => card.remove(), 200);
+            } else {
+                card.style.transform = ''; // Reset card position
+            }
+        });
+    });
+}
+
+initCards();
 
 // Initialize all cards
 allCards.forEach(initCardSwipe);
