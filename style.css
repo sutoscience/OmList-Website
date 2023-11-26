@@ -962,16 +962,6 @@ section {
     pointer-events: none;
   }
   
-  .tinder--status i {
-    font-size: 100px;
-    opacity: 0;
-    transform: scale(0.3);
-    transition: all 0.2s ease-in-out;
-    position: absolute;
-    width: 100px;
-    margin-left: -50px;
-  }
-  
   .tinder_love .fa-heart {
     opacity: 0.7;
     transform: scale(1);
@@ -994,28 +984,52 @@ section {
   }
   
   .tinder--card {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 90vw;
     max-width: 400px;
     height: 70vh;
     background: #FFFFFF;
-    padding-bottom: 40px;
     border-radius: 8px;
     overflow: hidden;
     position: absolute;
     will-change: transform;
-    transition: all 0.3s ease-in-out;
-    cursor: -webkit-grab;
-    cursor: -moz-grab;
+    transition: transform 0.3s ease-in-out;
     cursor: grab;
-  }
-  
-  .moving.tinder--card {
+    z-index: 10; /* Make sure cards are above other elements */
+}
+
+.swiped-right {
+    transform: translate3d(1000px, 100px, 0) rotate(20deg);
+}
+
+.swiped-left {
+    transform: translate3d(-1000px, 100px, 0) rotate(-20deg);
+}
+
+.moving {
     transition: none;
-    cursor: -webkit-grabbing;
-    cursor: -moz-grabbing;
     cursor: grabbing;
-  }
+}
+
+.tinder--status i {
+    font-size: 100px;
+    opacity: 0; /* Set to 0 by default, will be changed by JS */
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    z-index: 20; /* Make sure status icons are above cards */
+}
+
+/* Ensure that the status icons only appear during a swipe */
+.tinder--card.moving .tinder--status .fa-remove,
+.tinder--card.moving .tinder--status .fa-heart {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
   
   .tinder--card img {
     max-width: 100%;

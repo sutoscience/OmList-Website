@@ -1,43 +1,129 @@
-let access_token = "";
+console.log('Script loaded');
 
 // Log-In Pop-Up Code
 window.onload = function () {
     const loginButton = document.getElementById('loginButton');
     const loginContainer = document.getElementById('login-container');
     const overlay = document.getElementById('overlay');
-    const navbar = document.getElementById('navbar');
 
-    if (loginButton && loginContainer && overlay && navbar) {
+    // Function to toggle the login popup
+    function toggleLoginPopup() {
+        if (loginContainer && (loginContainer.style.display === 'none' || loginContainer.style.display === '')) {
+            loginContainer.style.display = 'block';
+            overlay.style.display = 'block';
+        } else if (loginContainer) {
+            loginContainer.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    }
+
+    // Function to close the login popup
+    function closeLoginPopup() {
+        if (loginContainer) {
+            loginContainer.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    }
+
+    if (loginButton && loginContainer && overlay) {
         loginButton.addEventListener('click', function (event) {
             event.stopPropagation();
             toggleLoginPopup();
         });
 
-        document.addEventListener('click', closeLoginPopup);
-        navbar.addEventListener('click', closeLoginPopup);
+        overlay.addEventListener('click', closeLoginPopup);
         loginContainer.addEventListener('click', function (event) {
             event.stopPropagation();
         });
-
-        function toggleLoginPopup() {
-            if (loginContainer.style.display === 'none' || loginContainer.style.display === '') {
-                loginContainer.style.display = 'block';
-                overlay.style.display = 'block';
-            } else {
-                closeLoginPopup();
-            }
-        }
-
-        function closeLoginPopup() {
-            loginContainer.style.display = 'none';
-            overlay.style.display = 'none';
-        }
     }
+    };
+
+// Check if the sign-up form exists before adding event listeners
+const createAccountPopup = document.getElementById('create-account-popup');
+if (createAccountPopup) {
+    createAccountPopup.addEventListener('submit', function(event){
+        event.preventDefault();
+        
+        // Gather data from the form
+        var formData = {
+            name: document.getElementById('first-name').value + ' ' + document.getElementById('last-name').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password-user').value
+        };
+
+        // Create the fetch request
+        fetch("http://3.12.228.217:3030/auth/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (!response.ok) {
+                // If the response is not ok, parse and log it before throwing an error
+                return response.json().then(errorData => {
+                    console.error("Error Response Body:", errorData);
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                });
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Account created successfully", data);
+            access_token = data.access_token;
+            document.getElementById('create-account-popup').style.display = 'none';
+        })
+        .catch(error => {
+            console.error("Error in account creation", error);
+        });
+    });
 }
 
+
+// Swipescreen Page Code
+document.addEventListener('DOMContentLoaded', function () {
+    const allCards = document.querySelectorAll('.tinder--card');
+    const nopeIndicator = document.querySelector('.fa-remove');
+    const loveIndicator = document.querySelector('.fa-heart');
+
+    if (allCards.length === 0) {
+        console.error('No tinder cards found.');
+        return;
+    }
+
+    allCards.forEach(function (card) {
+        const hammertime = new Hammer(card);
+        hammertime.on('pan', function (event) {
+            card.classList.add('moving');
+            card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px)';
+            if (event.deltaX > 0) loveIndicator.style.opacity = 1;
+            else if (event.deltaX < 0) nopeIndicator.style.opacity = 1;
+        });
+
+        hammertime.on('panend', function (event) {
+            card.classList.remove('moving');
+            loveIndicator.style.opacity = 0;
+            nopeIndicator.style.opacity = 0;
+            if (Math.abs(event.deltaX) > 80) {
+                const outOfScreenX = (event.deltaX > 0) ? window.innerWidth : -window.innerWidth;
+                card.style.transition = 'transform 0.5s ease-in-out';
+                card.style.transform = 'translate(' + outOfScreenX + 'px, ' + event.deltaY + 'px)';
+                setTimeout(() => card.remove(), 500);
+            } else {
+                card.style.transition = 'transform 0.5s ease-in-out';
+                card.style.transform = 'translate(0px, 0px)';
+            }
+        });
+    });
+});
+
 // Sign-up submit code
-document.getElementById('create-account-popup').addEventListener('submit', function(event){
-    event.preventDefault();
+   if (createAccountPopup) {
+       createAccountPopup.addEventListener('submit', function(event){
+           event.preventDefault();
+        });
+    }
 
     // Gather data from the form
     var formData = {
@@ -72,7 +158,6 @@ document.getElementById('create-account-popup').addEventListener('submit', funct
     .catch(error => {
         console.error("Error in account creation", error);
     });
-});
 
 document.getElementById('get-user-button').addEventListener('click', function(event){
     event.preventDefault();
@@ -99,7 +184,6 @@ document.getElementById('get-user-button').addEventListener('click', function(ev
         console.error("Error in user fetching", error);
     });
 });
-
 
 
 // About Page Scroll Bar
@@ -189,30 +273,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-
-/* Swipe Screen Page */
-
-document.addEventListener('DOMContentLoaded', function() {
-    var allCards = document.querySelectorAll('.tinder--card');
-    if (allCards) {
-        allCards.forEach(function(card) {
-            var hammertime = new Hammer(card);
-            hammertime.on('pan', function(event) {
-                card.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px)';
-            });
-            hammertime.on('panend', function(event) {
-                card.style.transform = ''; // Reset card position
-            });
-        });
-    }
-});
-
-
-// Initialize all cards
-allCards.forEach(initCardSwipe);
-
-
 /* Profile Page */
 
 // JavaScript to change the profile picture when a new file is selected
@@ -231,5 +291,4 @@ function logoutFunction() {
     // Your logout code here
     // Redirect to index.html after logout
     window.location.href = 'index.html';
-  }
-  
+};
