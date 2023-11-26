@@ -10,9 +10,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to animate and remove movie poster
     function removeMovie(movieElement, direction) {
+        movieElement.classList.add('flame');
         // Add flames and removal animation
         // Replace with next movie poster after animation
     }
+
+    setTimeout(function () {
+        movieElement.classList.add('remove');
+
+          // After the poster has "burned", remove it and replace with a new one
+          setTimeout(function () {
+            replaceMovie(movieElement);
+            movieElement.classList.remove('flame', 'remove');
+        }, 1000); // Corresponds with the duration of the burnAndFade animation
+    }, 3000); 
+    
+    function replaceMovie(movieElement) {
+        // Logic to load a new movie poster goes here
+        // For example, setting new src for the img tag and updating the movie title
+        movieElement.querySelector('img').src = 'new_path_to_movie_poster.jpg';
+        movieElement.querySelector('.movie-title').textContent = 'New Movie Title';
+     //This duration should match the length of your flame GIF or CSS animation//
+}
 
     // Hammer.js swipe event listeners for both movie cards
     var hammerLeft = new Hammer(leftMovie);
