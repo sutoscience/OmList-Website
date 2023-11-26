@@ -34,30 +34,41 @@ document.addEventListener('DOMContentLoaded', function () {
             card.style.transform = 'translate(0px, 0px)';
         }
     }
+    
+    // Function to find the topmost card
+    function getTopCard() {
+        const allCards = document.querySelectorAll('.tinder--card');
+        return allCards.length > 0 ? allCards[allCards.length - 1] : null;
+    }
 
-    // Like and Dislike button handlers with card animation
+    // Updated like and dislike button handlers
     const likeButton = document.getElementById('like');
     const dislikeButton = document.getElementById('dislike');
 
     likeButton.addEventListener('click', function() {
-        if(allCards.length > 0) {
-            animateCard(allCards[0], true);
+        const topCard = getTopCard();
+        if(topCard) {
+            animateCard(topCard, true); // True for like
         }
     });
 
     dislikeButton.addEventListener('click', function() {
-        if(allCards.length > 0) {
-            animateCard(allCards[0], false);
+        const topCard = getTopCard();
+        if(topCard) {
+            animateCard(topCard, false); // False for dislike
         }
     });
 
-    // Function to animate card on like or dislike
+    // Updated animateCard function
     function animateCard(card, isLiked) {
-        const outOfScreenX = isLiked ? window.innerWidth : -window.innerWidth;
-        card.style.transition = 'transform 0.5s ease-in-out';
-        card.style.transform = 'translate(' + outOfScreenX + 'px, 0px)';
-        setTimeout(() => card.remove(), 500);
+        if(card) {
+            const outOfScreenX = isLiked ? window.innerWidth : -window.innerWidth;
+            card.style.transition = 'transform 0.5s ease-in-out';
+            card.style.transform = 'translate(' + outOfScreenX + 'px, 0px)';
+            setTimeout(() => card.remove(), 500);
+        }
     }
+
 
     // Existing logout function
     function logoutFunction() {
