@@ -905,6 +905,12 @@ section {
     background-size: contain;
     background-color: transparent; 
 }
+
+.havent-seen {
+    background-size: contain;
+    background-color: transparent; 
+    border: none;
+}
   
   .dislike {
     margin-left: 10px; /* Adjust as needed */
@@ -919,6 +925,11 @@ section {
 }
 
 .like img {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+}
+
+.havent-seen img {
     width: 50px; /* Adjust as needed */
     height: 50px; /* Adjust as needed */
 }

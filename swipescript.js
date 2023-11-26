@@ -75,6 +75,22 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+
+        // Function to animate card for "Haven't Seen" action
+    function haventSeenAction() {
+        const topCard = getTopCard();
+        if (topCard) {
+            const outOfScreenY = window.innerHeight;
+            topCard.style.transition = 'transform 0.5s ease-in-out';
+            topCard.style.transform = 'translate(0px, ' + outOfScreenY + 'px)';
+            setTimeout(() => topCard.remove(), 500);
+        }
+    }
+
+    // Attaching event to the "Haven't Seen" button
+    const haventSeenButton = document.getElementById('haventSeen');
+    haventSeenButton.addEventListener('click', haventSeenAction);
+
         // Attaching click events to buttons
         likeButton.addEventListener('click', likeAction);
         dislikeButton.addEventListener('click', dislikeAction);
@@ -86,6 +102,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (event.key === 'ArrowLeft') {
                 dislikeAction(); // Bind left arrow key to dislike action
+            }
+            if (event.key === 'ArrowDown') {
+                haventSeenAction(); // Bind down arrow key to havent seen action
             }
         });
 
