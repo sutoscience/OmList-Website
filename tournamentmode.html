@@ -1,0 +1,78 @@
+<!-- FILEPATH: /Users/amysuto/Sutoscience LLC Dropbox/Amy Suto/~2023 Documents and Photos/Coding Projects/OmList Website/swipescreen.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmList App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
+    <body class="swipe-screen-page">
+
+    <div id="overlay" style="display:none;"></div>
+
+    <!-- Header and NavBar Section -->
+    <header class="hero">
+      <div class="header-content">
+          <div class="logo-nav">
+              <div class="logo" id="logoId">
+                  <a href="index.html"><img src="Images and Animations/OmList Compact Logo.png" alt="OmList Logo" style="vertical-align: middle; width: 200px;" /></a>
+              </div>
+              <nav id="navbar" class="NavBar">
+                  <ul>
+                     <li><a href="swipescreen.html">Swipe</a></li>
+                      <li><a href="reclist.html">My Lists</a></li>
+                      <li>
+                          <div class="search-container">
+                              <form action="#" method="get">
+                                  <input type="text" placeholder="Search movies...">
+                                  <button type="submit"><i class="fa fa-search"></i></button>
+                              </form>
+                          </div>
+                      </li>
+                      <div class="user-icon-container">
+                          <li><a href="profile.html"><img src="Images and Animations/user icon.png" alt="User" style="max-height: 50px;"></a></li>
+                          <div class="dropdown">
+                              <a href="profile.html">Settings</a>
+                              <a href="index.html" onclick="logoutFunction()">Log Out</a>
+                            </div>
+                            
+                      </div>
+                  </ul>
+              </nav>
+      </div>
+  </header>
+
+
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="terms-of-service">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 OmList. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Connector -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script src="tourneyscript.js"></script>
+
+
+</body>
+
+</html>

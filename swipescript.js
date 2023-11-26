@@ -59,34 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-        // Function to handle like action
-        function likeAction() {
-            const topCard = getTopCard();
-            if (topCard) {
-                animateCard(topCard, true); // True for like
-            }
-        }
-    
-        // Function to handle dislike action
-        function dislikeAction() {
-            const topCard = getTopCard();
-            if (topCard) {
-                animateCard(topCard, false); // False for dislike
-            }
-        }
-
-
-        // Function to animate card for "Haven't Seen" action
-    function haventSeenAction() {
-        const topCard = getTopCard();
-        if (topCard) {
-            const outOfScreenY = window.innerHeight;
-            topCard.style.transition = 'transform 0.5s ease-in-out';
-            topCard.style.transform = 'translate(0px, ' + outOfScreenY + 'px)';
-            setTimeout(() => topCard.remove(), 500);
-        }
-    }
-
     // Attaching event to the "Haven't Seen" button
     const haventSeenButton = document.getElementById('haventSeen');
     haventSeenButton.addEventListener('click', haventSeenAction);
@@ -99,12 +71,17 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('keydown', function(event) {
             if (event.key === 'ArrowRight') {
                 likeAction(); // Bind right arrow key to like action
+                event.preventDefault(); // Prevents the page from scrolling
+
             }
             if (event.key === 'ArrowLeft') {
                 dislikeAction(); // Bind left arrow key to dislike action
+                event.preventDefault(); // Prevents the page from scrolling
+
             }
             if (event.key === 'ArrowDown') {
                 haventSeenAction(); // Bind down arrow key to havent seen action
+                event.preventDefault(); // Prevents the page from scrolling
             }
         });
 
@@ -116,6 +93,43 @@ document.addEventListener('DOMContentLoaded', function () {
             card.style.transform = 'translate(' + outOfScreenX + 'px, 0px)';
             setTimeout(() => card.remove(), 500);
         }
+    }
+
+    function handleSwipe() {
+        swipeCount++;
+        if (swipeCount > 20 && Math.random() < 0.1) { // 10% chance after 20 swipes
+            window.location.href = 'tournamentmode.html'; // Redirect to tournament mode
+            return true; // Indicates a redirect occurred
+        }
+        return false; // Indicates no redirect occurred
+    }
+
+    // Wrap existing actions to include handleSwipe
+    function likeAction() {
+        const topCard = getTopCard();
+        if (topCard) {
+            animateCard(topCard, true); // True for like
+            return handleSwipe();
+        }
+        return false;
+    }
+
+    function dislikeAction() {
+        const topCard = getTopCard();
+        if (topCard) {
+            animateCard(topCard, false); // False for dislike
+            return handleSwipe();
+        }
+        return false;
+    }
+
+    function haventSeenAction() {
+        const topCard = getTopCard();
+        if (topCard) {
+            animateCard(topCard, 'down');
+            return handleSwipe();
+        }
+        return false;
     }
 
 
