@@ -212,7 +212,8 @@ function initCards(card, index) {
   tinderContainer.classList.add('loaded');
 }
 
-initCards();
+// Initialize all cards
+allCards.forEach((card, index) => initCards(card, index));
 
 allCards.forEach(function (el) {
   var hammertime = new Hammer(el);
@@ -245,9 +246,7 @@ allCards.forEach(function (el) {
 
     event.target.classList.toggle('removed', !keep);
 
-    if (keep) {
-      event.target.style.transform = '';
-    } else {
+    if (!keep) {
       var endX = Math.max(Math.abs(event.velocityX) * moveOutWidth, moveOutWidth);
       var toX = event.deltaX > 0 ? endX : -endX;
       var endY = Math.abs(event.velocityY) * moveOutWidth;
@@ -262,7 +261,7 @@ allCards.forEach(function (el) {
   });
 });
 
-function createButtonListener(love) {
+function createButtonListener(loveAction) {
   return function (event) {
     var cards = document.querySelectorAll('.tinder--card:not(.removed)');
     var moveOutWidth = document.body.clientWidth * 1.5;
@@ -270,17 +269,15 @@ function createButtonListener(love) {
     if (!cards.length) return false;
 
     var card = cards[0];
-
     card.classList.add('removed');
 
-    if (like) {
+    if (loveAction) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
     } else {
       card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
     }
 
     initCards();
-
     event.preventDefault();
   };
 }
@@ -290,6 +287,7 @@ var loveListener = createButtonListener(true);
 
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
+
 
 
 
