@@ -1564,6 +1564,10 @@ section {
     }
 }
 
+.tournament-mode-page .movie-card.burned {
+    display: none; /* Hide burned cards */
+}
+
 
 
 /* Footer Styling */
