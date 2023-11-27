@@ -1520,24 +1520,34 @@ section {
     gap: 20px; /* Adjust the gap as necessary */
 }
 
-/* Styling for the OR divider */
+/* Style the OR divider */
 .tournament-mode-page .or {
+    flex-shrink: 0; /* Prevents the OR divider from shrinking */
     font-size: 24px;
     font-weight: bold;
-    padding: 0 20px; /* Gives some space around the OR text */
-    flex-shrink: 0; /* Prevents the OR divider from shrinking */
+    margin: 0 20px; /* Adjust the margin as needed */
 }
 
-/* Individual movie card positioning */
+/* Style the stacks of cards */
 .tournament-mode-page .movie-stack {
-    flex: 1; /* Allows the movie stacks to grow and take available space */
-    position: relative; /* Stacks the cards on top of each other */
+    position: relative;
+    width: 300px; /* or your preferred width */
+    height: 400px; /* or your preferred height */
+    margin: 0 10px; /* Adjust the margin as needed */
 }
 
+/* Position the movie cards absolutely within their stack */
 .tournament-mode-page .movie-card {
-    width: auto; /* Allows the card to grow as needed, respecting the aspect ratio of the image */
-    max-width: 45%; /* Limits the card size to 45% of its container */
-    margin: 0; /* Resets any margin to align properly */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* This hides the back of cards when flipped */
+    transition: transform 0.3s; /* Smooth transition for any transformations */
+}
+
+/* This is an example to position the first card at the top, you will need to adjust for others */
+.tournament-mode-page .movie-stack .movie-card:first-child {
+    z-index: 3; /* Adjust as needed for stacking */
 }
 
 /* Styles for the movie posters */
@@ -1558,7 +1568,9 @@ section {
 }
 
 .tournament-mode-page #tournament {
-    text-align: center;
+    display: flex;
+    justify-content: space-around; /* This will place content evenly spaced */
+    align-items: center;
 }
 
 .tournament-mode-page .controls button {
@@ -1576,14 +1588,14 @@ section {
 
 
 .tournament-mode-page .footer {
-    position: relative; /* Change from 'absolute' to 'relative' if it's currently absolute */
-    clear: both; /* Ensures it doesn't overlap with the content above */
+    clear: both;
+    position: relative; /* Change from absolute if necessary */
     width: 100%;
     background-color: black;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px; /* Adjust this value as needed to ensure there's space between the content and the footer */
+    margin-top: 50px; /* Adjust as necessary to ensure space between the content and footer */
 }
 
 /* Footer Styling */
