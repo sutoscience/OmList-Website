@@ -1511,31 +1511,40 @@ section {
 
 /* Tournament Mode Page Styling */
 
+/* Flex container for movie cards and OR divider */
 .tournament-mode-page .movie-selection {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows elements to wrap to the next line on small screens */
+    gap: 20px; /* Adjust the gap as necessary */
 }
 
+/* Styling for the OR divider */
+.tournament-mode-page .or {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 20px; /* Gives some space around the OR text */
+    flex-shrink: 0; /* Prevents the OR divider from shrinking */
+}
+
+/* Individual movie card positioning */
 .tournament-mode-page .movie-stack {
-    position: relative;
-    display: inline-block; /* Adjust as needed */
+    flex: 1; /* Allows the movie stacks to grow and take available space */
+    position: relative; /* Stacks the cards on top of each other */
 }
 
 .tournament-mode-page .movie-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Adjust z-index for stacking */
-    width: 300px; /* Adjust size as needed */
-    height: auto;
-    cursor: pointer;
+    width: auto; /* Allows the card to grow as needed, respecting the aspect ratio of the image */
+    max-width: 45%; /* Limits the card size to 45% of its container */
+    margin: 0; /* Resets any margin to align properly */
 }
 
+/* Styles for the movie posters */
 .tournament-mode-page .movie-card img {
-    width: 100%;
-    height: auto;
+    width: auto; /* Changed from a fixed width to auto to maintain aspect ratio */
+    max-width: 100%; /* Ensures image does not overflow its container */
+    height: auto; /* Maintains aspect ratio */
 }
 
 .tournament-mode-page .movie-stack#leftMovieStack .movie-card {
@@ -1547,13 +1556,6 @@ section {
     left: auto; /* Position to the right */
     right: -350px; /* Adjust position */
 }
-
-.tournament-mode-page .or {
-    font-size: 24px;
-    font-weight: bold;
-    padding: 0 20px; /* Adjust space around 'OR' */
-}
-
 
 .tournament-mode-page #tournament {
     text-align: center;
@@ -1568,6 +1570,20 @@ section {
     color: white;
     font-size: 24px;
     margin-bottom: 20px;
+    width: 100%;
+    text-align: center; /* Centers the header text */
+}
+
+
+.tournament-mode-page .footer {
+    position: relative; /* Change from 'absolute' to 'relative' if it's currently absolute */
+    clear: both; /* Ensures it doesn't overlap with the content above */
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px; /* Adjust this value as needed to ensure there's space between the content and the footer */
 }
 
 /* Footer Styling */
