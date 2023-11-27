@@ -1516,17 +1516,17 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allows elements to wrap to the next line on small screens */
-    gap: 20px; /* Adjust the gap as necessary */
 }
 
 /* Style the OR divider */
 .tournament-mode-page .or {
-    flex-shrink: 0; /* Prevents the OR divider from shrinking */
+    /* Ensure the OR text is centered */
+    text-align: center;
+    margin: 0 20px;
     font-size: 24px;
     font-weight: bold;
-    margin: 0 20px; /* Adjust the margin as needed */
 }
+
 
 /* Style the stacks of cards */
 .tournament-mode-page .movie-stack {
@@ -1583,7 +1583,7 @@ section {
     font-size: 24px;
     margin-bottom: 20px;
     width: 100%;
-    text-align: center; /* Centers the header text */
+    text-align: center;
 }
 
 
