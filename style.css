@@ -1511,31 +1511,37 @@ section {
 
 /* Tournament Mode Page Styling */
 
+.tournament-mode-page #tournament {
+    display: flex;
+    justify-content: space-between; /* This will place content evenly spaced */
+    align-items: center;
+}
+
+#tournament h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.tournament-mode-page .movie-stack {
+    flex: 1; /* This will make the movie stacks take up equal space on either side */
+    display: flex;
+    justify-content: center; /* This will center the movie cards within the stack */
+}
+
+.tournament-mode-page .or {
+    flex: 1; /* This will make the "OR" take up equal space */
+    text-align: center; /* This will center the "OR" text */
+}
+
 /* Flex container for movie cards and OR divider */
 .tournament-mode-page .movie-selection {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* Style the OR divider */
-.tournament-mode-page .or {
-    /* Ensure the OR text is centered */
-    text-align: center;
-    margin: 0 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
-/* Style the stacks of cards */
-.tournament-mode-page .movie-stack {
-    position: relative;
-    width: 300px; /* or your preferred width */
-    height: 400px; /* or your preferred height */
-    margin: 0 10px; /* Adjust the margin as needed */
-}
-
 /* Position the movie cards absolutely within their stack */
 .tournament-mode-page .movie-card {
     position: absolute;
@@ -1566,26 +1572,6 @@ section {
     left: auto; /* Position to the right */
     right: -350px; /* Adjust position */
 }
-
-.tournament-mode-page #tournament {
-    display: flex;
-    justify-content: space-around; /* This will place content evenly spaced */
-    align-items: center;
-}
-
-.tournament-mode-page .controls button {
-    margin: 10px;
-    padding: 10px 20px;
-}
-
-#tournament h2 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-}
-
 
 .tournament-mode-page .footer {
     clear: both;
