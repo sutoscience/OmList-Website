@@ -1543,9 +1543,22 @@ section {
     margin-bottom: 20px;
 }
 
-.movie-card {
+.tournament-mode-page .movie-card {
     cursor: pointer; /* Make posters look clickable */
     /* Other styles as necessary */
+}
+
+.tournament-mode-page .movie-stack {
+    position: relative;
+    /* Other styles as needed */
+}
+
+.tournament-mode-page .movie-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Use higher z-index for the top card */
+    /* Other styles as needed */
 }
 
 
