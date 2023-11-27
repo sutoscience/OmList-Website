@@ -1511,10 +1511,6 @@ section {
 
 /* Tournament Mode Page Styling */
 
-.tournament-mode-page #tournament {
-    text-align: center;
-}
-
 .tournament-mode-page .movie-selection {
     display: flex;
     justify-content: center;
@@ -1522,14 +1518,45 @@ section {
     margin-bottom: 20px;
 }
 
-.tournament-mode-page .movie-card img {
-    width: 300px; /* Adjust as necessary */
+.tournament-mode-page .movie-stack {
+    position: relative;
+    display: inline-block; /* Adjust as needed */
+}
+
+.tournament-mode-page .movie-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Adjust z-index for stacking */
+    width: 300px; /* Adjust size as needed */
     height: auto;
+    cursor: pointer;
+}
+
+.tournament-mode-page .movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.tournament-mode-page .movie-stack#leftMovieStack .movie-card {
+    right: auto; /* Position to the left */
+    left: -350px; /* Adjust position */
+}
+
+.tournament-mode-page .movie-stack#rightMovieStack .movie-card {
+    left: auto; /* Position to the right */
+    right: -350px; /* Adjust position */
 }
 
 .tournament-mode-page .or {
     font-size: 24px;
     font-weight: bold;
+    padding: 0 20px; /* Adjust space around 'OR' */
+}
+
+
+.tournament-mode-page #tournament {
+    text-align: center;
 }
 
 .tournament-mode-page .controls button {
@@ -1542,25 +1569,6 @@ section {
     font-size: 24px;
     margin-bottom: 20px;
 }
-
-.tournament-mode-page .movie-card {
-    cursor: pointer; /* Make posters look clickable */
-    /* Other styles as necessary */
-}
-
-.tournament-mode-page .movie-stack {
-    position: relative;
-    /* Other styles as needed */
-}
-
-.tournament-mode-page .movie-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Use higher z-index for the top card */
-    /* Other styles as needed */
-}
-
 
 /* Footer Styling */
 footer {
