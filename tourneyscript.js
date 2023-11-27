@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function () {
             movieElement.classList.add('remove');
             movieElement.classList.add('burned'); // Mark the card as burned so it's not targeted again
-
+    
             replaceMovie(movieElement);
-        }, 3000); // Adjust timing as needed for your animation
+        }, 500); 
     }
 
     function replaceMovie(movieElement) {
