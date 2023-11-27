@@ -65,3 +65,15 @@ document.getElementById('rightMovieStack').addEventListener('click', function() 
         }
     });
 });
+
+// Example of setting up Hammer.js on a movie card
+var leftStack = document.getElementById('leftMovieStack');
+Array.from(leftStack.getElementsByClassName('movie-card')).forEach(function(card) {
+    var hammer = new Hammer(card);
+    hammer.on('swipe', function(ev) {
+        // Handle swipe logic
+        if (ev.direction === Hammer.DIRECTION_LEFT) {
+            removeMovie('rightMovieStack');
+        }
+    });
+});
