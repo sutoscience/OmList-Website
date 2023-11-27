@@ -1511,82 +1511,87 @@ section {
 
 /* Tournament Mode Page Styling */
 
-.tournament-mode-page #tournament {
-    display: flex;
-    justify-content: space-between; /* This will place content evenly spaced */
-    align-items: center;
+.tournament-mode-page .movie-card.hidden {
+    display: none;
 }
 
-#tournament h2 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
+.tournament-mode-page #tournament {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    text-align: center;
+    max-width: 1200px; /* Adjust this as needed */
+    margin: 0 auto;
 }
 
 .tournament-mode-page .movie-stack {
-    flex: 1; /* This will make the movie stacks take up equal space on either side */
-    display: flex;
-    justify-content: center; /* This will center the movie cards within the stack */
-    width: 300px; /* Adjust as necessary */
-    height: 400px; /* Adjust as necessary */
-    margin: 0 10px;
+    position: relative; /* This is needed for absolute positioning of children */
+    width: 30%; /* This will make the stacks take up 30% of the #tournament width */
+}
+
+.tournament-mode-page .movie-card {
+    position: absolute; /* This will stack the cards */
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
 }
 
 
 .tournament-mode-page .or {
-    /* Centering the OR text */
+    position: absolute; /* This will position the "OR" relative to #tournament */
+    top: 50%; /* This will position the "OR" at the vertical center of #tournament */
+    left: 50%; /* This will position the "OR" at the horizontal center of #tournament */
+    transform: translate(-50%, -50%); /* This will perfectly center the "OR" */
+    /* Rest of your CSS */
+}
+
+.tournament-mode-page h2 {
+    color: white;
+    font-size: 24px;
     text-align: center;
-    margin: 0 20px;
-    flex-shrink: 0;
-}
-/* Flex container for movie cards and OR divider */
-.tournament-mode-page .movie-selection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* Position the movie cards absolutely within their stack */
-.tournament-mode-page .movie-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* This hides the back of cards when flipped */
-    transition: transform 0.3s; /* Smooth transition for any transformations */
+    position: relative;
+    width: 100%; 
+    margin: 0 auto;
+    padding: 20px; 
 }
 
-/* This is an example to position the first card at the top, you will need to adjust for others */
-.tournament-mode-page .movie-stack .movie-card:first-child {
-    z-index: 3; /* Adjust as needed for stacking */
-}
-
-/* Styles for the movie posters */
 .tournament-mode-page .movie-card img {
-    width: auto; /* Changed from a fixed width to auto to maintain aspect ratio */
-    max-width: 100%; /* Ensures image does not overflow its container */
+    width: 100%; 
     height: auto; /* Maintains aspect ratio */
-}
-
-.tournament-mode-page .movie-stack#leftMovieStack .movie-card {
-    right: auto; /* Position to the left */
-    left: -350px; /* Adjust position */
-}
-
-.tournament-mode-page .movie-stack#rightMovieStack .movie-card {
-    left: auto; /* Position to the right */
-    right: -350px; /* Adjust position */
 }
 
 .tournament-mode-page .footer {
     clear: both;
-    position: relative; /* Change from absolute if necessary */
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
     background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px; /* Adjust as necessary to ensure space between the content and footer */
+    margin-bottom: 10px;
+}
+.tournament-mode-page .movie-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Adjust this as needed */
+    position: relative; /* This is needed for absolute positioning of children */
+}
+
+.tournament-mode-page .movie-stack#leftMovieStack {
+    left: 50px; /* Position the left stack at the left edge of .movie-selection */
+}
+
+.tournament-mode-page .movie-stack#rightMovieStack {
+    right: 0; /* Position the right stack at the right edge of .movie-selection */
+}
+
+/* Styles for the movie posters */
+.tournament-mode-page .movie-card img {
+    width: 80%; 
+    max-width: 100%; /* Ensures image does not overflow its container */
+    height: auto; /* Maintains aspect ratio */
 }
 
 /* Footer Styling */

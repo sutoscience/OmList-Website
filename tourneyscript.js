@@ -1,34 +1,33 @@
-document.addEventListener('DOMContentLoaded', function () {
-    function getTopCard(stackId) {
-        const stack = document.getElementById(stackId);
-        const allCards = stack.querySelectorAll('.movie-card:not(.burned)');
-        return allCards[allCards.length - 1];
+function removeMovie(stackId) {
+    console.log('removeMovie called with stackId:', stackId);
+    const movieElement = getTopCard(stackId);
+    if (!movieElement) return;
+
+    movieElement.classList.add('explode');
+
+    setTimeout(function () {
+        movieElement.remove(); // This will remove the movieElement from the DOM
+        revealNextCard(stackId); // This will reveal the next card
+    }, 1000);
+}
+
+function revealNextCard(stackId) {
+    const stack = document.getElementById(stackId);
+    const nextCard = stack.querySelector('.movie-card:not(.burned)');
+    if (nextCard) {
+        nextCard.classList.remove('hidden'); // Assuming 'hidden' class hides the card
     }
+}
 
-    function removeMovie(stackId) {
-        const movieElement = getTopCard(stackId);
-        if (!movieElement) return;
+document.getElementById('leftMovieStack').addEventListener('click', function() {
+    console.log('leftMovieStack clicked'); // Add this line
+    removeMovie('rightMovieStack');
+});
 
-        const confettiContainer = document.getElementById('confettiContainer');
-        const confetti = new ConfettiGenerator({ target: confettiContainer });
-        confetti.render();
-
-        movieElement.classList.add('explode');
-
-        setTimeout(function () {
-            movieElement.classList.add('burned');
-            replaceMovie(movieElement);
-            confetti.clear();
-        }, 1000);
-    }
-
-    document.getElementById('leftMovieStack').addEventListener('click', function() {
-        removeMovie('rightMovieStack');
-    });
-
-    document.getElementById('rightMovieStack').addEventListener('click', function() {
-        removeMovie('leftMovieStack');
-    });
+document.getElementById('rightMovieStack').addEventListener('click', function() {
+    console.log('rightMovieStack clicked'); // Add this line
+    removeMovie('leftMovieStack');
+});
 
     function replaceMovie(movieElement) {
         movieElement.querySelector('img').src = 'new_path_to_movie_poster.jpg';
@@ -53,4 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
+
+
+    function getTopCard(stackId) {
+        const stack = document.getElementById(stackId);
+        return stack.querySelector('.movie-card:not(.burned)');
+    }
