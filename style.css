@@ -1522,11 +1522,6 @@ section {
     margin-bottom: 20px;
 }
 
-.tournament-mode-page .movie-card {
-    margin: 0 10px;
-    position: relative; /* For flame animation positioning */
-}
-
 .tournament-mode-page .movie-card img {
     width: 150px; /* Adjust as necessary */
     height: auto;
@@ -1542,32 +1537,16 @@ section {
     padding: 10px 20px;
 }
 
-.tournament-mode-page .movie-card.flame {
-    /* Position your flame animation as a background or use an img tag */
-    /* Example using a background image: */
-    background: url('Images and Animations/flame animation.gif') center center no-repeat;
-    background-size: cover;
-    /* Make sure the flame covers the card */
-    z-index: 2;
+#tournament h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-/* Animation for removing the card */
-.tournament-mode-page .movie-card.remove {
-    animation: burnAndFade 1s forwards;
+.movie-card {
+    cursor: pointer; /* Make posters look clickable */
+    /* Other styles as necessary */
 }
-
-/* Keyframes for the burn and fade animation */
-@keyframes burnAndFade {
-    to {
-        opacity: 0;
-        transform: translateY(-100vh); /* This will move the card upwards */
-    }
-}
-
-.tournament-mode-page .movie-card.burned {
-    display: none; /* Hide burned cards */
-}
-
 
 
 /* Footer Styling */
