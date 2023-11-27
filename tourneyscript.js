@@ -64,7 +64,6 @@ document.getElementById('rightMovieStack').addEventListener('click', function() 
             removeMovie('left');
         }
     });
-});
 
 // Example of setting up Hammer.js on a movie card
 var leftStack = document.getElementById('leftMovieStack');
