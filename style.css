@@ -1529,13 +1529,18 @@ section {
     flex: 1; /* This will make the movie stacks take up equal space on either side */
     display: flex;
     justify-content: center; /* This will center the movie cards within the stack */
+    width: 300px; /* Adjust as necessary */
+    height: 400px; /* Adjust as necessary */
+    margin: 0 10px;
 }
+
 
 .tournament-mode-page .or {
-    flex: 1; /* This will make the "OR" take up equal space */
-    text-align: center; /* This will center the "OR" text */
+    /* Centering the OR text */
+    text-align: center;
+    margin: 0 20px;
+    flex-shrink: 0;
 }
-
 /* Flex container for movie cards and OR divider */
 .tournament-mode-page .movie-selection {
     display: flex;
