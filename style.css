@@ -1030,7 +1030,11 @@ section {
 .swipe-screen-page #upButton {
     background-image: url('Images and Animations/haventseen.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
 }
 
 .swipe-screen-page #leftButton {
@@ -1038,9 +1042,12 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 10px;
-    background-size: cover;
-    width: 100px;
-    height: auto;
+    background-size: contain;
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    border: none;
+    padding: 0;
+
 }
 
 .swipe-screen-page #rightButton {
@@ -1048,9 +1055,12 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     margin-left: 10px;
-    background-size: cover;
-    width: 100px;
-    height: auto;
+    background-size: contain;
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    border: none;
+    padding: 0;
+
 }
 
 .swipe-screen-page #downButton {
@@ -1058,9 +1068,12 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 10px;
-    background-size: cover;
-    width: 100px;
-    height: auto;
+    background-size: contain;
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    border: none;
+    padding: 0;
+
 }
 
 
