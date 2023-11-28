@@ -1027,56 +1027,6 @@ section {
     justify-content: center;
 }
 
-.swipe-screen-page #upButton {
-    background-image: url('Images and Animations/haventseen.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none;
-    padding: 0;
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-}
-
-.swipe-screen-page #leftButton {
-    background-image: url('Images and Animations/dislike.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 10px;
-    background-size: contain;
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border: none;
-    padding: 0;
-
-}
-
-.swipe-screen-page #rightButton {
-    background-image: url('Images and Animations/like.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-left: 10px;
-    background-size: contain;
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border: none;
-    padding: 0;
-
-}
-
-.swipe-screen-page #downButton {
-    background-image: url('Images and Animations/tournament .png');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 10px;
-    background-size: contain;
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border: none;
-    padding: 0;
-
-}
-
-
 /* Reclist Page Styling */
 
 .reclist-page .toggle-container {
