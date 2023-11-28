@@ -887,53 +887,6 @@ section {
     height: calc(100vh - 200px); /* Adjust 120px to the height of your buttons container */
   }
 
-  #dislike, #like {
-    background: transparent;
-    border: none; /* Removes the border if any */
-  }  
-
-  .like-button,
-.dislike-button {
-  position: relative; 
-  bottom: initial; /* Reset any previously set values */
-  left: initial;
-  transform: initial;
-}
-  .like {
-    margin-right: 10px; /* Adjust as needed */
-    background: url('Images and Animations/Swipe Screen Icons/Buttons/like button.png') no-repeat center center;
-    background-size: contain;
-    background-color: transparent; 
-}
-
-.havent-seen {
-    background-size: contain;
-    background-color: transparent; 
-    border: none;
-}
-  
-  .dislike {
-    margin-left: 10px; /* Adjust as needed */
-    background: url('Images and Animations/Swipe Screen Icons/Buttons/dislike button.png') no-repeat center center;
-     background-size: contain;
-      background-color: transparent; 
-}
-
-.dislike img {
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
-}
-
-.like img {
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
-}
-
-.havent-seen img {
-    width: 50px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
-}
-
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .tinder {
@@ -1060,6 +1013,55 @@ section {
     padding: 0 16px;
     pointer-events: none;
   }
+
+
+.swipe-screen-page .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 5px;
+}
+
+.swipe-screen-page .button-row {
+    display: flex;
+    justify-content: center;
+}
+
+.swipe-screen-page #upButton {
+    background-image: url('Images and Animations/haventseen.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.swipe-screen-page #leftButton {
+    background-image: url('Images and Animations/dislike.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    background-size: cover;
+    width: 100px;
+    height: auto;
+}
+
+.swipe-screen-page #rightButton {
+    background-image: url('Images and Animations/like.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+    background-size: cover;
+    width: 100px;
+    height: auto;
+}
+
+.swipe-screen-page #downButton {
+    background-image: url('Images and Animations/tournament .png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    background-size: cover;
+    width: 100px;
+    height: auto;
+}
 
 
 /* Reclist Page Styling */

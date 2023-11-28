@@ -138,3 +138,18 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'index.html'; // Redirect to index.html after logout
     };
 });
+
+
+    // New Like/Disilke/Haven't Seen/Tournament Mode Button
+
+    document.getElementById('dislikeButton').addEventListener('click', function() {
+        // Code to handle dislike button click
+    });
+
+    document.getElementById('haventSeenButton').addEventListener('click', function() {
+        // Code to handle haven't seen button click
+    });
+
+    document.getElementById('likeButton').addEventListener('click', function() {
+        // Code to handle like button click
+    });
